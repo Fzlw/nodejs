@@ -14,6 +14,7 @@
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
     "egg-sequelize": "^4.1.0",
+    "egg-view-xtpl": "^1.2.0",
     "eslint": "^4.11.0",
     "eslint-config-egg": "^6.0.0",
     "mysql2": "^1.6.3"

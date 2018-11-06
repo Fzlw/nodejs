@@ -7,3 +7,8 @@ exports.sequelize = {
     enable: true,
     package: 'egg-sequelize',
 }
+
+exports.xtpl = {
+    enable: true,
+    package: 'egg-view-xtpl'
+}
