@@ -5,7 +5,9 @@
   "private": true,
   "dependencies": {
     "egg": "^2.2.1",
-    "egg-scripts": "^2.5.0"
+    "egg-scripts": "^2.5.0",
+    "mysql2": "^1.6.3",
+    "egg-view-xtpl": "^1.2.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -14,16 +16,16 @@
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
     "egg-sequelize": "^4.1.0",
-    "egg-view-xtpl": "^1.2.0",
+    "egg-sequelize-auto": "^0.1.1",
     "eslint": "^4.11.0",
     "eslint-config-egg": "^6.0.0",
-    "mysql2": "^1.6.3"
+    "sequelize": "^4.41.2"
   },
   "engines": {
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --env=prod --port=2018 --title=egg-server-myService",
+    "start": "egg-scripts start --daemon --env=prod --port=80 --title=egg-server-myService",
     "stop": "egg-scripts stop --title=egg-server-myService",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
@@ -32,7 +34,8 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "model": "node node_modules/egg-sequelize-auto/bin/egg-sequelize-auto -o \"./app/model\" -d liwei -h 120.77.222.224 -u fzstudy -p 3306 -x fz@liwei2018 -e mysql"
   },
   "ci": {
     "version": "8"
