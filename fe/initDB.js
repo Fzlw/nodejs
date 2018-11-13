@@ -8,7 +8,7 @@ const {
     password
 } = require('../config/sequelize.config');
 const Sequelize = require('sequelize');
-const tools = require('./tools');
+const sql = require('../lib/init/sql');
 
 const sequelize = new Sequelize(database, username, password, {
     host,
@@ -27,6 +27,20 @@ const sequelize = new Sequelize(database, username, password, {
 // }).catch(err => {
 //     console.log(err);
 // })
+
+let i = 0,
+    promiseArr = [],
+    len = sql.SQL.length;
+
+while(i < len) {
+    promiseArr.push(sequelize.query(sql.SQL[i].sql));
+    i ++;
+}
+Promise.all(promiseArr).then(res => {
+    console.log(res)
+}).catch(err => {
+    console.log(err);
+})
 
 
 
