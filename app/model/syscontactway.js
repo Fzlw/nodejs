@@ -49,7 +49,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'syscontactway'
+    tableName: 'syscontactway',
+    timestamps: false
   });
 
   Model.associate = function() {

@@ -28,7 +28,8 @@ module.exports = app => {
       allowNull: true
     }
   }, {
-    tableName: 'test_banner'
+    tableName: 'test_banner',
+    timestamps: false
   });
 
   Model.associate = function() {

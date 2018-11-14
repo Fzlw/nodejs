@@ -65,7 +65,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'sysperson'
+    tableName: 'sysperson',
+    timestamps: false
   });
 
   Model.associate = function() {

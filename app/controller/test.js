@@ -3,7 +3,7 @@
 const Controller = require('egg').Controller;
 
 class Test extends Controller {
-    // 获取所有的图片，api
+  // 获取所有的图片，api
     async getImgs() {
         let result = {
             success: false,
@@ -29,7 +29,7 @@ class Test extends Controller {
         } catch (err) {
             result.message = "获取资源出错，刷新";
             result.code = 30009;
-            console.log('controller/test/getImgs' + err);
+            console.log('controller/home/getImgs' + err);
         }
         this.ctx.body = result;
     }

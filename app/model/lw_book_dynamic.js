@@ -49,7 +49,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_book_dynamic'
+    tableName: 'lw_book_dynamic',
+    timestamps: false
   });
 
   Model.associate = function() {

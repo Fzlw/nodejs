@@ -4,7 +4,8 @@ const sequelizeDefault = {
     host: '120.77.222.224',
     port: 3306,
     username: 'fzstudy',
-    password: 'fz@liwei2018'
+    password: 'fz@liwei2018',
+    timezone: '+00:00'
 }
 
 module.exports = sequelizeDefault;

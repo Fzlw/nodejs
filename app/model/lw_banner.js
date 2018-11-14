@@ -41,7 +41,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_banner'
+    tableName: 'lw_banner',
+    timestamps: false
   });
 
   Model.associate = function() {

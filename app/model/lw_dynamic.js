@@ -53,7 +53,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_dynamic'
+    tableName: 'lw_dynamic',
+    timestamps: false
   });
 
   Model.associate = function() {

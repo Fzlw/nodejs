@@ -49,7 +49,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_support'
+    tableName: 'lw_support',
+    timestamps: false
   });
 
   Model.associate = function() {

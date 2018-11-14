@@ -67,7 +67,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_imgs'
+    tableName: 'lw_imgs',
+    timestamps: false
   });
 
   Model.associate = function() {

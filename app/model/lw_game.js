@@ -54,7 +54,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_game'
+    tableName: 'lw_game',
+    timestamps: false
   });
 
   Model.associate = function() {

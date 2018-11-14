@@ -49,7 +49,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_visitor'
+    tableName: 'lw_visitor',
+    timestamps: false
   });
 
   Model.associate = function() {

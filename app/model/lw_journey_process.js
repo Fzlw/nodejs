@@ -49,7 +49,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_journey_process'
+    tableName: 'lw_journey_process',
+    timestamps: false
   });
 
   Model.associate = function() {

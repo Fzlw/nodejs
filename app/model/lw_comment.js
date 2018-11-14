@@ -54,7 +54,8 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_comment'
+    tableName: 'lw_comment',
+    timestamps: false
   });
 
   Model.associate = function() {
