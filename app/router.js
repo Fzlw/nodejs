@@ -4,8 +4,7 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-  const { router, controller } = app;
-  router.get('/', controller.home.index);
-
-  router.get('/game/flappybird', controller.game.flappybird);
+    require('./router/home')(app);
+    require('./router/game')(app);
+    require('./router/test')(app);
 };

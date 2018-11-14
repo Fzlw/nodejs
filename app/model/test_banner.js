@@ -3,7 +3,7 @@
 module.exports = app => {
   const DataTypes = app.Sequelize;
 
-  const Model = app.model.define('banner', {
+  const Model = app.model.define('test_banner', {
     Id: {
       type: DataTypes.STRING(36),
       allowNull: false,
@@ -28,7 +28,7 @@ module.exports = app => {
       allowNull: true
     }
   }, {
-    tableName: 'banner'
+    tableName: 'test_banner'
   });
 
   Model.associate = function() {
