@@ -1,23 +1,23 @@
 'use strict';
 
 /**
- * __servicename__
+ * LwGameRecord
  * autoCreate Template by LiWei
  */
 
 const Service = require('egg').Service;
 
-module.exports = class __ServiceName__ extends Service {
+module.exports = class LwGameRecordService extends Service {
 
     /**
-     * create a new __tablename__
-     * @param {Object} entity  model __tablename__
+     * create a new lw_game_record
+     * @param {Object} entity  model lw_game_record
      * @return {Object} entity a model Entity
      */
     async create(entity) {
         if (typeof entity !== 'object') throw new Error('entity must be Object');
         try {
-            const result = await this.ctx.model.__servicename__.create(entity);
+            const result = await this.ctx.model.LwGameRecord.create(entity);
             return result;
         } catch (err) {
             throw err;
@@ -25,14 +25,14 @@ module.exports = class __ServiceName__ extends Service {
     }
 
     /**
-     * get a __tablename__ entity by Id
+     * get a lw_game_record entity by Id
      * @param {String} Id guid
      * @return {Object} entity a model Entity
      */
     async getById(Id) {
         if(!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
         try {
-            const result = await this.ctx.model.__servicename__.findOne({
+            const result = await this.ctx.model.LwGameRecord.findOne({
                 where: {
                     Id: Id
                 }
@@ -44,8 +44,8 @@ module.exports = class __ServiceName__ extends Service {
     }
 
     /**
-     * update a __tablename__
-     * @param {Object} entity model __tablename__
+     * update a lw_game_record
+     * @param {Object} entity model lw_game_record
      * @return {Object} newEntity entity a model Entity
      */
     async edit(entity) {
@@ -53,7 +53,7 @@ module.exports = class __ServiceName__ extends Service {
             throw new Error('entity must be Object');
         }
         try {
-            const newEntity = await this.ctx.model.__servicename__.update(entity, {
+            const newEntity = await this.ctx.model.LwGameRecord.update(entity, {
                 where: {
                     Id: entity.Id
                 }
@@ -65,7 +65,7 @@ module.exports = class __ServiceName__ extends Service {
     }
 
     /**
-     * remove a record from __tablename__
+     * remove a record from lw_game_record
      * @param {Object} entity a model Entity
      * @return {Object} affact count
      */
@@ -75,20 +75,20 @@ module.exports = class __ServiceName__ extends Service {
         }
         try {
             entity.Valid = 0;
-            return await this.ctx.service.__servicename__.edit(entity);
+            return await this.ctx.service.LwGameRecord.edit(entity);
         } catch (error) {
             throw error;
         }
     }
 
     /**
-     * delete a record from __tablename__
+     * delete a record from lw_game_record
      * @param {Object} entity a model Entity
      * @return {Object} affact count
      */
     async delete(entity) {
         try {
-            const result = await this.ctx.model.__servicename__.destroy({
+            const result = await this.ctx.model.LwGameRecord.destroy({
                 where: {
                     Id: entity.Id
                 }
@@ -100,7 +100,7 @@ module.exports = class __ServiceName__ extends Service {
     }
 
     /**
-     * search in __tablename__
+     * search in lw_game_record
      * @param {Object} pagination page 
      * @param {Object} where where
      * @param {Object} order order by  
@@ -139,7 +139,7 @@ module.exports = class __ServiceName__ extends Service {
                 })
             }
 
-            let entityList = await this.ctx.model.__servicename__.findAndCountAll(condition);
+            let entityList = await this.ctx.model.LwGameRecord.findAndCountAll(condition);
             return entityList;
         } catch (err) {
             throw err;

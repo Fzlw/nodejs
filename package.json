@@ -35,7 +35,8 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
-    "model": "node node_modules/egg-sequelize-auto/bin/egg-sequelize-auto -o \"./app/model\" -d liwei -h 120.77.222.224 -u fzstudy -p 3306 -x fz@liwei2018 -e mysql"
+    "model": "node node_modules/egg-sequelize-auto/bin/egg-sequelize-auto -o \"./app/model\" -d liwei -h 120.77.222.224 -u fzstudy -p 3306 -x fz@liwei2018 -e mysql",
+    "template": "TESTS=app/auto-template/index.js egg-bin test"
   },
   "ci": {
     "version": "8"
