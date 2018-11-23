@@ -49,7 +49,7 @@ module.exports = class __ServiceName__ extends Service {
      * @return {Object} newEntity entity a model Entity
      */
     async edit(entity) {
-        if (!entity || typeof entity !== 'object' || Object.keys(where).length === 0) {
+        if (!entity || typeof entity !== 'object' || Object.keys(entity).length === 0) {
             throw new Error('entity must be Object');
         }
         try {
@@ -70,7 +70,7 @@ module.exports = class __ServiceName__ extends Service {
      * @return {Object} affact count
      */
     async remove(entity) {
-        if (!entity || typeof entity !== 'object' || Object.keys(where).length === 0) {
+        if (!entity || typeof entity !== 'object' || Object.keys(entity).length === 0) {
             throw new Error('entity must be Object');
         }
         try {
