@@ -44,7 +44,7 @@ __Entity__
 
         oldEntity.__updateField__ = 'anto-update value';
         const newEntity = await ctx.service.__ServiceName__.edit(oldEntity);
-        assert(oldEntity.__updateField__ === newEntity.__updateField__);
+        assert(newEntity[0] === 1);
     })
 
     it('should remove a __tablename__ entity', async () => {
@@ -66,7 +66,7 @@ __Entity__
             },
             where = {
                 Valid: {
-                    $gt: 0
+                    $gte: 0
                 }
             };
         const entityList = await ctx.service.__ServiceName__.search(pagination, where);

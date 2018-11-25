@@ -37,8 +37,8 @@ describe('autoCreate by liwei', () => {
         if (Object.keys(models).length === 0) throw new Error('app/model noexist file');
 
         for (let fileName in models) {
-            const __servicename__ = nameTrans(fileName),
-                __ServiceName__ = __servicename__ + 'Service',
+            const __servicename__ = nameTrans(fileName, '_', false),
+                __ServiceName__ = nameTrans(fileName),
                 __tablename__ = fileName;
             
             // 替换service层设置字段并写入
