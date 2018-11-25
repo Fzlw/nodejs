@@ -1,0 +1,8 @@
+{{extend ('./layout/layout.xtpl')}}
+
+
+{{#block ('body')}}
+
+hello
+
+{{/block}}

@@ -1,0 +1,8 @@
+{{extend ('../layout/layout.xtpl')}}
+
+
+{{#block ('body')}}
+
+{{include ('../../public/src/component/404/index.xtpl')}}   
+
+{{/block}}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+
+    <script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
+    <script src="../../public/src/require.config.js"></script>
+
+    {{{block ('head')}}}
+</head>
+<body>
+    {{{block ('body')}}}
+</body>
+</html>
