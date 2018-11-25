@@ -1,6 +1,7 @@
 'use strict';
 
 const sequelizeDefault = require('./sequelize.config');
+const path = require('path');
 
 module.exports = appInfo => {
     const config = exports = {};
@@ -18,6 +19,17 @@ module.exports = appInfo => {
     config.view = {
         defaultViewEngine: "xtpl",
         defaultExtension: ".xtpl"
+    }
+
+    config.staticPrefix = 'fz';
+    config.staticVersion = '0.0.1';
+
+    // egg 静态资源服务
+    config.static = {
+        prefix: `/${config.staticPrefix}/${config.staticVersion}/`, 
+        dir: path.join(appInfo.baseDir, 'app/public/src'), 
+        dynamic: true,
+        preload: false
     }
 
 
