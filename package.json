@@ -11,8 +11,11 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
+    "browser-sync": "^2.26.3",
     "egg-bin": "^4.3.5",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
@@ -21,6 +24,11 @@
     "eslint": "^4.11.0",
     "eslint-config-egg": "^6.0.0",
     "faker": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
     "lodash": "^4.17.11",
     "sequelize": "^4.41.2"
   },
@@ -38,7 +46,8 @@
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
     "model": "node node_modules/egg-sequelize-auto/bin/egg-sequelize-auto -o \"./app/model\" -d liwei -h 120.77.222.224 -u fzstudy -p 3306 -x fz@liwei2018 -e mysql",
-    "template": "TESTS=app/auto-template/index.js egg-bin test"
+    "template": "TESTS=app/auto-template/index.js egg-bin test",
+    "watch": "gulp watch"
   },
   "ci": {
     "version": "8"
