@@ -16,6 +16,7 @@
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
     "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
     "egg-bin": "^4.3.5",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
@@ -38,7 +39,7 @@
   "scripts": {
     "start": "egg-scripts start --daemon --env=prod --port=80 --title=egg-server-myService",
     "stop": "egg-scripts stop --title=egg-server-myService",
-    "dev": "egg-bin dev",
+    "dev": "concurrently \"egg-bin dev\" \"gulp watch\"",
     "debug": "egg-bin debug",
     "test": "egg-bin test",
     "cov": "egg-bin cov",

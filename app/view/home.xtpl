@@ -1,8 +1,12 @@
 {{extend ('./layout/layout.xtpl')}}
 
+{{#block ('head')}}
+<link href="http://127.0.0.1:7001/fz/0.0.1/page/home.css" rel="stylesheet" type="text/css" />
+{{/block}}
+
 
 {{#block ('body')}}
 
-hello
+hello1
 
 {{/block}}

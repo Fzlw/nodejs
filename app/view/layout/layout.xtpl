@@ -11,5 +11,9 @@
 </head>
 <body>
     {{{block ('body')}}}
+
+    <script>
+        console.log(document.currentScript)
+    </script>
 </body>
 </html>

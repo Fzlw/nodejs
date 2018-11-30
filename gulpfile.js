@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-const browserSync = require('browser-sync');
+// const browserSync = require('browser-sync').create();
 // const pug = require('gulp-pug');
 
 let baseUrl = 'app/public/src/**/**/';
@@ -41,13 +41,12 @@ gulp.task('build:js', () => {
     .pipe(gulp.dest(buildUrl))
 })
 
-gulp.task('browserSync', () => {
-    browserSync({
-        server: {
-            baseDir: 'app'
-        }
-    })
-})
+// gulp.task('browserSync', ['watch'], () => {
+//     browserSync.init({
+//         proxy: 'http://127.0.0.1:7001/'
+//     })
+//     gulp.watch(baseUrl + '*.+(sass|scss)', [ 'build:scss' ]);
+// })
 
 /** 监听scss|sass 和 js 文件的更改 */
 gulp.task('watch', [ 'build:scss', 'build:js' ], () => {

@@ -27,9 +27,17 @@ module.exports = appInfo => {
     // egg 静态资源服务
     config.static = {
         prefix: `/${config.staticPrefix}/${config.staticVersion}/`, 
-        dir: path.join(appInfo.baseDir, 'app/public/src'), 
+        dir: path.join(appInfo.baseDir, 'app/public/build'), 
         dynamic: true,
         preload: false
+    }
+
+    config.cluster = {
+        listen: {
+            path: '',
+            port: 7001,
+            hostname: 'localhost'
+        }
     }
 
 
