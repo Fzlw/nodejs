@@ -21,6 +21,7 @@ module.exports = appInfo => {
         defaultExtension: ".xtpl"
     }
 
+    // 映射路径
     config.staticPrefix = 'fz';
     config.staticVersion = '0.0.1';
 
@@ -32,12 +33,13 @@ module.exports = appInfo => {
         preload: false
     }
 
-    config.cluster = {
-        listen: {
-            path: '',
-            port: 7001,
-            hostname: 'localhost'
-        }
+    // 默认为本地
+    config.isOnline = false;
+
+    // cdn地址
+    config.cdnHost = {
+        local: `//127.0.0.1:7001/${config.staticPrefix}/${config.staticVersion}`,
+        online: `//www.fzstudy.top/${config.staticPrefix}/${config.staticVersion}`
     }
 
 

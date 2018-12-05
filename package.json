@@ -30,6 +30,7 @@
     "gulp-clean-css": "^4.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
+    "gulp-xtpl": "^1.1.1",
     "lodash": "^4.17.11",
     "sequelize": "^4.41.2"
   },

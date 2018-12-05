@@ -4,7 +4,8 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
     async index() {
-        await this.ctx.render('home.xtpl');
+        let env = await this.app.config.env;
+        await this.ctx.render('home.xtpl', { env });
     }
 }
 

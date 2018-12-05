@@ -6,7 +6,9 @@
 
 
 {{#block ('body')}}
-
-hello1
+{{env}}
+{{include ('../../public/build/component/banner/index.xtpl')}}
+hello123
+<p alt={{helper.getHost()}}>world</p>
 
 {{/block}}
