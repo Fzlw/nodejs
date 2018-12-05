@@ -28,6 +28,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.0.0",
+    "gulp-if": "^2.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-xtpl": "^1.1.1",
@@ -38,9 +39,9 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --env=prod --port=80 --title=egg-server-myService",
+    "start": "cnpm install && npm run build:prod && egg-scripts start --daemon --env=prod --port=80 --title=egg-server-myService",
     "stop": "egg-scripts stop --title=egg-server-myService",
-    "dev": "concurrently \"egg-bin dev\" \"gulp watch\"",
+    "dev": "concurrently \"egg-bin dev\" \"npm run watch\"",
     "debug": "egg-bin debug",
     "test": "egg-bin test",
     "cov": "egg-bin cov",
@@ -49,7 +50,8 @@
     "autod": "autod",
     "model": "node node_modules/egg-sequelize-auto/bin/egg-sequelize-auto -o \"./app/model\" -d liwei -h 120.77.222.224 -u fzstudy -p 3306 -x fz@liwei2018 -e mysql",
     "template": "TESTS=app/auto-template/index.js egg-bin test",
-    "watch": "gulp watch"
+    "watch": "gulp watch --gulpfile=\"fe/gulpfile.js\"",
+    "build:prod": "PRO_BUILD=true gulp online --gulpfile=\"fe/gulpfile.js\""
   },
   "ci": {
     "version": "8"
