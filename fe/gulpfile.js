@@ -9,6 +9,8 @@ const uglify = require('gulp-uglify');
 const globby = require('globby');
 const gulpif = require('gulp-if');
 const isOnline = process.env.PRO_BUILD === "true";
+const appConfig = require('../config/config.default')({});    // 读取默认配置
+const fs = require('fs');
 
 // const browserSync = require('browser-sync').create();
 // const pug = require('gulp-pug');
@@ -16,7 +18,7 @@ const isOnline = process.env.PRO_BUILD === "true";
 let baseUrl = '../app/public/src/**/**/';
 let buildUrl = '../app/public/build';
 let componentPaths = [
-    'app/public/src/**/**/*.js'
+    '../app/public/src/**/**/*.js'
 ]
 
 
@@ -24,6 +26,13 @@ let componentPaths = [
 let xtplDefaultConfig = {
     
 };
+
+let requireDefaultConfig = {
+    "baseUrl": `/${appConfig.staticPrefix}/${appConfig.staticVersion}/`,
+    "paths": {
+        "zepto": "https://cdn.bootcss.com/zepto/1.2.0/zepto.min"
+    }
+}
 
 
 /** 编译scss|sass */
@@ -46,10 +55,10 @@ gulp.task('build:scss', () => {
 
 /** 编译js */
 // TODO  判断线上环境，混淆js
-gulp.task('build:js', () => {
+gulp.task('build:js', [ 'build:requirejs' ], () => {
     gulp.src([
         baseUrl + '*.js',
-        // '!app/public/src/require.config.js'
+        '!../app/public/src/require.config.js'
     ])
     .pipe(babel({
         presets: [ '@babel/env' ]
@@ -72,6 +81,20 @@ gulp.task('build:xtpl', () => {
 gulp.task('build:requirejs', () => {
     globby(componentPaths).then(paths => {
         // paths.forEach   TODO
+        paths.forEach((path, i) => {
+            let filePath = path.replace(/.*app\/public\/src\//, "").replace(/\.js/, "");
+            requireDefaultConfig.paths[filePath] = filePath;
+        })
+        // 生成require.config.js内容
+        const requireConfigFile = 
+        `require.config(
+            ${ JSON.stringify(requireDefaultConfig, null, 2) }
+        )`;
+
+        if (fs.existsSync('../app/public/build/require.config.js')) {
+            fs.unlinkSync('../app/public/build/require.config.js');
+        }
+        fs.writeFileSync('../app/public/build/require.config.js', requireConfigFile, 'utf-8');
     })
 })
 

@@ -11,5 +11,7 @@ define([
         }
 
     }
+
+    return Tools;
     
 });
