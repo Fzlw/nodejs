@@ -1,3 +1,19 @@
-<div class="self">
-    
+<div class="message-board">
+    {{! 最多显示一定条数，循环message }}
+    <div class="message">
+        <div class="userinfo">
+            <img src="http://placehold.it/30x30/deb887" />
+            <span class="user">匿名用户</span>
+            <span>位置</span>
+        </div>
+        <p>
+            <span>己不由心，身又岂能由己</span>
+            <span>2018-12-07 18:38:43</span>
+        </p>
+        <div class="opera">
+            <button>赞</button>
+            <button>赞</button>
+            <button>删除</button>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,36 @@
+.message-board {
+    padding: 10px;
+    margin: 10px 0 0;
+    background: #ffffff;
+    .message {
+        display: flex;
+        flex-direction: column;
+        .userinfo {
+            display: flex;
+            align-items: center;
+            img {
+                width: 30px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            span {
+                font-size: 12px;
+                align-self: flex-end;
+            }
+            .user {
+                flex: 1;
+                margin: 0 0 0 5px;
+                font-size: 14px;
+            }
+        }
+        > p {
+            display: flex;
+            flex-direction: column;
+            span {
+                &:first-child {
+                    text-indent: 35px;
+                }
+            }
+        }
+    }
+}

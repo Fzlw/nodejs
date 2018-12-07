@@ -9,13 +9,29 @@
 
 // 内容主体头部分
 @import '../component/header/index.scss';
-// 内容主体d导航部分
+// 内容主体导航部分
 @import '../component/header-nav/index.scss';
+// 内容音乐模块
+@import '../component/bg-music/index.scss';
+
+// 内容留言板模块
+@import '../component/message-board/index.scss';
 
 .container {
     display: flex;
     flex-direction: column;
     width: 960px;
     margin: 0 auto;
+    .content {
+        margin: 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        .aslide {
+            width: 300px;
+        }
+        .article {
+            width: 650px;
+        }
+    }
 }
 

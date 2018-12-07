@@ -1,3 +1,10 @@
+{{! 做成3D盒子类型 }}
 <div class="bg-music" data-mod-id="component/bg-music/index">
-    
+    <div>
+        <p class="name">《光年之外》</p>
+        <p class="singer">G.E.M.邓紫棋</p>
+        <div class="lyric">感受停在我发端的指尖</div>
+        <div class="controller"></div>
+        <div class="bg"></div>
+    </div>
 </div>
