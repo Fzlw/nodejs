@@ -1,10 +1,13 @@
 .message-board {
-    padding: 10px;
+    $padding: 10px;
+    padding: $padding;
     margin: 10px 0 0;
     background: #ffffff;
     .message {
         display: flex;
         flex-direction: column;
+        padding: 10px 0 10px;
+        border-bottom: 1px dashed red;
         .userinfo {
             display: flex;
             align-items: center;
@@ -26,11 +29,29 @@
         > p {
             display: flex;
             flex-direction: column;
+            // TODO 盒子最大高度，超过内容怎么显示
             span {
-                &:first-child {
-                    text-indent: 35px;
-                }
+                max-height: 50px;
+                overflow: hidden;
+                text-indent: 35px;
+            }
+            time {
+                align-self: flex-end;
+                margin: 2px 0 0;
+                font-size: 12px;
             }
         }
+        .opera {
+            display: flex;
+            justify-content: flex-end;
+            > button {
+                margin: 2px 0 0 10px;
+            }
+        }
+
+    }
+    .line {
+        display: block;
+        border-bottom: 1px dashed red;
     }
 }
