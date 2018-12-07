@@ -1,0 +1,18 @@
+<div class="header" data-mod-id="component/header/index">
+    <div class="img">
+        <img src="http://placehold.it/100x100" />
+        {{! 后续可以扩展显示展示标签 }}
+    </div>
+    <div class="self">
+        <span>{{ Name }}</span>
+        {{! 标签可以有很多 }}
+        <span class="sign">标签</span>
+        <span class="sign">标签</span>
+        <span class="sign">标签</span>
+    </div>
+    <p class="field">己不由心，身又岂能由己</p>
+    <div class="others">
+        <button class="btn-default">留言</button>
+        <button class="btn-default">私信</button>
+    </div>
+</div>

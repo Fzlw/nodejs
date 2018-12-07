@@ -11,6 +11,7 @@ const gulpif = require('gulp-if');
 const isOnline = process.env.PRO_BUILD === "true";
 const appConfig = require('../config/config.default')({});    // 读取默认配置
 const fs = require('fs');
+const plumber = require('gulp-plumber');
 
 // const browserSync = require('browser-sync').create();
 // const pug = require('gulp-pug');
@@ -34,11 +35,22 @@ let requireDefaultConfig = {
     }
 }
 
+// 出错处理函数
+function handleErr(err) {
+    // 如果是线上环境就退出
+    if (isOnline) {
+        throw err;
+    } else {
+        console.log(err);
+    }
+}
+
 
 /** 编译scss|sass */
 gulp.task('build:scss', () => {
     gulp.src(baseUrl + '*.+(sass|scss)')
     .pipe(sass())
+    .pipe(plumber(handleErr))  // 忽略错误
     .pipe(gulpif(isOnline, cleanCSS()))
     .pipe(gulp.dest(buildUrl));
 })
@@ -60,6 +72,7 @@ gulp.task('build:js', [ 'build:requirejs' ], () => {
         baseUrl + '*.js',
         '!../app/public/src/require.config.js'
     ])
+    .pipe(plumber(handleErr))  // 忽略错误
     .pipe(babel({
         presets: [ '@babel/env' ]
     }))
@@ -71,6 +84,7 @@ gulp.task('build:js', [ 'build:requirejs' ], () => {
 /**  编译 .xtpl 文件  */
 gulp.task('build:xtpl', () => {
     gulp.src(baseUrl + '*.xtpl')
+    .pipe(plumber(handleErr))  // 忽略错误
     .pipe(gulp.dest(buildUrl))  // 保留源文件
     .pipe(xtpl(xtplDefaultConfig))  // 编译成xtpl
     .pipe(gulp.dest(buildUrl));

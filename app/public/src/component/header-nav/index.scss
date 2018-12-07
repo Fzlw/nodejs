@@ -1,0 +1,19 @@
+.header-nav {
+    position: fixed;
+    width: 200px;
+    top: 0;
+    left: 0;
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        border-radius: 5px;
+        background-color: #CC00FF;
+        .item {
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}

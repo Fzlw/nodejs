@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    color: #fff;
+    background: url('http://placehold.it/960x380/000000');
+    .img {
+        // css对百分比是相对于父级元素对宽度计算的
+        padding: 16% 0 0;
+        img {
+            display: block;
+            width: 80px;
+            border-radius: 40px;
+        }
+    }
+    .self {
+        padding: 10px 0 0;
+    }
+    .field {
+        padding: 12px 0 0;
+    }
+    .others {
+        padding: 20px 0 0;
+    }
+}

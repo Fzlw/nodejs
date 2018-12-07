@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <title>Layout</title>
 
-    <script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
     {{{block ('head')}}}
 </head>
 <body>
+    {{! 主体导航部分 }}
+    {{include ('../../public/build/component/nav/index.xtpl', { title: 'liwei' })}}
     {{{block ('body')}}}
 
+
+    <script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
     <script src="{{ helper.getHost() }}/require.config.js"></script>
     <script src="{{ helper.getHost() }}/loader.js"></script>
 

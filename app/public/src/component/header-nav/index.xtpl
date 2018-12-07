@@ -1,0 +1,14 @@
+{{! 主导航做成随下拉后滚动,模仿哔哩哔哩导航 }}
+<div class="header-nav" data-mod-id="component/header-nav/index">
+    <div class="nav-bg"></div>
+    <div class="navlist">
+        {{! 全部由div组成 }}
+        <div class="item">主页</div>
+        <div class="item">主页</div>
+        <div class="item">主页</div>
+        <div class="item">主页</div>
+        <div class="item">主页</div>
+        <div class="item">主页</div>
+        <div class="item">主页</div>
+    </div>
+</div> 
