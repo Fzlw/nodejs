@@ -28,7 +28,7 @@
         }
         > p {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
             // TODO 盒子最大高度，超过内容怎么显示
             span {
                 max-height: 50px;
