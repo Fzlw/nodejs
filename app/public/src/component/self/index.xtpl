@@ -1,3 +1,27 @@
-<div class="self">
-    
+{{! 可以做一个先隐藏爱好栏，点击后动画掉出来爱好栏目 }}
+<div class="module-self">
+    <div class="item">
+    {{! svg图标 }}
+        <img src="http://placehold.it/30x30/deb887" alt="icon" />
+        <span>昵称</span>
+        <p>红瞳雀</p>
+    </div>
+    <div class="item">
+    {{! svg图标 }}
+        <img src="http://placehold.it/30x30/deb887" alt="icon" />
+        <span>城市</span>
+        <p>红瞳雀</p>
+    </div>
+    <div class="item">
+    {{! svg图标 }}
+        <img src="http://placehold.it/30x30/deb887" alt="icon" />
+        <span>关注我</span>
+        <p>红瞳雀</p>
+    </div>
+    <div class="item">
+    {{! svg图标 }}
+        <img src="http://placehold.it/30x30/deb887" alt="icon" />
+        <span>签名</span>
+        <p>红瞳雀</p>
+    </div>
 </div>

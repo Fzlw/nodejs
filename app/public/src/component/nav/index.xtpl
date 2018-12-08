@@ -1,4 +1,4 @@
-<div class="nav" data-mod-id="component/nav/index">
+<div class="module-nav" data-mod-id="component/nav/index">
     <div class="user">
         <span>欢迎 {{title}}</span>
         <span class="info">深圳</span>

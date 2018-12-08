@@ -1,4 +1,4 @@
-.message-board {
+.module-message-board {
     $padding: 10px;
     padding: $padding;
     margin: 10px 0 0;
@@ -29,7 +29,7 @@
         > p {
             display: flex;
             flex-direction: column; 
-            // TODO 盒子最大高度，超过内容怎么显示
+            // TODO 盒子最大高度，超过内容怎么显示，出现显示全部
             span {
                 max-height: 50px;
                 overflow: hidden;

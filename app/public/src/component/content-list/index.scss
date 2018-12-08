@@ -1,0 +1,52 @@
+.module-content-list {
+    padding: 10px;
+    background: #fff;
+    .content-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .top {
+            display: flex;
+            height: 60px;
+            .head {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: inherit;
+                margin: 0 10px 0 0;
+                img {
+                    width: 40px;
+                    border-radius: 20px;
+                }
+                .draw {
+                    position: absolute;
+                }
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .name {
+                    display: flex;
+                    align-items: center;
+                    height: 30px;
+                    .icon {
+                        width: 30px;
+                        height: 17px;
+                        margin: 0 0 0 10px;
+                        border-radius: 10px;
+                    }
+                }
+                .tips {
+                    display: flex;
+                    align-items: flex-start;
+                    height: 20px;
+                    font-size: 12px;
+                    time {
+                        margin: 0 15px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

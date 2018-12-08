@@ -17,6 +17,15 @@
 // 内容留言板模块
 @import '../component/message-board/index.scss';
 
+// 内容个人展示模块
+@import '../component/self/index.scss';
+
+// 内容个人兴趣爱好展示模块
+@import '../component/interesting/index.scss';
+
+// 个人动态模块
+@import '../component/content-list/index.scss';
+
 .container {
     display: flex;
     flex-direction: column;

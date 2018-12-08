@@ -1,4 +1,4 @@
-<div class="header" data-mod-id="component/header/index">
+<div class="module-header" data-mod-id="component/header/index">
     <div class="img">
         <img src="http://placehold.it/100x100" />
         {{! 后续可以扩展显示展示标签 }}

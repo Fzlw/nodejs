@@ -1,4 +1,4 @@
-<div class="message-board">
+<div class="module-message-board">
     {{! 最多显示一定条数，循环message }}
     <div class="message">
         <div class="userinfo">

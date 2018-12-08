@@ -1,3 +1,9 @@
-<div class="self">
-    
+<div class="module-interesting">
+    <div class="hobby">
+        <span>骑行</span>
+        {{! 表现为一段动画骑行动画 }}
+        <img src="http://placehold.it/30x30/deb887" alt="骑行" />
+        {{! 滑入更多，展示canvas动画 }}
+        <a href="javascript:void(0);"> >> </a>
+    </div>
 </div>
