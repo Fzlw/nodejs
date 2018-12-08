@@ -42,6 +42,7 @@ function handleErr(err) {
         throw err;
     } else {
         console.log(err);
+        console.log('-------------')
     }
 }
 
@@ -50,7 +51,8 @@ function handleErr(err) {
 gulp.task('build:scss', () => {
     gulp.src(baseUrl + '*.+(sass|scss)')
     .pipe(sass())
-    .pipe(plumber(handleErr))  // 忽略错误
+    .on('error', handleErr)   // 编译scss时出错自动退出，plumber似乎不OK
+    // .pipe(plumber(handleErr))  // 忽略错误
     .pipe(gulpif(isOnline, cleanCSS()))
     .pipe(gulp.dest(buildUrl));
 })

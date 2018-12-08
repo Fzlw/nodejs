@@ -48,5 +48,39 @@
                 }
             }
         }
+        // 内容部分---文字和图片内容
+        .content {
+            display: flex;
+            flex-direction: column;
+            .words {
+                $fsize: 16px;
+                font-size: $fsize;
+                text-indent: $fsize * 2;
+            }
+            .imgs {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin: 15px 0 0;
+                overflow: hidden;
+                img {
+                    width: 200px;
+                    height: 160px;
+                }
+            }
+        }
+        // 包括浏览数，点赞数等 
+        .interat {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: 15px;
+            margin: 15px 0 0;
+            font-size: 12px;
+            .item {
+                margin: 0 0 0 20px;
+            }
+        }
     }
 }
