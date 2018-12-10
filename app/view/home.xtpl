@@ -6,9 +6,13 @@
 
 
 {{#block ('body')}}
+
+{{! 主体导航部分 }}
+{{include ('../../public/build/component/nav/index.xtpl', { data: navData })}}
+
 <div class="container">
     {{! 内容-头部 }}
-    {{include ('../../public/build/component/header/index.xtpl', { Name: '李伟' })}}
+    {{include ('../../public/build/component/header/index.xtpl', { data: navData })}}
     {{! 内容-导航 }}
     {{include ('../../public/build/component/header-nav/index.xtpl', {  })}}
 

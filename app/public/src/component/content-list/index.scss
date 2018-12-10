@@ -1,10 +1,15 @@
 .module-content-list {
-    padding: 10px;
-    background: #fff;
     .content-item {
-        width: 100%;
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+        margin: 10px 0 0;
+        background: #fff;
+        &:first-child {
+            margin: 0;
+        }
         .top {
             display: flex;
             height: 60px;
@@ -80,6 +85,64 @@
             font-size: 12px;
             .item {
                 margin: 0 0 0 20px;
+            }
+        }
+        .comment {
+            padding: 0 10px 0;
+            margin: 15px 0 0;
+            font-size: 14px;
+            text-indent: 28px;
+            .comment-item {
+                display: flex;
+                width: 100%;
+                .comment-content {
+                    width: 85%;
+                    time, i {
+                        font-size: 12px;
+                    }
+                    time {
+                        margin: 0 20px 0 0;
+                    }
+                }
+                .comment-user {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 15%;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                    span {
+                        margin: 5px 0 0;
+                        font-size: 12px;
+                        text-indent: 0;
+                    }
+                }
+            }
+            .comment-no {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 30px;
+                img {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+        .push-comment {
+            width: 100%;
+            height: 30px;
+            text-align: right;
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
             }
         }
     }

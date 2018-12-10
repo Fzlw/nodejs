@@ -7,6 +7,10 @@
 
 const Service = require('egg').Service;
 
+const uuid = require('uuid');
+const { UserType } = require('../enums/visitor');
+const { fillString } = require('../utils/string');
+
 module.exports = class LwVisitorService extends Service {
 
     /**
@@ -144,6 +148,61 @@ module.exports = class LwVisitorService extends Service {
         } catch (err) {
             throw err;
         }
+    }
+
+    /**
+     * get the last lw_visitor
+     */
+    async getLastOne() {
+        try {
+            let lastone = await this.ctx.model.LwVisitor.findOne({
+                where: {
+                    Valid: 1
+                },
+                offset: 0,
+                limit: 1,
+                order: [['CreateTime', 'DESC']]
+            });
+            return lastone;
+        } catch (err) {
+            throw err;
+        }
+    }
+
+    /**
+     * 创建用户
+     * @param {number} userType 创建用户类型
+     * @returns {Object} entity 
+     */
+    async createVisitor(userType) {
+        let { prefixVisitor, prefixRegister, maxLength, fillByte, regexp } = this.ctx.app.config.users;
+
+        try {
+            let lastUser = await this.ctx.service.lwVisitor.getLastOne();
+            let newUserName = '',
+                newUserId = uuid.v4(),
+                prefix = userType === UserType.visitor ? prefixVisitor : userType === UserType.register ? prefixRegister : userType.unknow;
+            if (!lastUser || !lastUser.Id || lastUser.Id.length === 0) {
+                newUserName = prefix + fillString(1, maxLength, fillByte);
+            } else {
+                let count = Number(lastUser.Name.replace(regexp, '')) + 1;
+                newUserName = prefix + fillString(count, maxLength, fillByte);
+            }
+
+            let userEntity = {
+                Id: newUserId,
+                Name: newUserName,
+                LandTime: new Date(),
+                Valid: 1,
+                CreateTime: new Date(),
+                CreatePerson: 'sysauto'
+            };
+            let result = await this.ctx.service.lwVisitor.create(userEntity);
+            return result.dataValues || result;
+        } catch (err) {
+            console.log('app/service/home/createVisitor' + err);
+        }
+        
     }
 
 }

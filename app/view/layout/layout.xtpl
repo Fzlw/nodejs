@@ -7,8 +7,7 @@
     {{{block ('head')}}}
 </head>
 <body>
-    {{! 主体导航部分 }}
-    {{include ('../../public/build/component/nav/index.xtpl', { title: 'liwei' })}}
+    
     {{{block ('body')}}}
 
 
