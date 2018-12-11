@@ -50,7 +50,7 @@ describe('test app/service/lw_visitor_logs.js', () => {
         const oldEntity = await ctx.service.lwVisitorLogs.getById(Id);
         assert(oldEntity.Id === Id);
 
-        oldEntity. = 'anto-update value';
+        oldEntity.CreatePerson = 'anto-update value';
         const newEntity = await ctx.service.lwVisitorLogs.edit(oldEntity);
         assert(newEntity[0] === 1);
     })
