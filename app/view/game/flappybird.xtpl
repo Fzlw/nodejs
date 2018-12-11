@@ -1,1 +1,1 @@
-{{include ("../../public/src/flappybird/index.xtpl")}}
+{{include ("../../public/build/flappybird/index.xtpl")}}
