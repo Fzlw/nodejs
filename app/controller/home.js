@@ -2,18 +2,20 @@
 
 const Controller = require('egg').Controller;
 
-const { UserType } = require('../enums/visitor');
+const {
+    UserType
+} = require('../enums/visitor');
 const moment = require('moment');
 
 class HomeController extends Controller {
     async index() {
-        let UserId = this.ctx.session.user.Id,
-            navData = {
-                Name: this.ctx.session.user.Name,
-                Today: moment().format('YYYY年MM月DD日')
-            };
-        
         try {
+            let user = this.ctx.session.user,
+                UserId = user && user.Id ? user.Id : '',
+                navData = {
+                    Name: this.ctx.session.user.Name,
+                    Today: moment().format('YYYY年MM月DD日')
+                };
             if (!UserId || UserId.length === 0) {
                 let entity = await this.ctx.service.lwVisitor.createVisitor(UserType.visitor);
                 if (!entity) {
@@ -31,7 +33,9 @@ class HomeController extends Controller {
 
             // 数据处理
 
-            await this.ctx.render('home.xtpl', { navData });
+            await this.ctx.render('home.xtpl', {
+                navData
+            });
         } catch (err) {
             console.log('app/controller/home/index' + err);
         }
