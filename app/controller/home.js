@@ -13,7 +13,7 @@ class HomeController extends Controller {
             let user = this.ctx.session.user,
                 UserId = user && user.Id ? user.Id : '',
                 navData = {
-                    Name: this.ctx.session.user.Name,
+                    Name: user && user.Name ? user.Name : '',
                     Today: moment().format('YYYY年MM月DD日')
                 };
             if (!UserId || UserId.length === 0) {

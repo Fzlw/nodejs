@@ -6,6 +6,9 @@
  */
 
 const Service = require('egg').Service;
+const { UserType } = require('../enums/visitor');
+const { fillString } = require('../utils/string');
+const uuid = require('uuid');
 
 module.exports = class LwVisitorService extends Service {
 
@@ -155,8 +158,6 @@ module.exports = class LwVisitorService extends Service {
                 where: {
                     Valid: 1
                 },
-                offset: 0,
-                limit: 1,
                 order: [
                     ['CreateTime', 'DESC']
                 ]
@@ -204,7 +205,7 @@ module.exports = class LwVisitorService extends Service {
             let result = await this.ctx.service.lwVisitor.create(userEntity);
             return result.dataValues || result;
         } catch (err) {
-            console.log('app/service/home/createVisitor' + err);
+            console.log('app/service/lw_visitor/createVisitor' + err);
         }
 
     }
