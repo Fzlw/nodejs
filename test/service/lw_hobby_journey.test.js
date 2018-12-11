@@ -24,17 +24,17 @@ describe('test app/service/lw_hobby_journey.js', () => {
 
         const entity = await ctx.service.lwHobbyJourney.create({
             Id: Id,
-			StartTime: "Fri Sep 21 2018 13:41:13 GMT+0800 (CST)", 
-			EndTime: "Thu Jun 28 2018 23:46:55 GMT+0800 (CST)", 
-			PointOfStart: "DPYcnboY", 
-			PointOfEnd: "8yf7bfCNBWThK", 
-			JourneyId: "jXcYJKK7VfNpV", 
-			Background: "fL", 
+			StartTime: "Mon Apr 02 2018 18:10:45 GMT+0800 (CST)", 
+			EndTime: "Mon Apr 16 2018 19:25:58 GMT+0800 (CST)", 
+			PointOfStart: "YNpHGUkoMbGd6Uw", 
+			PointOfEnd: "Uwk27oJVxIfyLR3nY3Am46n6Fia9wTpVvkE5aDjZHqpbsLxJtZY22JjH", 
+			JourneyId: "1rp4D9to", 
+			Background: "FcHH", 
 			Valid: 1, 
-			CreateTime: "Sun Apr 22 2018 14:24:05 GMT+0800 (CST)", 
-			CreatePerson: "QARDXnmhQIGUY4qMu6D5iGoEIDmuFHjjk6uIEgqWPTn5yt3JnZ3C6rIQqrixLGN", 
-			UpdateTime: "Sun May 13 2018 03:21:07 GMT+0800 (CST)", 
-			UpdatePerson: "qOWBfOsatvELPq1HRu9hpnFcShzCjZlz9Yhkat5HQ0JHPIZ7fJIND6sswZKrZ9msSyfsah15xv", 
+			CreateTime: "Sat Dec 23 2017 01:07:11 GMT+0800 (CST)", 
+			CreatePerson: "zjWP4QE7D61jtgyiPSA72USBOUMuUfT99hzdxxKQSgD3tlY1HC2JOJm31qEITZ5mF8EosZWOhjP", 
+			UpdateTime: "Wed Jan 10 2018 17:36:13 GMT+0800 (CST)", 
+			UpdatePerson: "1iV835rpYsNkhHPKUeYhanJU82XT4UoDRzHVaD3UqrjiGmqJqZ", 
 
         });
         assert(entity.Id === Id);

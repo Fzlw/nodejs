@@ -24,16 +24,16 @@ describe('test app/service/lw_dynamic.js', () => {
 
         const entity = await ctx.service.lwDynamic.create({
             Id: Id,
-			HobbyId: "E9SrUdKz", 
-			UserId: "g5oMk4gw", 
-			Caption: "MPWT1ynwj2h6fRHgBWn2x8z5n5zq8AqzJkI3jywXaV3ZSNE5mNwtwtuQcXe1IAwfttecf3fmBnXbcgjsi6zF2vl2SLs", 
-			ActivityId: "P6zKBqOIY7Qie5d", 
-			Position: "1KRkDYFgNqOifVsJDBOmLNLb8MK0gz3GrtFmrgO0", 
+			HobbyId: "e44vhyXnmbzmVKfF", 
+			UserId: "9MkM73Ef8w", 
+			Caption: "FylN3Jo2c6E8vpr49Hzoo9V0NAiN9z86CvlQf9F46eXoYk3gTit91RoDnyE81za8C2", 
+			ActivityId: "oEwtVCH2WGk", 
+			Position: "U1p2J0266PquZdpiFQ05jMTmJ5R4BXX20lENuK3XahiEg", 
 			Valid: 1, 
-			CreateTime: "Sat Jul 07 2018 23:50:32 GMT+0800 (CST)", 
-			CreatePerson: "QNMPStEukELEjHZ6CSND5t7kt6lWJby2tbFd7OntUO9IjIe8GhBCkYZg4j71CKZOVk6pQbziWF", 
-			UpdateTime: "Mon Mar 26 2018 13:35:50 GMT+0800 (CST)", 
-			UpdatePerson: "UCYH32M7jnjF", 
+			CreateTime: "Wed Oct 17 2018 11:35:51 GMT+0800 (CST)", 
+			CreatePerson: "X6bCQ60oIKlkVbg3xTmRpPdSoZa1Zcc", 
+			UpdateTime: "Sat Sep 22 2018 16:01:19 GMT+0800 (CST)", 
+			UpdatePerson: "U8CTQdBCVfmLuX6iS", 
 
         });
         assert(entity.Id === Id);

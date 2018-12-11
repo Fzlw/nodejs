@@ -24,16 +24,16 @@ describe('test app/service/lw_comment.js', () => {
 
         const entity = await ctx.service.lwComment.create({
             Id: Id,
-			DynamicId: "asXEeMg7mjiUG", 
-			Comment: "q4y79bl7zPe9GYnJleC5LYUFKNbEjlhRWZFln4ZIvMiONoX4WwqLj5CnCCtpIDRaWKRhMgfUKzsozaVkAJx2zqQIAXHtT1sFu9tg18bxAm94jZazeAZ4tiUHSp2VRiz2YqsWGV47DCbi575ng4efeGbG1a3ZrKQQzSeKPfyp9syz6XYrV5Xl4lCTNg8aqzuHZ68X0aXPejDAODYYsUvQrzGE0MAXIWzhiB7HOZUYme6zXVqjMT2QiSEVO7QvvWWCuHFeKN9bnPzugcRQfC1tY8F13XeHwmjWD67eyF741cZPzqrxSgxQTcXJOKzV8rovVhUIMR1oibbIRLyBv22TxjSlCZdGp9CZLqqURxodkmLfmnat3ckefEJBOLIIXoCcgbnGSJQADjkCWaDlBr8qqZIqbOUPMVDIvZAtt76shSp0kgsGcRuINs80PWjaGU6K5GDeCvvPFdK7LZYZkwaoYG2sSNeEM9QcfVJrUpArAwT1bPOlT3mxFDHic8kuRg98tfFrzflQGJaCLsQZ4KgwxgP26m99upSoHBzaO7scNFJFLUJWngZUvJhQEugdodjpL1aBO7bq33XEWYg2Yw8GCzr2Y7t4FQGM6Ca834uzmH7vgAWPGuK9ePVym3yrC7uzCR2Cggb7saS9nI6naECOTp4utaxUlHNkJVBipUvEzWEy0FHw4zglTRaNGXIZudwbB5wQ5uViPBWpsFHVAnBJAkWaPkXhvIdXJibeOLDUx1VGiLAcM9qCkhp0wXnJuGTrDmN6S1tLnvjxYHhHk6YpqJp5lX", 
-			Position: "b6MLu8Tf8ED678wCE7i7eYEQOtdzY1", 
-			VisitorId: "XtiSqXQ", 
+			DynamicId: "TclGKxG7d", 
+			Comment: "fs9VG0FI6eIQgGlTEpI54yL5AuW0y9NvtgBFVBCzVX391YP4KGBNszz3c3TTYant9mKN69JaNzaSq0hiqgLPuCOH94yMq92hkjTqvYzorx1I8g66PZ1bdAeQnNe1ryeY5IaOmYRmSzDV1xiKhTZND5v8xvDRRxSIyc2mdYCZDHp9gQpp7kR3Rm6PMsRIAreHBA5N9CCjGthY0yHhQ6HMaNpaYIvEYYgl4OKJrPwyfynErCbY258vkKPOPPONaY0o8Udq45u1qs1ipi1spY3BTxfBAKto8fE1jZuHJAd8SQuL7M56rd9AP9mSmi56kboEBFUXThFQP2mlHEN62ZhYYp9JZyxKQIDM7QvGNRInOrZDEGk92pKkUGXKpd0B7DMkCu", 
+			Position: "K0414vPgZZ2Nsx2LEnLR8Aj", 
+			VisitorId: "fqJOL7frWywkLtk", 
 			Approval: 1, 
 			Valid: 1, 
-			CreateTime: "Wed Feb 21 2018 05:59:43 GMT+0800 (CST)", 
-			CreatePerson: "vmhNvn0tozjXbIDLe3EiOJ7sR8jSqDXiukFMFleDpJ", 
-			UpdateTime: "Mon Jan 29 2018 06:58:17 GMT+0800 (CST)", 
-			UpdatePerson: "FbfImv3VturFc1NhPrwg7WFn3hAmU5sSwgfPFcTE6fLHzZVgKQwsCmfB", 
+			CreateTime: "Mon Nov 05 2018 06:23:41 GMT+0800 (CST)", 
+			CreatePerson: "lqRc6U9AOPmVvq60wOY9pEfK4yHCmrZktmZ9LCRLFcgEEasNP", 
+			UpdateTime: "Sun May 13 2018 05:29:40 GMT+0800 (CST)", 
+			UpdatePerson: "dOzekUHNJNu4fndwcgZx1tOMWn5FLt7dafFJF9BaPMnxxy6T4zmn4zfompHqoa", 
 
         });
         assert(entity.Id === Id);

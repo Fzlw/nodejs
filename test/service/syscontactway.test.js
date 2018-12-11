@@ -24,15 +24,15 @@ describe('test app/service/syscontactway.js', () => {
 
         const entity = await ctx.service.syscontactway.create({
             Id: Id,
-			UserId: "186q7bv6VOCfXDd5", 
-			QQ: "KSopxG", 
-			Email: "qHxo9jqZZs", 
-			WeChat: "8JLlrX1nwf", 
+			UserId: "7jh2JfHaGAVT0V", 
+			QQ: "ju9DivThm", 
+			Email: "fqNAN9EoPp09QzPcNPi1ZtpLOD", 
+			WeChat: "mi3", 
 			Valid: 1, 
-			CreateTime: "Fri Nov 02 2018 23:50:45 GMT+0800 (CST)", 
-			CreatePerson: "3vTmiXZlWqI2VFOBdGAyGSL", 
-			UpdateTime: "Sat Mar 24 2018 23:27:26 GMT+0800 (CST)", 
-			UpdatePerson: "7vhm9YvZwYZbVnP6OCSnVv8X7f9vFMGnTjUFk03wy3KMulyTorr9W58uJEcDI", 
+			CreateTime: "Fri Sep 28 2018 13:47:41 GMT+0800 (CST)", 
+			CreatePerson: "X3LeJVQHcCM7XXjd7MVA7q4HX9eRmt4CEAL1ht7cDWMuFg4EmIcYnCRpQgZLb3Xgdx4qtnzF4bm", 
+			UpdateTime: "Mon Jun 25 2018 06:03:19 GMT+0800 (CST)", 
+			UpdatePerson: "ly45pvSMLDq3yTS3ftzn0ya9x", 
 
         });
         assert(entity.Id === Id);

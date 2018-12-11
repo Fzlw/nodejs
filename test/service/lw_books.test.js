@@ -24,17 +24,17 @@ describe('test app/service/lw_books.js', () => {
 
         const entity = await ctx.service.lwBooks.create({
             Id: Id,
-			Name: "s4TFxUxx4f9k1Yimz", 
-			Pages: "c", 
-			Position: "zy37fzuBbyaaGKatvCRgosoIllsQ5rHfbICuXcIAF7vfgyFQaFNTjq3bsDlbbJwIe0EFhsQPp8o9A6rvUuwdk7iYBHp7JUt", 
-			AuthorId: "aYQQ3J2UPWC7Nv3L", 
-			BuyTime: "Wed Dec 06 2017 02:26:38 GMT+0800 (CST)", 
-			Remark: "o0y8A7qZyhKupeUjxIG6rk8PYfKjwAYSU0XGWRcCWQLFqQjdJEUFBBZq9x5ycHMzmcSFBRmz6CIQueqv2ocgOn4ioTnrTw0L6kWv3cOeo25j5vrquJMFNLgiKREyKjkJzAourz5wN0QOrg1yR3zQDykT3BGLhaRbNGEjDqpMewSDZ576tQb3P6WjXBLLL3Ueu8TNegouymz0wofb9o2p8r7YDB6TujZmlue4j2InhjXbR76dtkY2jpN4TC1WvXOxO8JB5KkJFOWgHobD2", 
+			Name: "gQfoPBY4DuNqUAGBIaA", 
+			Pages: "CGTV9", 
+			Position: "bMcGIsXMw2uUcY3mkGnEuEJ03TG6a0WwhCpnmi70nGXOr0wjPPktDEHa3wSQTsVFUbmk3Up1JUED3mu6OUikCpwEaZUokcG", 
+			AuthorId: "3q67XeETFWmbB", 
+			BuyTime: "Mon Jan 29 2018 01:15:33 GMT+0800 (CST)", 
+			Remark: "wjRqLjZOU9Hpztf05bSLxQhCiPqoBbcw8I4DyBWuwd1bBH84LiiofUJhou0wAWtxwZbOanpq4iLBAxOL8kIpIbHTqKTHUhmu5QAtTUB9DRi6nByPKygqm4boi0Qy47FGkKwKShs7NoYaD2itjlyzbvl4vmaSfPUb9qdBq0kK1CJIFOKikOeUb6HVdRpp6Qef3JiRC9SV8EzKUjhimsyCk1jq9zXY93Wit7hmVB3C1s2tHVLFnjApe6RbuBLqVGqohpW83W442bmsfMlx8uFvEb8fmecYluQ8t0WYYoKflpDSzDpfd1ebED7dUjq5iYNqXnJRst0k0NitAXC1wDBQDhe4TANsxZLrLkfqW0LmOPAPl1cJ8aMgtft4MCGjFMaG1L8yOwKT4wW60KG13qDHRSKgUntAXEYG3LsSB0EGqvQumM", 
 			Valid: 1, 
-			CreateTime: "Tue Jun 26 2018 04:29:45 GMT+0800 (CST)", 
-			CreatePerson: "W7xXIJJYiAKQWT7WhBuHZUuC33eSPacEzTiYDZVSE8IkPB1x5ux4hdm4fOOBmnZaIV9hGOcNiQDe", 
-			UpdateTime: "Tue Jul 10 2018 07:13:52 GMT+0800 (CST)", 
-			UpdatePerson: "oSANa0Bt5PsbCrNX356ao8cssTn0mXUUBhZQJVcNkSyCaprXKuUcxMfMBFJ3GZWUqPtub8IbyR", 
+			CreateTime: "Tue Jun 19 2018 07:35:33 GMT+0800 (CST)", 
+			CreatePerson: "qssKrKb", 
+			UpdateTime: "Fri Jun 08 2018 17:16:01 GMT+0800 (CST)", 
+			UpdatePerson: "Ruu8tUIcgdqbu4XDn3QXqccVH3mYJfnXmctqjVOVBs6Xv39v8V8s60igwhyVZGwpmlCC70dt4YEQUWGHBoX5ILiNJEM3ZV", 
 
         });
         assert(entity.Id === Id);

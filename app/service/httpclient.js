@@ -16,7 +16,7 @@ class HttpClient extends Service {
                 timeout: (params.timeout && this.app.config.DefaultTimeOut)
             })
             if (result && result.status === 200 && result.data) {
-                return result;
+                return result.data || result;
             }
         } catch (err) {
             console.log('service/httpclient/get' + err);
@@ -36,7 +36,7 @@ class HttpClient extends Service {
                 timeout: (params.timeout && this.app.config.DefaultTimeOut)
             })
             if (result && result.status === 200 && result.data) {
-                return result;
+                return result.data || result;
             }
         } catch (err) {
             console.log('service/httpclient/get' + err);

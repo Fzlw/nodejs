@@ -24,15 +24,15 @@ describe('test app/service/lw_visitor.js', () => {
 
         const entity = await ctx.service.lwVisitor.create({
             Id: Id,
-			Name: "oVIkFufTGL8QS8NhA6KyC7xS4nJYKzWFbAkYoOv2WxWUPPit6J", 
-			Sex: "k", 
-			LandTime: "Fri Aug 03 2018 08:46:33 GMT+0800 (CST)", 
-			Position: "hA4GUo1kuVilFeuzYtpapLEsrBYL5BNoIoQZwzKymIB", 
+			Name: "Fu7HqhZp12rTovyrlv3iEGTWEpKWYvL2MqA3H1", 
+			Sex: "o", 
+			LandTime: "Fri Jun 29 2018 01:12:17 GMT+0800 (CST)", 
+			Position: "EnazJ1wjplg4", 
 			Valid: 1, 
-			CreateTime: "Fri Jul 20 2018 02:43:59 GMT+0800 (CST)", 
-			CreatePerson: "ZAOCyhgNalSRZvge7NkstDPMhmiM2vCrSDkKCIb1BKPVfgPOjXZw0Ee2TvP1gNG3g", 
-			UpdateTime: "Thu May 03 2018 10:40:26 GMT+0800 (CST)", 
-			UpdatePerson: "zgRpzto34dMeC9azAezE6vVUL4hT0LgRTML95ogTXqKlcwsxWQmWQBr7eSEMTjW68yDo2OqJ7660ElUn", 
+			CreateTime: "Mon Apr 02 2018 16:22:28 GMT+0800 (CST)", 
+			CreatePerson: "QUaCh0X6ywAMZ1RuwQXcTkDaVVbt3LEyTi7xwaLOE0Y9ktSA7", 
+			UpdateTime: "Sat Mar 03 2018 08:58:38 GMT+0800 (CST)", 
+			UpdatePerson: "SXEBelEYQQaVLES3YZgdy2hKLG8SXd68bL5R9Tqzpx09Dyebu40bcQQzis0xKDYIIacNmYDXufHw", 
 
         });
         assert(entity.Id === Id);

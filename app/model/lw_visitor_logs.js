@@ -3,19 +3,18 @@
 module.exports = app => {
   const DataTypes = app.Sequelize;
 
-  const Model = app.model.define('lw_visitor', {
+  const Model = app.model.define('lw_visitor_logs', {
     Id: {
       type: DataTypes.STRING(36),
       allowNull: false,
       primaryKey: true
     },
-    Name: {
-      type: DataTypes.STRING(200),
-      allowNull: false,
-      defaultValue: ''
+    UserId: {
+      type: DataTypes.STRING(36),
+      allowNull: false
     },
-    Sex: {
-      type: DataTypes.STRING(2),
+    IP: {
+      type: DataTypes.STRING(50),
       allowNull: true
     },
     LandTime: {
@@ -26,6 +25,14 @@ module.exports = app => {
       type: DataTypes.STRING(200),
       allowNull: true
     },
+    WebBrowser: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    WebBrowserVersion: {
+      type: DataTypes.STRING(40),
+      allowNull: true
+    },
     Valid: {
       type: DataTypes.INTEGER(1),
       allowNull: false,
@@ -34,23 +41,9 @@ module.exports = app => {
     CreateTime: {
       type: DataTypes.DATE,
       allowNull: false
-    },
-    CreatePerson: {
-      type: DataTypes.STRING(200),
-      allowNull: false,
-      defaultValue: 'system'
-    },
-    UpdateTime: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    UpdatePerson: {
-      type: DataTypes.STRING(200),
-      allowNull: true,
-      defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_visitor',
+    tableName: 'lw_visitor_logs',
     timestamps: false
   });
 

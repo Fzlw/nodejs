@@ -24,16 +24,16 @@ describe('test app/service/lw_game.js', () => {
 
         const entity = await ctx.service.lwGame.create({
             Id: Id,
-			DeveloperId: "rUaQKFqvH6fS", 
-			Name: "GJ8", 
-			Icon: "aDBxus", 
-			Router: "FIj2F6M2EdZNPysnSgvKwal3dnCz7abIxLIB08rsCDZ2hAmz5kbRI", 
-			Sort: 4, 
+			DeveloperId: "4MoEYChVRbOtZ0kT", 
+			Name: "HjYw4SKnkVboaQOEna", 
+			Icon: "iT4FBZty4mOwvyScsDXfiJgpQHrxKaV5Pt2fEtmulfRDeZ7hk9GhqMlJ5TIBwcZOGAhJhqNJuux83olNCb5", 
+			Router: "HdVTvrkha6HwilElyu6do7", 
+			Sort: 1, 
 			Valid: 1, 
-			CreateTime: "Thu Jul 12 2018 01:03:28 GMT+0800 (CST)", 
-			CreatePerson: "rNQ37KPDqaqaaNFfChpzjiPnPZLl1l1cmfAFZDAeoqmPTEMI0dFQVadlfh", 
-			UpdateTime: "Thu Feb 15 2018 16:36:17 GMT+0800 (CST)", 
-			UpdatePerson: "P6fvBZg9NsQHUBdQa7MugyA1bqnKj4rR4GFLc9uIPVhmKp87h3ZzkBG4xBveHE7ZaTOrAufQExuiMU3Fjg", 
+			CreateTime: "Sat Dec 23 2017 08:57:22 GMT+0800 (CST)", 
+			CreatePerson: "Ykxc4Yqu00rUW5JJDaoS4B5L390T4Pqp2UrdBpU8tWqM6KxaalI9cxQ1yemWvKdqLl", 
+			UpdateTime: "Thu Jul 19 2018 18:45:36 GMT+0800 (CST)", 
+			UpdatePerson: "hApsbTVJ9zDv", 
 
         });
         assert(entity.Id === Id);

@@ -1,23 +1,24 @@
 'use strict';
 
 /**
- * lwVisitor
+ * lwWeather
  * autoCreate Template by LiWei
  */
 
 const Service = require('egg').Service;
+const { baseUrl, api, WebServiceKey } = require('../enums/api');
 
-module.exports = class LwVisitorService extends Service {
+module.exports = class LwWeatherService extends Service {
 
     /**
-     * create a new lw_visitor
-     * @param {Object} entity  model lw_visitor
+     * create a new lw_weather
+     * @param {Object} entity  model lw_weather
      * @return {Object} entity a model Entity
      */
     async create(entity) {
         if (typeof entity !== 'object') throw new Error('entity must be Object');
         try {
-            const result = await this.ctx.model.LwVisitor.create(entity);
+            const result = await this.ctx.model.LwWeather.create(entity);
             return result;
         } catch (err) {
             throw err;
@@ -25,14 +26,14 @@ module.exports = class LwVisitorService extends Service {
     }
 
     /**
-     * get a lw_visitor entity by Id
+     * get a lw_weather entity by Id
      * @param {String} Id guid
      * @return {Object} entity a model Entity
      */
     async getById(Id) {
-        if (!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
+        if(!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
         try {
-            const result = await this.ctx.model.LwVisitor.findOne({
+            const result = await this.ctx.model.LwWeather.findOne({
                 where: {
                     Id: Id
                 }
@@ -44,8 +45,8 @@ module.exports = class LwVisitorService extends Service {
     }
 
     /**
-     * update a lw_visitor
-     * @param {Object} entity model lw_visitor
+     * update a lw_weather
+     * @param {Object} entity model lw_weather
      * @return {Object} newEntity entity a model Entity
      */
     async edit(entity) {
@@ -53,7 +54,7 @@ module.exports = class LwVisitorService extends Service {
             throw new Error('entity must be Object');
         }
         try {
-            const newEntity = await this.ctx.model.LwVisitor.update(entity, {
+            const newEntity = await this.ctx.model.LwWeather.update(entity, {
                 where: {
                     Id: entity.Id
                 }
@@ -65,7 +66,7 @@ module.exports = class LwVisitorService extends Service {
     }
 
     /**
-     * remove a record from lw_visitor
+     * remove a record from lw_weather
      * @param {Object} entity a model Entity
      * @return {Object} affact count
      */
@@ -75,20 +76,20 @@ module.exports = class LwVisitorService extends Service {
         }
         try {
             entity.Valid = 0;
-            return await this.ctx.service.lwVisitor.edit(entity);
+            return await this.ctx.service.lwWeather.edit(entity);
         } catch (error) {
             throw error;
         }
     }
 
     /**
-     * delete a record from lw_visitor
+     * delete a record from lw_weather
      * @param {Object} entity a model Entity
      * @return {Object} affact count
      */
     async delete(entity) {
         try {
-            const result = await this.ctx.model.LwVisitor.destroy({
+            const result = await this.ctx.model.LwWeather.destroy({
                 where: {
                     Id: entity.Id
                 }
@@ -100,7 +101,7 @@ module.exports = class LwVisitorService extends Service {
     }
 
     /**
-     * search in lw_visitor
+     * search in lw_weather
      * @param {Object} pagination page 
      * @param {Object} where where
      * @param {Object} order order by  
@@ -139,7 +140,7 @@ module.exports = class LwVisitorService extends Service {
                 })
             }
 
-            let entityList = await this.ctx.model.LwVisitor.findAndCountAll(condition);
+            let entityList = await this.ctx.model.LwWeather.findAndCountAll(condition);
             return entityList;
         } catch (err) {
             throw err;
@@ -147,66 +148,61 @@ module.exports = class LwVisitorService extends Service {
     }
 
     /**
-     * get the last lw_visitor
+     * 通过城市编码获取最新城市的天气
+     * @param {number} adcode 城市编码
      */
-    async getLastOne() {
+    async getLastByAdcode(adcode) {
         try {
-            let lastone = await this.ctx.model.LwVisitor.findOne({
+            const result = await this.ctx.model.LwWeather.findOne({
                 where: {
-                    Valid: 1
-                },
-                offset: 0,
-                limit: 1,
-                order: [
-                    ['CreateTime', 'DESC']
-                ]
+                    AdCode: adcode
+                }
             });
-            return lastone;
+            return result && result.dataValues; 
         } catch (err) {
-            throw err;
+            console.log('service/lw_weather/getLastByAdcode' + err);
         }
     }
 
     /**
-     * 创建用户
-     * @param {number} userType 创建用户类型
-     * @returns {Object} entity 
+     * https://lbs.amap.com/api/webservice/guide/api/ipconfig
+     * @param {string} ip 客户端请求IP
      */
-    async createVisitor(userType) {
-        let {
-            prefixVisitor,
-            prefixRegister,
-            maxLength,
-            fillByte,
-            regexp
-        } = this.ctx.app.config.users;
-
+    async getPositionByIP(ip) {
         try {
-            let lastUser = await this.ctx.service.lwVisitor.getLastOne();
-            let newUserName = '',
-                newUserId = uuid.v4(),
-                prefix = userType === UserType.visitor ? prefixVisitor : userType === UserType.register ? prefixRegister : userType.unknow;
-            if (!lastUser || !lastUser.Id || lastUser.Id.length === 0) {
-                newUserName = prefix + fillString(1, maxLength, fillByte);
-            } else {
-                let count = Number(lastUser.Name.replace(regexp, '')) + 1;
-                newUserName = prefix + fillString(count, maxLength, fillByte);
-            }
-
-            let userEntity = {
-                Id: newUserId,
-                Name: newUserName,
-                LandTime: new Date(),
-                Valid: 1,
-                CreateTime: new Date(),
-                CreatePerson: 'sysauto'
-            };
-            let result = await this.ctx.service.lwVisitor.create(userEntity);
-            return result.dataValues || result;
+            let result = await this.ctx.service.httpclient.get({
+                baseUrl: baseUrl,
+                api: api.ip,
+                data: {
+                    key: WebServiceKey,
+                    ip: ip
+                }
+            });
+            return result;
         } catch (err) {
-            console.log('app/service/home/createVisitor' + err);
+            console.log('service/lw_weather/getPositionByIP' + err);
         }
+    }
 
+    /**
+     * https://lbs.amap.com/api/webservice/guide/api/weatherinfo
+     * @param {number} adcode 城市编码
+     */
+    async getWeatherByadcode(adcode) {
+        try {
+            let result = await this.ctx.service.httpclient.get({
+                baseUrl: baseUrl,
+                api: api.weather,
+                data: {
+                    key: WebServiceKey,
+                    city: adcode,
+                    extensions: 'base'  // 返回实况天气
+                }
+            });
+            return result;
+        } catch (err) {
+            console.log('service/lw_weather/getWeatherByadcode' + err);
+        }
     }
 
 }

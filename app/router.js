@@ -8,4 +8,5 @@ module.exports = app => {
     require('./router/game')(app);
     require('./router/test')(app);
     require('./router/help')(app);
+    require('./router/api')(app);
 };
