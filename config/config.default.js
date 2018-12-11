@@ -51,6 +51,9 @@ module.exports = appInfo => {
         regexp: /.*_/g
     }
 
+    // http请求默认超时时间
+    config.DefaultTimeOut = 10000;  
+
 
     return config;
 };
