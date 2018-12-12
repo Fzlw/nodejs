@@ -16,6 +16,7 @@ class HomeController extends Controller {
                     Name: user && user.Name ? user.Name : '',
                     Today: moment().format('YYYY年MM月DD日')
                 };
+            // 建立游客入口
             if (!UserId || UserId.length === 0) {
                 let entity = await this.ctx.service.lwVisitor.createVisitor(UserType.visitor);
                 if (!entity) {
@@ -29,6 +30,16 @@ class HomeController extends Controller {
                 };
                 // 写入navData
                 navData.Name = entity.Name;
+            }
+
+            // 同步获取我的相关信息
+            let selfData = {};
+            let selfInfo = await this.ctx.service.sysperson.getLastOne();
+            if (selfInfo) {
+                selfData = {
+                    MyName: selfInfo.Name,
+                    City: selfInfo
+                }
             }
 
             // 数据处理

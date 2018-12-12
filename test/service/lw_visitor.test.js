@@ -24,15 +24,15 @@ describe('test app/service/lw_visitor.js', () => {
 
         const entity = await ctx.service.lwVisitor.create({
             Id: Id,
-			Name: "Fu7HqhZp12rTovyrlv3iEGTWEpKWYvL2MqA3H1", 
-			Sex: "o", 
-			LandTime: "Fri Jun 29 2018 01:12:17 GMT+0800 (CST)", 
-			Position: "EnazJ1wjplg4", 
+			Name: "a0Qc9dkR", 
+			Sex: "P", 
+			LandTime: "Wed Mar 07 2018 04:49:55 GMT+0800 (CST)", 
+			Position: "iXvGgZyv48NNXM8iv2bdnAzHA5fFpwGDYkRoLzVY53R8LHvHCo5Xfnojy8jJ7Xeif0k0lDNlN", 
 			Valid: 1, 
-			CreateTime: "Mon Apr 02 2018 16:22:28 GMT+0800 (CST)", 
-			CreatePerson: "QUaCh0X6ywAMZ1RuwQXcTkDaVVbt3LEyTi7xwaLOE0Y9ktSA7", 
-			UpdateTime: "Sat Mar 03 2018 08:58:38 GMT+0800 (CST)", 
-			UpdatePerson: "SXEBelEYQQaVLES3YZgdy2hKLG8SXd68bL5R9Tqzpx09Dyebu40bcQQzis0xKDYIIacNmYDXufHw", 
+			CreateTime: "Tue Mar 06 2018 17:41:35 GMT+0800 (CST)", 
+			CreatePerson: "4X60jXwdBEWkOHfpUOffj8FbQv", 
+			UpdateTime: "Sat Jan 20 2018 01:49:19 GMT+0800 (CST)", 
+			UpdatePerson: "27T", 
 
         });
         assert(entity.Id === Id);

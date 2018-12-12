@@ -156,7 +156,12 @@ module.exports = class LwWeatherService extends Service {
             const result = await this.ctx.model.LwWeather.findOne({
                 where: {
                     AdCode: adcode
-                }
+                },
+                offset: 0,
+                limit: 1,
+                order: [
+                    ['CreateTime', 'Desc']
+                ]
             });
             return result && result.dataValues; 
         } catch (err) {

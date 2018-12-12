@@ -24,17 +24,17 @@ describe('test app/service/lw_books.js', () => {
 
         const entity = await ctx.service.lwBooks.create({
             Id: Id,
-			Name: "gQfoPBY4DuNqUAGBIaA", 
-			Pages: "CGTV9", 
-			Position: "bMcGIsXMw2uUcY3mkGnEuEJ03TG6a0WwhCpnmi70nGXOr0wjPPktDEHa3wSQTsVFUbmk3Up1JUED3mu6OUikCpwEaZUokcG", 
-			AuthorId: "3q67XeETFWmbB", 
-			BuyTime: "Mon Jan 29 2018 01:15:33 GMT+0800 (CST)", 
-			Remark: "wjRqLjZOU9Hpztf05bSLxQhCiPqoBbcw8I4DyBWuwd1bBH84LiiofUJhou0wAWtxwZbOanpq4iLBAxOL8kIpIbHTqKTHUhmu5QAtTUB9DRi6nByPKygqm4boi0Qy47FGkKwKShs7NoYaD2itjlyzbvl4vmaSfPUb9qdBq0kK1CJIFOKikOeUb6HVdRpp6Qef3JiRC9SV8EzKUjhimsyCk1jq9zXY93Wit7hmVB3C1s2tHVLFnjApe6RbuBLqVGqohpW83W442bmsfMlx8uFvEb8fmecYluQ8t0WYYoKflpDSzDpfd1ebED7dUjq5iYNqXnJRst0k0NitAXC1wDBQDhe4TANsxZLrLkfqW0LmOPAPl1cJ8aMgtft4MCGjFMaG1L8yOwKT4wW60KG13qDHRSKgUntAXEYG3LsSB0EGqvQumM", 
+			Name: "EArQmYEcSQakpdKSc5P", 
+			Pages: "fPP", 
+			Position: "zBS7ob4X6kya2vCxTUZiD15X2ylYoLq2ymZoBf3mfnlVKMYLv4bcjJJluo3Xob1EVe5zvKFcCROzBnZOTuIRY7ayjQX", 
+			AuthorId: "T", 
+			BuyTime: "Tue Dec 04 2018 00:04:03 GMT+0800 (CST)", 
+			Remark: "EmUJeddagKR2Pjtm4JWLJ67UV4ocrpCgUfkhIFHbxSrMgQcgWOS8fFoGN3dOxpJhgs4lFKXUXyoukXQIn1RxPeJY5zGOFgSxoRadzelx2j3p98XfhfusbFesqnxPnv7rNBUqarxn1FnwSmtrzTeVRyyHofGRjV2bUoQTemKJevyBz9XEiFSrcevv1vQNJld68oMHY2AjpGRdgDRXHF5cFejIS2vWQJJw38F7PYQk5cDno96i2dJ", 
 			Valid: 1, 
-			CreateTime: "Tue Jun 19 2018 07:35:33 GMT+0800 (CST)", 
-			CreatePerson: "qssKrKb", 
-			UpdateTime: "Fri Jun 08 2018 17:16:01 GMT+0800 (CST)", 
-			UpdatePerson: "Ruu8tUIcgdqbu4XDn3QXqccVH3mYJfnXmctqjVOVBs6Xv39v8V8s60igwhyVZGwpmlCC70dt4YEQUWGHBoX5ILiNJEM3ZV", 
+			CreateTime: "Fri Mar 16 2018 10:15:26 GMT+0800 (CST)", 
+			CreatePerson: "MFdmg1Ki9W0OSqAZlHimEeU6D", 
+			UpdateTime: "Tue May 15 2018 09:08:26 GMT+0800 (CST)", 
+			UpdatePerson: "88LYhfPOLMFEpTlfINZXAYjjI0t4J8ewBYSyIUSUzk", 
 
         });
         assert(entity.Id === Id);

@@ -24,19 +24,19 @@ describe('test app/service/lw_weather.js', () => {
 
         const entity = await ctx.service.lwWeather.create({
             Id: Id,
-			Province: "sTDOdDQLcolc5TQbOMXkNQchm5Y6NT", 
-			City: "VlAef3RA9ftKaaCCOHwFMlC9LEl3hL2Lwz0rMKnyZm8FZnfLS", 
-			AdCode: "xMW8", 
-			Weather: "T4YP0U", 
-			Temperature: 2, 
-			MinTemperature: 3, 
+			Province: "XPXHOpuqrWe9QFLHZXiHybSHronGsG2I02ADp56BaVYyL1IDM6maBcucrpKGar5s", 
+			City: "r9koNsPHGlZqE1lwk1jacihWO4K3", 
+			AdCode: "Gc", 
+			Weather: "ya37uJ", 
+			Temperature: 1, 
+			MinTemperature: 0, 
 			MaxTemperature: 1, 
-			WindDirection: "yJYGd", 
-			WindPower: '<=3', 
-			ReportTime: "Wed Dec 05 2018 05:47:05 GMT+0800 (CST)", 
+			WindDirection: "9g1", 
+			WindPower: "ra", 
+			ReportTime: "Thu May 31 2018 08:16:37 GMT+0800 (CST)", 
 			Valid: 1, 
-			CreateTime: "Tue Apr 17 2018 15:44:36 GMT+0800 (CST)", 
-			CreatePerson: "4I91lvZqepqZWioXvgZRMuG3YkQlkzr8TN8g6tq7BMTiiudyPX83PCYSc8pGqfUQmqo", 
+			CreateTime: "Fri Apr 13 2018 19:57:47 GMT+0800 (CST)", 
+			CreatePerson: "ub1hYiMM3kYLfkMDLovzqN0zRfE21m98qadaRskDH5b00wNcfidjLn1oK6XGWszaur7UKiBLSJa1hYLiPQ2", 
 
         });
         assert(entity.Id === Id);

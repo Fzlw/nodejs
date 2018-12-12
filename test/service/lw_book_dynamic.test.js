@@ -24,15 +24,16 @@ describe('test app/service/lw_book_dynamic.js', () => {
 
         const entity = await ctx.service.lwBookDynamic.create({
             Id: Id,
-			BookId: "yc6M", 
-			Content: "X0z2fdYlrkIGKuE43vT7FGqihDSmqPqfBsjaJeIBJREbpZQoybJN0GvGkjdGHCvjqEVplfyVjLegMIeUaMj50J25yHNO9kLEppgRJHyK4tXNiQMPZxE1KX5jEKeTCMjSq31EIinzK5DwZDXAN3fujEWL9JnSDwRxvCOHtFmfbFUeBeXn9XuYKhIU74OyYE7fqQi5SzhXG64msFIx0m2vgNtdetxOEHKiZsDhR9kX0cPLFPc9k3fgzE7KnXmF9JDpQgNIJflO3aapci0cTzFN8odA5w8VKNNCzlcs8kbY7Iz2NoLrJpN7kjhamjEWhzDMOrEOr5Zm700QHjP6O6XtGgL67tE9d7LOL2eESNI9msg4M5XYJWEydOEkxfLU6X47u3PmC4GZHHl3UFN12cGu2iKID7jKf6tViJbkyk1IOQkFPVjcOh70nzisaCB6Ql8", 
-			Remark: "RD3Ak6FVVoMw5ZsaQyeFBBnn7A9LKTq6pJeregXhRR9LTyEb", 
-			Position: "VnKTh9nYoPmZhEMlmAyHGH", 
+			BookId: "zHTWS", 
+			Content: "f2iSwpOulbkTBvWcPzYoKzktLqlx77t1QahkWhQgLAIW2ZbO1xGQLG7GDNwi6YfcpwknPtdl2YRutfyO8CFDfiXfAdkZgheLiz7F2fiMXR34Ip3FC14x5wEJ62pjMdnG7TuSK86rn5iCLoMjiUM6faNAhkFlVuOBRUgfssxuOtXA141iPiP0FEEo8RmFKXEhwoilWh3JOycWsAZo6W877bJwDIcBdo7EXWIneDuINGNXVZPs4Q", 
+			Remark: "2Yp6YXvl1zD944KlwYhQW3dhmk4d43lt3oo8v0Hd9y9wy81ASqXek2ksiRGhbl2XasO30pxaKKhTJlnSSrh5CcioE1a8a", 
+			Position: "W2PHSCwbP8jpq3Pb44XSctKwuJ46ttVziwI2J1wYyTckk0", 
+			ImgGroup: "Q2UzHTlyfNHq", 
 			Valid: 1, 
-			CreateTime: "Wed Oct 03 2018 19:04:13 GMT+0800 (CST)", 
-			CreatePerson: "ZdpNHuFKYNc2O3D6n4knVA5LarpTWuFgDNe11NdA8594ZrYe5TZ9bPFedsF5MYz79jSUniCP", 
-			UpdateTime: "Sun Apr 22 2018 19:39:49 GMT+0800 (CST)", 
-			UpdatePerson: "FHoIcXf9d5Jprt3uu0HIHpJ5b8tyRdVo", 
+			CreateTime: "Fri Feb 23 2018 14:20:21 GMT+0800 (CST)", 
+			CreatePerson: "j8qstD2k9KjE6itDtVKMeozg2uwsVyHVRuZI4Q9vPtbEbgFH9TM", 
+			UpdateTime: "Tue Jan 30 2018 01:05:13 GMT+0800 (CST)", 
+			UpdatePerson: "S3DcV0K2WVqSJ5xkAuI27MJPgN549aphhvLGv9TmHmaxQaWepuCKq6fdi8mTLLgcMKN2vuLO630Ha7Hvw", 
 
         });
         assert(entity.Id === Id);

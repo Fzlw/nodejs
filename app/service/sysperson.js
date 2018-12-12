@@ -146,4 +146,25 @@ module.exports = class SyspersonService extends Service {
         }
     }
 
+    /**
+     * 获取最新的个人信息
+     */
+    async getLastOne() {
+        try {
+            const entity = await this.ctx.model.Sysperson.findOne({
+                where: {
+                    Valid: 1
+                },
+                offset: 0,
+                limit: 1,
+                order: [
+                    ['CreateTime', 'Desc']
+                ]
+            })
+            return entity && entity.dataValues;
+        } catch (error) {
+            console.log('service/sysperson/getLastOne' + error);
+        }
+    }
+
 }

@@ -25,6 +25,18 @@ module.exports = app => {
       type: DataTypes.STRING(20),
       allowNull: true
     },
+    SinaBlog: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    BiliBili: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    GitHub: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
     Valid: {
       type: DataTypes.INTEGER(1),
       allowNull: false,

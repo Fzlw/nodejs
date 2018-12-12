@@ -25,6 +25,10 @@ module.exports = app => {
       type: DataTypes.STRING(200),
       allowNull: true
     },
+    UserAgent: {
+      type: DataTypes.STRING(2000),
+      allowNull: true
+    },
     WebBrowser: {
       type: DataTypes.STRING(100),
       allowNull: true

@@ -13,14 +13,15 @@ define([
 
         getWeather() {
             const info = this.box.find('.info'),
-                  date = this.box.find('.date'),
-                  weather = this.box.find('.weather');
+                  _date = this.box.find('.date'),
+                  _weather = this.box.find('.weather');
             this.get('/api/getweather').then(res => {
                 // 交互效果以及错误提示 TODO
                 if (res.success) {
-                    info.text(res.province + '_' + res.city);
-                    date.text(res.date);
-                    weather.text(res.temperature + ' ' + res.weather);
+                    let { province, city, date, temperature, weather } = res;
+                    info.text(province + '_' + city);
+                    _date.text(date);
+                    _weather.text(parseInt(temperature) + '℃ ' + weather);
                 }
             }).catch(err => {
                 console.log(err);

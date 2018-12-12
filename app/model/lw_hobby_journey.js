@@ -29,8 +29,16 @@ module.exports = app => {
       type: DataTypes.STRING(36),
       allowNull: true
     },
-    Background: {
+    ImgGroupId: {
       type: DataTypes.STRING(36),
+      allowNull: true
+    },
+    Describe: {
+      type: DataTypes.STRING(2000),
+      allowNull: true
+    },
+    Remark: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     Valid: {

@@ -29,6 +29,18 @@ module.exports = app => {
       type: DataTypes.DATE,
       allowNull: false
     },
+    Province: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    City: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    Introduce: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
     Position: {
       type: DataTypes.STRING(200),
       allowNull: true

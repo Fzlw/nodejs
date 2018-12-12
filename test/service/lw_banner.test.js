@@ -24,13 +24,13 @@ describe('test app/service/lw_banner.js', () => {
 
         const entity = await ctx.service.lwBanner.create({
             Id: Id,
-			GroupId: "ubEER", 
-			Remark: "E5go2eKYVIHedvPSxRjt1JQETgEw4HsxrNi0lhluKLnksUmLEie", 
+			GroupId: "1UWb8M", 
+			Remark: "z2TJbqGF1pTThaV8aTvyh1t2O2gbjvAKtXB5elwNlLA73jeu7VGZHH3OuOo96gdjFtynXLFU17GHQPasBOAGMQqqRvu", 
 			Valid: 1, 
-			CreateTime: "Wed Jan 31 2018 01:27:43 GMT+0800 (CST)", 
-			CreatePerson: "jPh5LFGYLPhXf1lj7zuaaneneTv5iQyvJoaBRkgEI1NMfu8m", 
-			UpdateTime: "Mon Jul 16 2018 08:56:29 GMT+0800 (CST)", 
-			UpdatePerson: "SNz7kSU7N7Cdkz", 
+			CreateTime: "Thu Jan 04 2018 19:46:14 GMT+0800 (CST)", 
+			CreatePerson: "7IEhpALRqOA1mOeQwuc8lVq4oHR5wllLDFCA2KT0OvOLCjgcP80ocua0k", 
+			UpdateTime: "Thu Feb 15 2018 14:11:47 GMT+0800 (CST)", 
+			UpdatePerson: "SLLS4BKWCG5DaMMLwVBWhiC1YGauUgfNFB5", 
 
         });
         assert(entity.Id === Id);
