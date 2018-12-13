@@ -152,16 +152,39 @@ module.exports = class SyspersonService extends Service {
     async getLastOne(userId) {
         try {
             const sql = `
-                select *
+                select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
                 from (
-                    select * from sysperson where Id = '${userId}' order by CreateTime desc limit 1; 
+                    select * from sysperson where Id = '${userId}' and Valid = 1 order by CreateTime desc limit 1; 
                 ) ppp
                 left join (
-                    select * from syscontactway where UserId = '${userId}' order by CreateTime desc limit 1; 
+                    select * from syscontactway where UserId = '${userId}' and Valid = 1 order by CreateTime desc limit 1; 
                 ) way ON ppp.Id = way.UserId
                 left join (
-                    select * from lw_user_hobby
-                )
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name,
+                    ho.Describe,
+                    ho.Img,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = '${userId}' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
             `
             return entity && entity.dataValues;
         } catch (error) {

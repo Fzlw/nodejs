@@ -24,17 +24,17 @@ describe('test app/service/lw_dynamic_book.js', () => {
 
         const entity = await ctx.service.lwDynamicBook.create({
             Id: Id,
-			BookId: "u45eva8zWoa", 
-			ImgGroupId: "m6", 
-			Content: "N4Vs3KdLizyMUj0tgwYbZTqmK9COW26hNWkg7YwLXZFiG8eySA61vKt9zILzhgDzjkz1csQsK1niKOFa3gxoMBl6LLMu7ngux1GvrQhISNsOIhVELpDwCphSc3akP8VcgSPHaZAYWh4o3Ryg0l7AVE1WofG2oYh1nsZbxVhcU9rWdNLzfUmMvBCtg45BP5cCvuBvN1O3Zh11RYEgmnx0Le4AG7SGAOtJANhMvovKdcQCKUjKCYcE4RFiUUmUV9wPkZOlb453DfvLeo29jquaUqQVtLV6mD0YQyp2Q7LZcp9bhRqL6aosJ8VWoNbdu6fbqDnUWHCfMwTirI2ChPXl4ZXJZiv03vjrNk7iC4lrUWwNJf0U41EypUtDhc0tdbhVSlD6ViZmzPuFl4RERc6Ix5aW0sHWZGOMmu2BAXaH82jg7S0AHBoztFqbcQZgvYDAE1ZzjcE42rrMS8gjPGs71Pz3AJLoLIQfBEooyXLsFV6EKW4VHdFmAj1wyfPakyxx7aWT2Ck2Q6ZtY8VlahwvWP0Vhr3nAbGk2d4QNXSh9LEsYrTzCBQMvKSWQA9W9hswRxIVV0PT5O3BUC3UyICCqzhdL2A68Dw60c2GV1cJ8jv5QYnvPEDyqIHXx7DsdLMSIru3VmZGJYcu4vtMVMphESEmv2ZQrJYXvymrVrlsyW8Rq0hnilx1TSr1j2glt1GbiOxmsfu9U8ympahcqKj6nmfpcwgGH9nl3r11cCWHhQkBooW5GLMOyYfqEAUprj9R1612nOWiJ2JRTVIzJoJcVs37AcNzuuOwJTuzpH2WeI1VoSdENntTLq6vI9G5QyksbbnZdzsUMJrm8d5uo7HAlNjHUxvfeA9zvd3nblHASVwK0bTjNjTwvIarSuRqH4b2VykBi1JugeCsa53oHueme1NESS", 
-			Remark: "VEse", 
-			Province: "pJ2", 
-			City: "XPVqos", 
+			BookId: "Ux7e1MBoi4k69Ox", 
+			ImgGroupId: "PJI0Yaz9h6UfhzJiz", 
+			Content: "kzOIHyjP5sTAaUjEdJchATX9lsUAPWEFEtVW5rdeFfZKbzDW2ca7tHx6ZBs1kDnase9BMIxkG9UG4kEa3n0rSFKsDcuKvODTJrzEESWpaGkt4hUy4zvuDGCtVdI12i6jiNNRu7eVPMh2QaBhkjLisbMYBXKIQkCAgvbnATmLkcsgygIwVRDGZhKoe2PQ2uU0ZSbZb3fnm9MsvPMGwbdxliucR3SvJVkm3TRnELuQZAUifwK86hvlbXLmkK97bgRQ4IRxZtBYbmIEBofdtga5S52hU6KI3isYkdFLJwRQ", 
+			Remark: "zthtnpAleF9vAmzFUz9TiYMX9cwFlDKsI4gXpeJWdYrbraLe4izxGuGNhxliK9bNdIBkEgkHuuLAX7i9poGvBw", 
+			Province: "zVWpiMZC6BSqv8orPlQLa0qG", 
+			City: "OHIhGIoqwOwsRzrLP6Ak7vN8AydLfHMh0p5Z", 
 			Valid: 1, 
-			CreateTime: "Wed Mar 14 2018 06:34:01 GMT+0800 (CST)", 
-			CreatePerson: "jYjegXPCmKEiyy4Pvld2te3KBFwSQ7LRZnCws2meHhPb8xaicIiKKZ5g", 
-			UpdateTime: "Sat May 26 2018 06:17:25 GMT+0800 (CST)", 
-			UpdatePerson: "2GiW", 
+			CreateTime: "Sun Sep 02 2018 23:48:03 GMT+0800 (CST)", 
+			CreatePerson: "Ka42USzpUq75TeVw", 
+			UpdateTime: "Fri Oct 05 2018 21:36:15 GMT+0800 (CST)", 
+			UpdatePerson: "SoSHZs3n8owLFkYdTEqkKJbjQbCegx0uURsuKy91zsOffevBhcPU0sHswUD0KGp1mQWTSHQ63CtJXQZqIfrEXB3wPEeQvhV24QkD", 
 
         });
         assert(entity.Id === Id);

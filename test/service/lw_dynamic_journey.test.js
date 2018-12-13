@@ -24,18 +24,18 @@ describe('test app/service/lw_dynamic_journey.js', () => {
 
         const entity = await ctx.service.lwDynamicJourney.create({
             Id: Id,
-			StartTime: "Sat Aug 04 2018 02:24:58 GMT+0800 (CST)", 
-			EndTime: "Thu Oct 11 2018 17:21:44 GMT+0800 (CST)", 
-			PointOfStart: "O04LYCxj3kcq2VHR6nnxpd3qfz84Er", 
-			PointOfEnd: "M3CYa9wmW9QggGdeO6zrKFYbwAZ5Zfclcguq3u1nLqhsZw8aiyFSCpWFQfFaujNSD7qZ81qPmbvqrICkXy0GmFtIOzStQE1Ij", 
-			ImgGroupId: "a", 
-			Describe: "pUVYfK8HhUGOVGtcH6xo66t3QRdbq38MTX5WtdseqRQkTDWwG7delmghK6p0wUmfPmo93OGXTIM8Chn8jCdSiGQCnOFD66chVHL2br1ocJIzhQJgHvx68x6y81CD2pxAqTG0zGHhiEQsLQi5mZ9A52tcNAGNZ6VSa9pfaGsSubBNcti1Tq9nrI8m8HToiCThEDvv6mSFKzAQsCcNqOTTX0yyTm2nx4MzA9OIW3bTHhzhVAsZbVCMsdRn6fwUED2ViqhuzZstGnR9ijuJ7qxtwwlEMgVmlpauKlhTQ6yvyPG7T97u4kVtQ4KrTuTyj4ilh2ccGLT00FOcjK5Dg1NfxCUBsgUc94FpVlQIhS7XKQFSWlBKLvhFdNrJEUSBWOjl2img81eHC2Z50cGnALzaGqZm7TyTR4ezeFojiKtKRLGhJ3zWPLmeN3vId7QkdCwodvQAYG6nSHnukCZH9vrahPQ2Q18dmPw6FJYq9MxUbcMn29gYjtNViII1ZVxSY86vY4fZJv3R3O2D4RQ9km4kKEebE5zkEsRlLffSKGAe9u4oin8SDuMvBYwgBwQjckVdg8QM0m9ctclIIjAVo0BgJLdAVmeuw8ZU8pXIKpXatHYzNjpMvRQOy5sgpFpx8WRf5vFetrTSGHskyR7XF7GQY4VrdCWnhV47WuSM7QgihRCbQHz4i5h9Rfp8XPewfbmaaZSBnSMy69hKOd3rCS2oQmNn8gsiey9UxRK9mBbgrzh5btUxJZCHsfzQy2p0Lb0cYrDFDfiOpMu2RxMntaUFz8b3iriF8xDjWpxZaSKBIVeCSxmiE3wcbzbccmBsg9yNsDUNQWFK29uYyhYFHm4JyaGkBJ0JEVywOqAveVclzUKhbet", 
-			Remark: "MfnlqPXWCdmD0kgHbBFKMAyFPQVHNZETrHHWXU0M5La3Ec", 
+			StartTime: "Wed Feb 14 2018 09:06:53 GMT+0800 (CST)", 
+			EndTime: "Thu Sep 27 2018 19:22:06 GMT+0800 (CST)", 
+			PointOfStart: "IARmfGoyGV9mQ5nUQbkIIHISMKwhx7NO4EJAUriMFLtidLK15iE6VN19lM6vXIHuJznbxtlurHPwQN0zWe4", 
+			PointOfEnd: "ngmqWU4jjRPU49sv4ndPmZvCNZG1xObB8NTLfz2rGlaX9APj8LaUa0lX5Gyee4uh2YXIhE95kews8q1pKHg7R16yNSMm2AptSaYn", 
+			ImgGroupId: "5DL0zxKuAIvRf6", 
+			Describe: "pgjEwmreJEAQ8MXbc88d86WQnFZ01X58j4TFN0QpRDhQUSwYt4GSTekfXiiq9b0vZdWnZ36nZYFwVuWsLF5R0Jw860FGuM8EwfpS4CAlVEGtZRqGbBODvlc5qAM0m22Cqj7Q4OjDQGeW60S86mZSm3GgwY6jWosqndtW7oRoddDAKPyVu29rvHx1uV9234ulUXzsriLH35lGHdkrCZtQPrrf6gIHT0TuMDKXrpUZuyksQBdGKJf4NLPf9BxUdvSAYEvpbPtBA5K9shZTDhNJqQtUPC1E4wgEFILI7kTLrOZyf31qGa6aHTRZWAMXCpA9ds4wMBmsz3KzYljrUtIt0Twq990vBBouZjkZoIVSgAsOLqdZrEHGtSXZP7UrKDU6ECzSl6Nbalt1PhL4aBIIhDBmgvXUYUzKLmM7hqnNce6wiB7v5QqYYLv1knBsCpBt425ZEg0K07MAmh0evkGcnw7kUwsL51yahtUygSYnGK5tnNV1FnFaS6mX4RjpzFPTVR0EcJ1tloi2yNgK0lPCAyfsm6x1HYgfmQ78UXkUNC9Rue2xX9ZaBuQSwWuY7iVh8OI8AudZd1eGZTypHL7WR2y17HGrSehefkfuODYpLYeaiyT4YWQ6A9clRDeP099OdQdZo52d", 
+			Remark: "JzP", 
 			Valid: 1, 
-			CreateTime: "Mon Oct 01 2018 16:14:06 GMT+0800 (CST)", 
-			CreatePerson: "RKx", 
-			UpdateTime: "Thu Nov 29 2018 06:07:47 GMT+0800 (CST)", 
-			UpdatePerson: "FdG52PeqoKnMgomkmW7snp8iNMpWqhOmfbIKFUIf5myQE14Oy", 
+			CreateTime: "Thu Jan 04 2018 17:23:31 GMT+0800 (CST)", 
+			CreatePerson: "AfV4c", 
+			UpdateTime: "Sat Dec 08 2018 16:15:48 GMT+0800 (CST)", 
+			UpdatePerson: "LZvzP3OUlCFLQCUVsK5kHJ9jXKMfE32hCnrDBTBERWdg82hH6yEvU8ZyeBFtmkSjpu", 
 
         });
         assert(entity.Id === Id);

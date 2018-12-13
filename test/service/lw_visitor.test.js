@@ -24,18 +24,18 @@ describe('test app/service/lw_visitor.js', () => {
 
         const entity = await ctx.service.lwVisitor.create({
             Id: Id,
-			UserTypeId: "3qAa", 
-			Name: "V9VqeWkqbyG9Pp3qXSY2m1RJI9UnnJUVzRjkm5AR2FjykcfsFyXR8bEVruPZuC1X", 
-			Mobile: "1e7pP", 
-			Sex: "4", 
-			Province: "Kd6IqD93AGyuAL0LRcmAefGGwo5m5Xns88MHwmpnHyKL9AAmIJMKzuwiQSVFJRu", 
-			City: "ATRKvOJyNCHK3HQeb9avz", 
-			LandTime: "Wed Oct 10 2018 09:13:06 GMT+0800 (CST)", 
+			UserTypeId: "Ctzrqdy7COE0Cm", 
+			Name: "6zOsWKfgZHA2o14cv6ogc0bvzey773DslBHxGnE9agN6NYRWVSnO37hCyOgZbipMtJc", 
+			Mobile: "4SrSt", 
+			Sex: "l", 
+			Province: "CDB3j1Ve88ekHDoUOnd0qSO1rHSbG7x8F0NtBMs76R5c4JEKW", 
+			City: "WYNmKj9nV5ZbNjMrDmli8jnWMMJhEbimChK3XLa0y", 
+			LandTime: "Tue Mar 27 2018 18:28:42 GMT+0800 (CST)", 
 			Valid: 1, 
-			CreateTime: "Thu Sep 27 2018 09:01:56 GMT+0800 (CST)", 
-			CreatePerson: "lv", 
-			UpdateTime: "Sun Feb 25 2018 03:49:07 GMT+0800 (CST)", 
-			UpdatePerson: "2sv5lqs9aBGNnxlEbL8cbGb7SDZ64AiucA", 
+			CreateTime: "Thu Apr 26 2018 09:00:23 GMT+0800 (CST)", 
+			CreatePerson: "RfkSvpc", 
+			UpdateTime: "Fri Feb 02 2018 01:30:00 GMT+0800 (CST)", 
+			UpdatePerson: "16dqJDMLiFO6Tt8HRZbt3REmoL99ZE26vkPCc1JpHadpGzfP3HUpj8", 
 
         });
         assert(entity.Id === Id);

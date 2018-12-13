@@ -24,17 +24,17 @@ describe('test app/service/lw_comment.js', () => {
 
         const entity = await ctx.service.lwComment.create({
             Id: Id,
-			DynamicId: "G1HeIoosEV9UtG4C", 
-			Comment: "TvWyaiMtji6WihOeig83FoLmQZo7btCHEqEt0RVMVFlAjNiBSIv9AFLNq2C84FgO4zQrhxaAYrnqzsZx05Fwptz5gPO9YtXGO25n0Ln1myMq038RR2Pfa1HJdgvr17VHJnMmW56w7ExBNDRPxg13mpfzmJ22VK2OhJtFrfYj97FOMHH8h0w1JuLAia2X4QBp7R6YsaWu4xVgm4wqNcqFgHPfFfzV0nVZ8Vx7Kx0N88bRFvteRAtYlvEIIDRQ7SRjzuXRKVmm1x9GDgzf4k3iHyfAMxTm1bGd5AmgDV9yGnM5Wd8pxZc8HbOFgCxXeE4LDOWXQKJf1ycfml7ONf29FSgQumcO2LTskipg8SbxQHH3RJzcHufDt7sUADzMT6czmXeCqRbQEJywQIqNyQJhLRJllBTgiWYSRPCoQGETbRVpobpZZE9A8OUVltJ4lFHSgss3rRDkGlXMLTZig1RMpuMpXPOYcGvLokzd5ihhUajsBnki0yp6jAT5ApyRShqagTJJad1jwtoRprvBsbRiUjtk7AYJAESzs1jSXmaIdC0Uby0Lv3zbXU6tg2dKo1HqzTCwEQ8AB58CyHc0SOz3DF3j43MLOIfqwb0C10aJT713SUlSOtv8mhOv8us1PriQuxIyMkjMlS5XwuYYl7tMLHTEXXpnQHY1BcTVJFlF1TmjLdlbgiznx79zUtczGjeYuNwIOC8q168O7apAOso0XlgRwdHmlhbc3LnLoNfxYDk26dnUuWWv9cUDc4Z5ZaaPXXiXAsuYokZGHBUv7pMyO9YXEKJ0Gx02PaXpmU6Oox8J4mE6WAgFfbdzXsBqttgy837eptCcOZr8JxssgJSa2Ueb5qjz", 
-			VisitorId: "WMqDNXJZm2A3v", 
-			Province: "kF4dvLqym6bgtK81rvhfyLnH3D", 
-			City: "2i0iQNxsjnhErKiQko5L3OShhhcbaSaHd5R2x5HpL9ef94i4OoJGLiQ2rmLrYYiNp7771KX1WQRYl0nAZc", 
+			DynamicId: "ewedRPsmU", 
+			Comment: "TCiCY0N5QOk2mUk9Ny2vUjmAxDo2dFzPeudBRPFaUxI7rFNZGE0iosJibABktIs8GWr9gxnb9L5LvXhCOPezg8tW63KSY2AWOfRKxv1cwAgfE4Z3H5WpC4GFKOSAtFZUS18TAaHsJOTV6MKR8GnEVZtG0POEt7rcM0tBHIaa11qMkuKzEAq7ihqaz1Qh6mAW8iLTFsct6SAblauI9cff0r5FbTRJti3HT3z00fsUfsmNRU9oF7s1CGEJ3ZBrmUATqAcD0KBhcJQCuCpV6oGcOsAzZOi6DlIRz6mhy9VMGFEE3ZRfGX7KMyzkNu4HSOARdBgOB4zBjhDhCQRcfN4oFX1DyLG64TFMlKBprzHAbbPNLzv5CtYQYjzyVWIUTd5QLGMmdaVqwExxMDzjeyzXqxsS2LRGXxRJk44gO4qiJYRdcvn4NyHLzGi7bNHT4y5zOBCxVwZXo45DunlJS2Ofyae0wEzOVI4yXDVdGoc3uzyDarQBbnRTuSOqxcOuiuz0IK831vntBQYC0iNAH7MDu4eXQxMCNfkohisVe3RXxZywuItxgi7grdxFTiAWN9ytiqeDE3d5Vm2DhbjkUimnYJO7Iy2l9a8wohKjEZSJPLUWhjTlP1vUsXynfsalLJy7twGMP2szQivD9aVuxTFXgXRjZafZ8batLJ3rgksdiKeTxuABKr6dM7TNYsykgICdjvLGF6HgvSx7zK5rBGfm6YYSNzJEJAT3tIfcN4OprWylCrd3yULvRZ0fmFKIyhqPDC63XSv3agsGCt9VvDbsNo1TvsutRPDsuxbDcq3QysI5h5B8A4XiE4xc6rM", 
+			VisitorId: "nN", 
+			Province: "qg", 
+			City: "CfBrZhqrujRnkbYRoGBUe", 
 			Approval: 1, 
 			Valid: 1, 
-			CreateTime: "Fri Sep 07 2018 20:01:28 GMT+0800 (CST)", 
-			CreatePerson: "k3Sddkixn9zwl7jiTMqAL0NN8IaYvUut1Po2GzShFEirP0WOmHhUf", 
-			UpdateTime: "Thu Jan 18 2018 12:39:47 GMT+0800 (CST)", 
-			UpdatePerson: "pwkfqMCKI1YZoQDytBM0h9j6TywkqvB7rU5TiHyNVEgwSHY6p021HpvEJF", 
+			CreateTime: "Wed Apr 18 2018 19:59:58 GMT+0800 (CST)", 
+			CreatePerson: "4QYJ8dbzKJtdYmH5Hr3Z0xx8VSxdSkGjke0g", 
+			UpdateTime: "Thu Jan 11 2018 17:04:18 GMT+0800 (CST)", 
+			UpdatePerson: "KDSih8jegAYzeW1t8AwkTjTOqiyDjTh5cvnzaGuWSaGWp", 
 
         });
         assert(entity.Id === Id);

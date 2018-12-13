@@ -24,16 +24,19 @@ describe('test app/service/lw_visitor_logs.js', () => {
 
         const entity = await ctx.service.lwVisitorLogs.create({
             Id: Id,
-			UserId: "I5GH3DirL0vWUv", 
-			IP: "meSuNJ2Td8vp", 
-			LandTime: "Thu Mar 22 2018 16:04:42 GMT+0800 (CST)", 
-			Province: "mO2NlEldFzhqK0jgpM8zQ0KiS3MjFqz7whnyo2CHQmHmkPcprjLMw0mXAeB5ZNari7glCGNcuNi5UCuHGxaKjKOQLEAyF5D", 
-			City: "YkYMY8MwYe4GZqzxA8Kgm8ZeulTjtKUENJTOu5BVtRapTgRDUYTzcF3EqPeor", 
-			UserAgent: "iMBbgUHYgenM0xeUQ3OYIjZhkvqAvggFmVh4tppMnF9GHspCHQdOPE0TViTTU8CUmpjkXWGHYQbgGeUazLLZJ1rtUb7gDSa9DbVOYjiKBZ5aDFbz4o44D6xOHAzHelqk3nKjrbfIjH4ARiFMZgi31H0jMF9xiaefiCXE3asPG93Ca1gfnKJ0iyLuYPrUwqLOU657N5shaROtd0UutmRlXvcf75tzFnPwu2X8j5iH6YEG3UgC7yL57dXGIb6Sj4N9ER6SFZTdwOvg8bWJxMjZ0RgjEQ1ZyYC7BS3g3oaCkbt9o8NBhX9UfWByRtlX9F4Wz8KJbKOO4EJ1E8KHeOBo", 
-			WebBrowser: "iMHUlFq84PI0yGBCeS4JNYd", 
-			WebBrowserVersion: "GGp8uSP2n", 
+			UserId: "05YVs", 
+			IP: "hPwT2nphGuoGJ4", 
+			LandTime: "Wed Apr 25 2018 12:00:18 GMT+0800 (CST)", 
+			Province: "AAIWwFk5esu5a5jK6ubhJJfZTMqxLzDLxQ6c7xNbPoZRW4Yjr7ERhMS6N2IT448vKflr7pjbms8cEhH0l", 
+			City: "1TUpIVsu7qWJTF4gaMZ6yFuFQXc0vAXaPBUDCvCdQyt1vdvNQ5wwxf54Z7CadZJL7tgwyt", 
+			UserAgent: "tWJadBrN1QaqwP2zloaamuQban13EEoE6rIHV58C12bUsgl5sMU1qyN0jEzIjhrJT1K1qrr7siNcWdHj21GCLxdE3pwpMgOaeAN9c9EmpJeQRHcNLwqOxFyVKokoFoS5VMjj8XZnikdfQqQpdk0l12NHZsbZZG0EjdVDbp0PQFlyOkuNNwj2CHQxDqjgmmFebAuKgwmAtlOyhhPHDcuHAwcqOWDiu3ZoJJR59ApwCmwPpqQ6YDqqQ7FSI3OvD1b1wG3uoGoFMeOUvnqD421myDF7HNHEorm2dzokJ5DjKRbAKLWkdBNNS5RzF6XyjdpBJBg9Y81r2ZxhFERo3MMxq0vtmHg1yBRRjscfwOvOs980I3CZsw91EnZLN17DijL6YiKuL2CFQJrX3Is6dtEWj7Bu7p9K6UdXsTzcanDvPX9raldr0iZ7zOgjiiF4yZ4XvkPFcAMGoWEFB9Cs0LBIrpw2YSx90QxnZ7vzLB7XLHfFVJlIg9rbtmkNO3NL1txXmYLqLpQ8LNZC8783wIwu58j1z1ctIforZXphX46FV2wx7p5bG48so99Mn1exsypb5hoo7hTTOzBvWPQmbvWfUp3Fto8JLGCHcGsbM20ZWmWidCF2w5Y3OrHvNVSElcrXsY6PluKYuZDz9vXTyPmOx0hcvGemWurkgn19l0", 
+			WebBrowser: "sfSJ6nBN3PVwPVnoea6UdUtgeB7nICDHZAB", 
+			WebBrowserVersion: "MYs8pj", 
 			Valid: 1, 
-			CreateTime: "Tue Dec 04 2018 10:05:22 GMT+0800 (CST)", 
+			CreateTime: "Mon Oct 08 2018 00:36:16 GMT+0800 (CST)", 
+			CreatePerson: "UmRD", 
+			UpdateTime: "Tue Oct 09 2018 18:49:00 GMT+0800 (CST)", 
+			UpdatePerson: "AOCa7R0fhnIi6sj3E764JoADq3cTpWodaOy1tcg6BMuy2wdccUUxAvnh4IQS5N3rv", 
 
         });
         assert(entity.Id === Id);
@@ -52,7 +55,7 @@ describe('test app/service/lw_visitor_logs.js', () => {
         const oldEntity = await ctx.service.lwVisitorLogs.getById(Id);
         assert(oldEntity.Id === Id);
 
-        oldEntity. = 'anto-update value';
+        oldEntity.CreatePerson = 'anto-update value';
         const newEntity = await ctx.service.lwVisitorLogs.edit(oldEntity);
         assert(newEntity[0] === 1);
     })

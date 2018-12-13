@@ -24,18 +24,18 @@ describe('test app/service/syscontactway.js', () => {
 
         const entity = await ctx.service.syscontactway.create({
             Id: Id,
-			UserId: "z6uS0w0P", 
-			QQ: "NEY", 
-			Email: "kUZFLXxDV0MuLt3q7HSwJY4znw4IXh0PXSQDYgEZzRPK8hvqovAHJNT8bs", 
-			WeChat: "0pX2uRKQL", 
-			SinaBlog: "l6rb8gsTKf0X5PEn1md6w8pnyfrVXfDfRXVr47dF605xuJMA9XpoL6hADUF6dJEB6CeCTxf0w3TeBXoSxJibn", 
-			BiliBili: "Vef1Ame7zJcguRpQuRHubZZutBLdPjoS0Eo9sT", 
-			GitHub: "34PABwdSdfyOKVs6jr5zI0zldjXWyoU4byGyhALrTx9gi3Sip9XgNcNZHF0Rs04504EjIDDlqPpLH", 
+			UserId: "ShWl9a7nLqDba", 
+			QQ: "L2dzoZ1s", 
+			Email: "ADKuAdHyI9HjkZGTJyh", 
+			WeChat: "dD", 
+			SinaBlog: "VdcBP9mb9DDJS5MPwB3DsNSy1pr3BxXFgSAJORYrYtYDqiDnDUh5Q2Rxbxi5NP4BTYzH2PYYSDDCdDk21dULQWqdgFmOZ5AFtL", 
+			BiliBili: "XGQqhzNX8usyEYe7ZL1EC8y8WnAqeRPnS5rKpD9xnsH0F1N77Zze96BfP25JHnTwNm1OgvMWOaR8frNR", 
+			GitHub: "NFjIrzgD6gKXAlY47NnltAN5poqDmOguDpJiTBLjToMfNOuHmJU516evk3tJbVa6iHmZVhN59MBZrNvhv5U2ARoo5", 
 			Valid: 1, 
-			CreateTime: "Wed Jul 25 2018 06:20:48 GMT+0800 (CST)", 
-			CreatePerson: "zkzbbVw3JvAs8g11cf2IegMnOeo9eFhVw05XJjKQ0VbOU5ZdX6", 
-			UpdateTime: "Sat Oct 06 2018 12:13:21 GMT+0800 (CST)", 
-			UpdatePerson: "ZcsOADPqrjHYXNTZMHvhk6h", 
+			CreateTime: "Mon Nov 05 2018 21:55:18 GMT+0800 (CST)", 
+			CreatePerson: "M0FepzKki7PFj3cLBMiyvUb0K3Rv2JBZBOr0fAeqjn2OLrtjzgjzOM", 
+			UpdateTime: "Wed Jul 18 2018 13:28:44 GMT+0800 (CST)", 
+			UpdatePerson: "i40VbutRZkXfjRUWgAUmjgF2pgCsghvvE", 
 
         });
         assert(entity.Id === Id);

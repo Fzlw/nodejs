@@ -53,6 +53,20 @@ module.exports = app => {
     CreateTime: {
       type: DataTypes.DATE,
       allowNull: false
+    },
+    CreatePerson: {
+      type: DataTypes.STRING(200),
+      allowNull: false,
+      defaultValue: 'system'
+    },
+    UpdateTime: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    UpdatePerson: {
+      type: DataTypes.STRING(200),
+      allowNull: true,
+      defaultValue: 'system'
     }
   }, {
     tableName: 'lw_visitor_logs',

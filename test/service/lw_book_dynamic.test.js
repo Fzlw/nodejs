@@ -24,16 +24,16 @@ describe('test app/service/lw_book_dynamic.js', () => {
 
         const entity = await ctx.service.lwBookDynamic.create({
             Id: Id,
-			BookId: "vd", 
-			Content: "aPYqYlA9xdtnxrgw6pZ2yX8hSuKLgTQdXegPxXunTV7AbVGeuQTnm3m81KHZai0mWWuENbiPdEOyEavuk2ipfS9CrXFOrOHY9Vc57jaWwZZ6JWJmB2tks7p0dPO0RBYvwvSw1WNp1czGnhmQnOfQywnQ1cQHRgnGlWwydr54UWXzXIt4Nut6io3Ua0VVq15tQYnwyp9tSgxLzgg07m5GWngMKJGMm6DxT19LNnM1sxz93eSAxjPGZUWDReZWLSqPM7p71bDeUNs4c1Jbgj3ANpbxefA3ccpaVVVW8krO3KKW7xm6n0jUdF3tT0SP2Gi9F6NY7xFKRF36VIw6eyLjNFTJNtTenSzDVo8McnHNAAaQGHoXlcpuNfvittuhqyFrIbhJNHFM2ev76xNSUFvAmO9FhP9NHTG0sjCtJcxyrgN523LhWOV5vdb2XQNmzhYMVT0du7DZs2GgZ0gOucyouYLEyemojvTnOEu1Zv6ee2gBjTvcAacumaWn7hE47fKq8C6miI91V1YM1kMHUMjQt65HGmKpvwQb1VdikK5QlzAoTd5NWc8Al1e1UXytKabOMRpCSCRgC3bSQ8w0REuoqO4ttJ5LqKzXFi4K4LJn40fhpa3CQfq2oKSJ2R7BC9fsvt9QV2KohQmTsXKYx2LFaUK10dKgUgu29M3Jo8SV0MDkCJbi2WT5yuJjhyXTCWz", 
-			Remark: "tFCx2ztEsgtQuv8VBnJ5c6BM8nEbmtZnTfH50Fh2MC8Uv0Vy3BW5EGwK56NhQvvWZ7X5G78Mbs", 
-			Position: "z7BLBl", 
-			ImgGroup: "1", 
+			BookId: "QPbl4eFY7DGdsHs", 
+			Content: "JK6yfspgTIiMf6FYTVYMg7g9HTLXVb6heSYVJ3nFADNWMEAvTJEnUs1wWIwaYYOvBZ3VVsh9CIleAMPDsZJ6SvsqhVKjsKVawTPKCSRDUlcgJqNv90ba3sMpoDwaUyV8J165Wf2YAyW6HGTCN1uAql8dXieD71zmzPngF7wniISCPizOVXu8nxMgc30odjhBiqmK8iWjfnN87sLtddje09BFaD2ULFwjd9SxdVKbV2iITYha47mMiFTynHD2GEl8mD1xHP1xLfvWAkbjV7J6oMs1xkih1ge9xXRTPLNba8iqSIi8tQ0TdPVOtdoNKqbDWXPICgaBPl6OqLUfvCNqvYlj1yhffhLVxJTm7DzXMJJ1r3pUOvW4n4XBZHj77V74RpMm54KkCn0x68lN9YQH3BC061sajqCFIZSspjcKUPiuEoMf8NigV6R04ygtEpK4fPZ7KrcqhzhmjN3Yq70gKMASoUPX8bVKlXHKut6dGSkmLXKWa957d2O1QhDPtFLnNIIb2zymDRjzuYPcCmKC2ajkvKRhJRKlxNjKUHEbAcwpvS7Ew5LtLuvOvWiaZXWY40FBMQhG9WoQKL9llbJGTQ07NcaHTTn9VyLHDDe3cn2EqCYLJSUkWl7RbEvP5zkVEW1h7JaKZnMSiF81Y4br9K03QsHuIMvOZ2yBtukmRMs7Ca9eKxN9uGVEPhLVGSVUdWe3FTfWEUyUryX8DqPJxS191qOfSQwZWiPtUnsveKz8xuWR9exDAMvJT8UWKtZjCRhsMmvsqEw5I9tRoGs5cexLMJQGfqKoYfIgJUzFXbcRb6E0ZmjIJTLJSmsRRuQdy6bnYdqLxCJrr7LEZkVYVrAkRUMWLIafpGnUfBTaAuIgCG96d4t1X6MXXCex5qAZDdOcCEaWPBPsgEVSByRl6Un1GGkq33ic9VJaif2", 
+			Remark: "qFt8PXyLXVEu600AgQ2IygsPf6N0", 
+			Position: "9oRiaC4rlBiloguWMQt9I11kaBH2oAy0oj9", 
+			ImgGroup: "JjMj5Vs7T5emt", 
 			Valid: 1, 
-			CreateTime: "Fri Jun 01 2018 23:22:01 GMT+0800 (CST)", 
-			CreatePerson: "goWkRxWLCMOCyR1V3zj4EPlQG5roOXVy7Naa3BWRMFVPz", 
-			UpdateTime: "Tue Nov 06 2018 20:26:19 GMT+0800 (CST)", 
-			UpdatePerson: "xKORHbJVZwFFeSW63hJ8O6Bq7yI7UOi4hCEXLIsHQZXh2t9jZpPy0s8yyV6sdAFhhUyTeykg3G7qdY1ToMN0xiC3Ky83hMnxYZ", 
+			CreateTime: "Sat Oct 13 2018 11:41:53 GMT+0800 (CST)", 
+			CreatePerson: "TVqcy5vCwYhkf4Idjv3EJNVT6wh6X2b04Ggdz47iAc87W4CpJ1Ril5kmRrduTztmzP3CEYWAffWWJJOBp85t9k8TNdQNCzy2lzpb", 
+			UpdateTime: "Thu Jan 25 2018 21:50:05 GMT+0800 (CST)", 
+			UpdatePerson: "foOQp6kUqBVY2yNWFk3VYmdOArKZYENuB3nMzQLR0pNI2G01f0Dgp9f2Nb6h8qUTCaM", 
 
         });
         assert(entity.Id === Id);

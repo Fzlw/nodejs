@@ -24,13 +24,13 @@ describe('test app/service/lw_user_hobby.js', () => {
 
         const entity = await ctx.service.lwUserHobby.create({
             Id: Id,
-			UserId: "lz", 
-			HobbyId: "j", 
+			UserId: "hZguYcJLE", 
+			HobbyId: "fgSx4IuDIsJrt3YaQk", 
 			Valid: 1, 
-			CreateTime: "Wed Jul 18 2018 02:58:55 GMT+0800 (CST)", 
-			CreatePerson: "SesAVfH9pRvQRiNuHBgZZ0AQLte4MBxPcrxPmhkyo922hYN0Kx6SGHrJGpE7Z9u2zsG7lSTmE", 
-			UpdateTime: "Thu Nov 22 2018 02:46:13 GMT+0800 (CST)", 
-			UpdatePerson: "exYhqFHstEypMQIbe9jaVkcq7lKP7rGQvbLcirGC330qdYoTxasRedCwTO2DTYY5PimMUS1YiFpe84JOOxomL3lCBdFwiQju", 
+			CreateTime: "Tue Dec 19 2017 18:47:48 GMT+0800 (CST)", 
+			CreatePerson: "uaIzvHDVK7TZ6A89tV0SqxEP3gntV", 
+			UpdateTime: "Tue Jun 05 2018 07:26:14 GMT+0800 (CST)", 
+			UpdatePerson: "dNjHA9pAiDfmRrlHSmTO15XvmZ0RB5FvVnlG3qM", 
 
         });
         assert(entity.Id === Id);

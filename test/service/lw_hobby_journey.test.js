@@ -24,19 +24,19 @@ describe('test app/service/lw_hobby_journey.js', () => {
 
         const entity = await ctx.service.lwHobbyJourney.create({
             Id: Id,
-			StartTime: "Thu May 10 2018 18:29:31 GMT+0800 (CST)", 
-			EndTime: "Mon Nov 05 2018 02:21:40 GMT+0800 (CST)", 
-			PointOfStart: "qASgrqZdKdzW3XOulVXxSqNufHouyckRzoPGhM", 
-			PointOfEnd: "8wzLXrZjI1JB", 
-			JourneyId: "s", 
-			ImgGroupId: "76RhxJVEIE2wedE2dX", 
-			Describe: "C39vympbHVeLwPJEPYIskPLZI5xE011I74FoRVgIW30z07ipwGLNq4dcVk9HzBo1eb4uM7m89aJusNBvIJSfCADNb2VNoA14H4bv6miizDHC4pBTAt7H1AocgrQHKyVe0Hbz0oGJsxrs1L29ULkqID0pPHUDgORLnCtDGH9WnLnQZFuFhSxyieGklDm5dREoyokFDpVQoI5a8WehZeUXhnCZw7Ibtjsn2UA8znaXABT3Tpw6tO6rtqNXvJF40HP9oGeLOflkmCOoGlgZNJO5nBpipvavBqYQ3ztaeVoNzRKrMfc8f05XQToHdsTrXiiZcL01WkCxIS9j7nPgnG8shkqhYIlClYAJCmMbA36FFJsD6CUODJKhofuGvoywbWYhOrkQetUGARHkVRJYNSS6qQNleNuD9ymUpjuYtaH9ZDsucavch2zjEGApOEcY33JMbCXoJdx9uHKwXr5PVAoNSgKCp6oh1ZQJL4UL0QiQrFJzukB0J4EogrG7xuhV2u2CoKL13UJLGSDdATgec4vSzvRNpArkkUDgV7nZlQsd1EgKS9gVadbCLZMyTL2Y5d9HaMJT9wb3UsWhYnHyJIFtVp6bnW7LfTzoSTq5YhxuTzHWnBkkgyVn8pvQncg6kB6w4V1TbhdWaM41W2cdc1wxHQH8dMeOsOJFnPQZFLbV0IaGWwqHaeTW6LJnDLBNAHjSKnZwmzLQVx5gAfghLk6FbTpidD9xpqlIm3lQc9iVNRXw9PNjmclIy", 
-			Remark: "sOAmFl9OxIasMuAXV", 
+			StartTime: "Tue Mar 27 2018 20:24:15 GMT+0800 (CST)", 
+			EndTime: "Tue Oct 30 2018 11:15:14 GMT+0800 (CST)", 
+			PointOfStart: "Tzvw9", 
+			PointOfEnd: "aFZ4daqtt0f70selkhI1jCbhoP10ZVoT5LNfStdrV36I3oO0cqcfCVTcj0xgacYSWepMmheu8u6DY0FYWephRvQ5X7wM", 
+			JourneyId: "24RV4ddBuM51Yw8pV", 
+			ImgGroupId: "5VtHuCFHH", 
+			Describe: "moeri8SxD3EASpt2ngReFFRh1bry2JweXOzxO2oxvrCusbGubSYsuaMzCisp76r3upLHvlli4o00yD7hQ4zbFxcEy4XiwwcFYU05JttsN5j4fqYEV7coS1R7ckdgfMfcSTqzZgeEgYpqTH5Nz94vozdtEutnEedi6jYwoh6v44rABuR4pcS6BDCAUEeVQzhzMRP8tcX02xMYtWxm9AT", 
+			Remark: "JzULos564LBJ30ajs1WKK6gCv", 
 			Valid: 1, 
-			CreateTime: "Tue Aug 07 2018 03:06:16 GMT+0800 (CST)", 
-			CreatePerson: "BrEAJGNOFPQHKSba6cabE1pN0Ow", 
-			UpdateTime: "Fri Aug 17 2018 00:38:27 GMT+0800 (CST)", 
-			UpdatePerson: "T7xdDxMdZtom2pHSXhELyWSnsofwLqYVZAYbRfeXQZ2KSvqJZZgsyAFIP2gJlDMgOb29dSe5Su9M10Ww", 
+			CreateTime: "Sun Aug 19 2018 06:45:38 GMT+0800 (CST)", 
+			CreatePerson: "lCNbbM68btIwkUkDaCdG78xLm8gI", 
+			UpdateTime: "Fri Feb 16 2018 22:38:48 GMT+0800 (CST)", 
+			UpdatePerson: "VlBVTdRiAUDvxjbZlVVk6udd7U2Pqd1vdsJSBY9g6MfPf0Ux3Wt7D9Qh21I7", 
 
         });
         assert(entity.Id === Id);
