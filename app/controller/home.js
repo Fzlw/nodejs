@@ -21,6 +21,8 @@ class HomeController extends Controller {
                     this.ctx.redirect('/error/404');
                     return;
                 }
+                // 校正用户名数据格式
+                entity.Name = entity.Name.replace(/{|}/g, '');
                 // 保存用户状态
                 this.ctx.session.user = {
                     Id: entity.Id,

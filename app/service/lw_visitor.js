@@ -190,10 +190,11 @@ module.exports = class LwVisitorService extends Service {
             if (!lastUser || !lastUser.Id || lastUser.Id.length === 0) {
                 newUserName = fillString(1, userTypeInfo.MaxLen, userTypeInfo.FillByte);
             } else {
-                let count = Number(lastUser.Name.replace(/.*_/g, '')) + 1;
+                // 只匹配数字部分
+                let count = Number(lastUser.Name.match(/.*{\D*(\d+)\D*}.*/)[1]) + 1;
                 newUserName = fillString(count, userTypeInfo.MaxLen, userTypeInfo.FillByte);
             }
-            newUserName = prefix + newUserName + suffix;
+            newUserName = prefix + '{' + newUserName + '}' + suffix;
 
             let userEntity = {
                 Id: newUserId,
