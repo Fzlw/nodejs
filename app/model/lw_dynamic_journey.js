@@ -3,42 +3,38 @@
 module.exports = app => {
   const DataTypes = app.Sequelize;
 
-  const Model = app.model.define('lw_journey_process', {
+  const Model = app.model.define('lw_dynamic_journey', {
     Id: {
       type: DataTypes.STRING(36),
       allowNull: false,
       primaryKey: true
     },
-    JourneyId: {
-      type: DataTypes.STRING(36),
-      allowNull: true,
-      references: {
-        model: 'lw_dynamic_journey',
-        key: 'Id'
-      }
-    },
-    Province: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    City: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    PlaceName: {
-      type: DataTypes.STRING(200),
-      allowNull: false
-    },
-    ArriveTime: {
+    StartTime: {
       type: DataTypes.DATE,
       allowNull: false
     },
-    Describe: {
-      type: DataTypes.STRING(5000),
+    EndTime: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    PointOfStart: {
+      type: DataTypes.STRING(200),
+      allowNull: false
+    },
+    PointOfEnd: {
+      type: DataTypes.STRING(200),
+      allowNull: false
+    },
+    ImgGroupId: {
+      type: DataTypes.STRING(36),
       allowNull: true
     },
-    ImgsId: {
-      type: DataTypes.STRING(200),
+    Describe: {
+      type: DataTypes.STRING(2000),
+      allowNull: true
+    },
+    Remark: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     Valid: {
@@ -61,11 +57,11 @@ module.exports = app => {
     },
     UpdatePerson: {
       type: DataTypes.STRING(200),
-      allowNull: true,
+      allowNull: false,
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_journey_process',
+    tableName: 'lw_dynamic_journey',
     timestamps: false
   });
 

@@ -11,7 +11,11 @@ module.exports = app => {
     },
     DeveloperId: {
       type: DataTypes.STRING(36),
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'sysperson',
+        key: 'Id'
+      }
     },
     Name: {
       type: DataTypes.STRING(50),
@@ -23,6 +27,10 @@ module.exports = app => {
     },
     Router: {
       type: DataTypes.STRING(200),
+      allowNull: false
+    },
+    PassKey: {
+      type: DataTypes.STRING(10),
       allowNull: false
     },
     Sort: {

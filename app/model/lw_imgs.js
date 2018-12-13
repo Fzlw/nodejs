@@ -11,7 +11,8 @@ module.exports = app => {
     },
     GroupId: {
       type: DataTypes.STRING(36),
-      allowNull: true
+      allowNull: true,
+      defaultValue: ''
     },
     Url: {
       type: DataTypes.STRING(200),

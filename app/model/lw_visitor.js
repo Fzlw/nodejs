@@ -9,22 +9,38 @@ module.exports = app => {
       allowNull: false,
       primaryKey: true
     },
+    UserTypeId: {
+      type: DataTypes.STRING(36),
+      allowNull: false,
+      references: {
+        model: 'lw_visitor_type',
+        key: 'Id'
+      }
+    },
     Name: {
       type: DataTypes.STRING(200),
       allowNull: false,
       defaultValue: ''
     },
+    Mobile: {
+      type: DataTypes.STRING(18),
+      allowNull: true
+    },
     Sex: {
       type: DataTypes.STRING(2),
+      allowNull: true
+    },
+    Province: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    City: {
+      type: DataTypes.STRING(200),
       allowNull: true
     },
     LandTime: {
       type: DataTypes.DATE,
       allowNull: false
-    },
-    Position: {
-      type: DataTypes.STRING(200),
-      allowNull: true
     },
     Valid: {
       type: DataTypes.INTEGER(1),

@@ -19,11 +19,20 @@ module.exports = app => {
     },
     DynamicId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      defaultValue: '',
+      references: {
+        model: 'lw_dynamic',
+        key: 'Id'
+      }
     },
     VisitorId: {
       type: DataTypes.STRING(36),
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'lw_visitor',
+        key: 'Id'
+      }
     },
     Valid: {
       type: DataTypes.INTEGER(1),

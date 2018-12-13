@@ -11,18 +11,31 @@ module.exports = app => {
     },
     DynamicId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      defaultValue: '',
+      references: {
+        model: 'lw_dynamic',
+        key: 'Id'
+      }
     },
     Comment: {
       type: DataTypes.STRING(2000),
       allowNull: false
     },
-    Position: {
+    VisitorId: {
+      type: DataTypes.STRING(36),
+      allowNull: true,
+      references: {
+        model: 'lw_visitor',
+        key: 'Id'
+      }
+    },
+    Province: {
       type: DataTypes.STRING(200),
       allowNull: true
     },
-    VisitorId: {
-      type: DataTypes.STRING(36),
+    City: {
+      type: DataTypes.STRING(200),
       allowNull: true
     },
     Approval: {

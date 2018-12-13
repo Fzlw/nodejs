@@ -149,18 +149,20 @@ module.exports = class SyspersonService extends Service {
     /**
      * 获取最新的个人信息
      */
-    async getLastOne() {
+    async getLastOne(userId) {
         try {
-            const entity = await this.ctx.model.Sysperson.findOne({
-                where: {
-                    Valid: 1
-                },
-                offset: 0,
-                limit: 1,
-                order: [
-                    ['CreateTime', 'Desc']
-                ]
-            })
+            const sql = `
+                select *
+                from (
+                    select * from sysperson where Id = '${userId}' order by CreateTime desc limit 1; 
+                ) ppp
+                left join (
+                    select * from syscontactway where UserId = '${userId}' order by CreateTime desc limit 1; 
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select * from lw_user_hobby
+                )
+            `
             return entity && entity.dataValues;
         } catch (error) {
             console.log('service/sysperson/getLastOne' + error);

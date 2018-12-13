@@ -11,11 +11,19 @@ module.exports = app => {
     },
     UserId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'sysperson',
+        key: 'Id'
+      }
     },
     HobbyId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'lw_hobby',
+        key: 'Id'
+      }
     },
     Valid: {
       type: DataTypes.INTEGER(1),

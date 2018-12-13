@@ -24,14 +24,14 @@ describe('test app/service/lw_game_record.js', () => {
 
         const entity = await ctx.service.lwGameRecord.create({
             Id: Id,
-			GameId: "8i", 
-			VisitorId: "JMZz6roxBwO2Hvoz", 
-			Score: "hCpxiifwNGFPvkDB5PGnLFIyffsXuoJ", 
+			GameId: "dZeR98NiGkzUC", 
+			VisitorId: "gBaTRss1", 
+			Score: "f4V8YarXv5FwhBElXFW84LKzR", 
 			Valid: 1, 
-			CreateTime: "Fri Aug 24 2018 20:15:30 GMT+0800 (CST)", 
-			CreatePerson: "BTB3GJ4iI5cSvoJdcN0U27QYSqDTKF2wwj0jqVpblMXqiGXIfiOqJlzEArwDyzE0969RyTOSEbUNdvPGwVjdVL", 
-			UpdateTime: "Mon Sep 24 2018 03:18:05 GMT+0800 (CST)", 
-			UpdatePerson: "LZNEQtJkkfTpPG2B8X9j5v8acn4jU9OaYRJgsQiJKkAZXrZrY3smhhI64VBzKS16ajEZprAy5", 
+			CreateTime: "Tue Oct 23 2018 20:30:56 GMT+0800 (CST)", 
+			CreatePerson: "MsgaeN9a0IRcVM3ne0qrej6xHfzuwkf8wRx12NC", 
+			UpdateTime: "Sat Aug 25 2018 10:19:16 GMT+0800 (CST)", 
+			UpdatePerson: "VSj8s5BixHRFa80hBvPB5Ff", 
 
         });
         assert(entity.Id === Id);

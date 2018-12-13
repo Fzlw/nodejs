@@ -18,10 +18,6 @@ module.exports = app => {
       allowNull: true,
       defaultValue: '0'
     },
-    Position: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
     AuthorId: {
       type: DataTypes.STRING(36),
       allowNull: false
@@ -29,6 +25,14 @@ module.exports = app => {
     BuyTime: {
       type: DataTypes.DATE,
       allowNull: false
+    },
+    Province: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    City: {
+      type: DataTypes.STRING(200),
+      allowNull: true
     },
     Remark: {
       type: DataTypes.STRING(1000),

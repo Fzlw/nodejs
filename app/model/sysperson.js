@@ -49,10 +49,6 @@ module.exports = app => {
       type: DataTypes.STRING(200),
       allowNull: true
     },
-    ContactWayId: {
-      type: DataTypes.STRING(36),
-      allowNull: true
-    },
     Valid: {
       type: DataTypes.INTEGER(1),
       allowNull: false,

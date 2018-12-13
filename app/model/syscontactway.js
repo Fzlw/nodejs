@@ -11,7 +11,11 @@ module.exports = app => {
     },
     UserId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'sysperson',
+        key: 'Id'
+      }
     },
     QQ: {
       type: DataTypes.STRING(18),

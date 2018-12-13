@@ -3,43 +3,33 @@
 module.exports = app => {
   const DataTypes = app.Sequelize;
 
-  const Model = app.model.define('lw_journey_process', {
+  const Model = app.model.define('lw_msg_board', {
     Id: {
       type: DataTypes.STRING(36),
       allowNull: false,
       primaryKey: true
     },
-    JourneyId: {
+    UserId: {
       type: DataTypes.STRING(36),
-      allowNull: true,
+      allowNull: false,
+      defaultValue: '',
       references: {
-        model: 'lw_dynamic_journey',
+        model: 'lw_visitor',
         key: 'Id'
       }
     },
-    Province: {
-      type: DataTypes.STRING(200),
+    Content: {
+      type: DataTypes.STRING(2000),
       allowNull: true
     },
-    City: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    PlaceName: {
+    Remark: {
       type: DataTypes.STRING(200),
       allowNull: false
     },
-    ArriveTime: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    Describe: {
-      type: DataTypes.STRING(5000),
-      allowNull: true
-    },
-    ImgsId: {
-      type: DataTypes.STRING(200),
-      allowNull: true
+    Approval: {
+      type: DataTypes.INTEGER(1),
+      allowNull: true,
+      defaultValue: '0'
     },
     Valid: {
       type: DataTypes.INTEGER(1),
@@ -65,7 +55,7 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_journey_process',
+    tableName: 'lw_msg_board',
     timestamps: false
   });
 

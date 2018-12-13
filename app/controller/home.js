@@ -32,13 +32,17 @@ class HomeController extends Controller {
                 navData.Name = entity.Name;
             }
 
-            // 同步获取我的相关信息
+            // 同步获取我的相关信息  TODO
             let selfData = {};
             let selfInfo = await this.ctx.service.sysperson.getLastOne();
             if (selfInfo) {
                 selfData = {
                     MyName: selfInfo.Name,
-                    City: selfInfo
+                    Province: selfInfo.Province,
+                    City: selfInfo.City,
+                    Introduce: selfInfo.Introduce,
+                    ContactWays: selfInfo.ContactWays,  // 联系方式 Array
+                    Hobbys: selfInfo.Hobbys  // 爱好/标签  Array  个人设置标签
                 }
             }
 

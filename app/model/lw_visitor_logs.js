@@ -11,7 +11,11 @@ module.exports = app => {
     },
     UserId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'lw_visitor',
+        key: 'Id'
+      }
     },
     IP: {
       type: DataTypes.STRING(50),
@@ -21,7 +25,11 @@ module.exports = app => {
       type: DataTypes.DATE,
       allowNull: false
     },
-    Position: {
+    Province: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    City: {
       type: DataTypes.STRING(200),
       allowNull: true
     },

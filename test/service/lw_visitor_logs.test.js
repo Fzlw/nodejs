@@ -24,15 +24,16 @@ describe('test app/service/lw_visitor_logs.js', () => {
 
         const entity = await ctx.service.lwVisitorLogs.create({
             Id: Id,
-			UserId: "M8qz0Lh", 
-			IP: "Iv7E7F1zdMpw", 
-			LandTime: "Fri Jul 13 2018 20:42:28 GMT+0800 (CST)", 
-			Position: "BbasXAD8hKyE6LP8Rilib8xuutSRvwsTUgzZ35pHod4CETK7GU05O4mm0aUxZwyT", 
-			UserAgent: "V8nttSx3gRwbBedtWh5mUgEdyDevZuqkZ8lmzxzquJlUKlSsdjzpSk6ZMD2Bvbaj73Cnl3lK9aObrwDBzKMYZUg9ECrtgTogNoiKaDobwIqJGdktN6ZcunYMC5GwESwXb0IFu9s9PpTzEFhcOatzyxUfeRJCYw0TkuoiBcvHLU8RyxqasieAecwNJPsoSeR7esyAOhdA3zDEw2FoRFunGdBYk4Vc1uI8zAnqfav36q3xOeFOuQmGtGz0pdmcXUnPEpycDMOEv1gmAG670uCSAKi7GQXl3mLJpzzrUxGzAxrUmaxNhzHxd48QqzJXctIr5LuX28exXIvBOHpryAzCrjeTxx0q8kNnwtM9WBfX9gzCj3q3dvD16fqHVyZMaR3jgOvL6vcmZ27DDpmq9sKlqAFtQp3VcMgwj1mLtRoWQFvHwUpHZyYYeRwLrOvpM7AHWOPIUOLRfRlvOm40R6xGOlLaC3UKND3o48CrvpVSTM5fxnoDgzeJcxgbjGoXNxD54kz07VIzLVj4NJ5AXsUh80AkaowtscDowKTNyc2SW6f4kFtqIGdzliDggoHo83JqofI5NYjuw2lD99Dmv3nchSmmnctAoVAJBlW8Z3vUgy2rQvSR8e6UHAMoi7oGYIWK27jr3ZuWBgzoS4w8MdowvwOyQsl0cXKA1mt1547XGXUPA7FmoDFQ6u8vuaK9Wpn9UyMNDDqOePMojBIFCYgEv0K7wE9cFy0KDjs2lPDnaE2Cp6F30v7F01Ii69vprdW41U1meyVY5W4XGhAo2BMR0qe", 
-			WebBrowser: "o9JXiTawyObJo9HIYhsKg5a7SqIFmVNr4isa10uHn", 
-			WebBrowserVersion: "DkrFfJJcdNBKWOO9", 
+			UserId: "I5GH3DirL0vWUv", 
+			IP: "meSuNJ2Td8vp", 
+			LandTime: "Thu Mar 22 2018 16:04:42 GMT+0800 (CST)", 
+			Province: "mO2NlEldFzhqK0jgpM8zQ0KiS3MjFqz7whnyo2CHQmHmkPcprjLMw0mXAeB5ZNari7glCGNcuNi5UCuHGxaKjKOQLEAyF5D", 
+			City: "YkYMY8MwYe4GZqzxA8Kgm8ZeulTjtKUENJTOu5BVtRapTgRDUYTzcF3EqPeor", 
+			UserAgent: "iMBbgUHYgenM0xeUQ3OYIjZhkvqAvggFmVh4tppMnF9GHspCHQdOPE0TViTTU8CUmpjkXWGHYQbgGeUazLLZJ1rtUb7gDSa9DbVOYjiKBZ5aDFbz4o44D6xOHAzHelqk3nKjrbfIjH4ARiFMZgi31H0jMF9xiaefiCXE3asPG93Ca1gfnKJ0iyLuYPrUwqLOU657N5shaROtd0UutmRlXvcf75tzFnPwu2X8j5iH6YEG3UgC7yL57dXGIb6Sj4N9ER6SFZTdwOvg8bWJxMjZ0RgjEQ1ZyYC7BS3g3oaCkbt9o8NBhX9UfWByRtlX9F4Wz8KJbKOO4EJ1E8KHeOBo", 
+			WebBrowser: "iMHUlFq84PI0yGBCeS4JNYd", 
+			WebBrowserVersion: "GGp8uSP2n", 
 			Valid: 1, 
-			CreateTime: "Sun Dec 09 2018 19:52:25 GMT+0800 (CST)", 
+			CreateTime: "Tue Dec 04 2018 10:05:22 GMT+0800 (CST)", 
 
         });
         assert(entity.Id === Id);

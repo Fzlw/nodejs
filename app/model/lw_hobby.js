@@ -17,6 +17,15 @@ module.exports = app => {
       type: DataTypes.STRING(2000),
       allowNull: true
     },
+    Img: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    IsSelf: {
+      type: DataTypes.INTEGER(1),
+      allowNull: true,
+      defaultValue: '0'
+    },
     Sort: {
       type: DataTypes.INTEGER(11),
       allowNull: false,

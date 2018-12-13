@@ -3,43 +3,34 @@
 module.exports = app => {
   const DataTypes = app.Sequelize;
 
-  const Model = app.model.define('lw_journey_process', {
+  const Model = app.model.define('lw_music', {
     Id: {
       type: DataTypes.STRING(36),
       allowNull: false,
       primaryKey: true
     },
-    JourneyId: {
+    LinkUrl: {
       type: DataTypes.STRING(36),
+      allowNull: false
+    },
+    Singer: {
+      type: DataTypes.STRING(50),
       allowNull: true,
-      references: {
-        model: 'lw_dynamic_journey',
-        key: 'Id'
-      }
+      defaultValue: 'unknow'
     },
-    Province: {
-      type: DataTypes.STRING(200),
-      allowNull: true
+    SongName: {
+      type: DataTypes.STRING(50),
+      allowNull: true,
+      defaultValue: 'unknow'
     },
-    City: {
-      type: DataTypes.STRING(200),
-      allowNull: true
+    IsBgMusic: {
+      type: DataTypes.INTEGER(1),
+      allowNull: false,
+      defaultValue: '0'
     },
-    PlaceName: {
+    Remark: {
       type: DataTypes.STRING(200),
       allowNull: false
-    },
-    ArriveTime: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    Describe: {
-      type: DataTypes.STRING(5000),
-      allowNull: true
-    },
-    ImgsId: {
-      type: DataTypes.STRING(200),
-      allowNull: true
     },
     Valid: {
       type: DataTypes.INTEGER(1),
@@ -65,7 +56,7 @@ module.exports = app => {
       defaultValue: 'system'
     }
   }, {
-    tableName: 'lw_journey_process',
+    tableName: 'lw_music',
     timestamps: false
   });
 

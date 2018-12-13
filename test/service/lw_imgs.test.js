@@ -24,19 +24,19 @@ describe('test app/service/lw_imgs.js', () => {
 
         const entity = await ctx.service.lwImgs.create({
             Id: Id,
-			GroupId: "28m9QbQGmf", 
-			Url: "ZQpn3ivzjPFzXBMiqiYlE9IyVtE2PGiIqkkOqz21872wZxD", 
+			GroupId: "2erQUyhp6iz6dZeS", 
+			Url: "XJ1Tw0Sn5ngQrR6F85Rl5L63BEb2C8tEFYzRYP16EXF6FrYjnBlITmDo0cOB", 
 			IsTimeLimit: 1, 
-			EffectiveStartTime: "Thu Jun 07 2018 01:06:51 GMT+0800 (CST)", 
-			EffectiveEndTime: "Mon Jul 30 2018 16:31:53 GMT+0800 (CST)", 
-			Sort: 9, 
-			Describe: "Pf3", 
-			Remark: "TpVtiBCXwppwFi", 
+			EffectiveStartTime: "Tue Jul 31 2018 23:17:40 GMT+0800 (CST)", 
+			EffectiveEndTime: "Sun Sep 09 2018 14:48:25 GMT+0800 (CST)", 
+			Sort: 5, 
+			Describe: "h2QSKKcS", 
+			Remark: "oH", 
 			Valid: 1, 
-			CreateTime: "Wed Dec 05 2018 01:53:55 GMT+0800 (CST)", 
-			CreatePerson: "KFLl1SQ9KknT9IcRwwDLGHjUD4VWcCuK4h", 
-			UpdateTime: "Thu Jun 14 2018 15:45:04 GMT+0800 (CST)", 
-			UpdatePerson: "wl76dG7pcWHrZblO3ElDo0q7fhzpMWwLDAzjJTFUE3bH6Do7O5wLZdX7WvyFh2hYThxJHksfO4vGjw1cBSruUpI0", 
+			CreateTime: "Wed Feb 21 2018 21:23:23 GMT+0800 (CST)", 
+			CreatePerson: "jo16nVEUxmU5MRs3OzLCIAf9VaDpCu1FFgOgVVY0q4Y2vJy98cHodriGcqFWTiYFzJ8rJ2wHQ3W08qdpZWcL58A", 
+			UpdateTime: "Sun Sep 16 2018 07:36:08 GMT+0800 (CST)", 
+			UpdatePerson: "gXWfQ4Dv51tHTRln0edLGI9eycYllyOGBB5GphjzAfB0k6PWVJX7Ds63GDRDTtp7rn9vPam7augdng6PSv0", 
 
         });
         assert(entity.Id === Id);

@@ -11,11 +11,19 @@ module.exports = app => {
     },
     GameId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'lw_game',
+        key: 'Id'
+      }
     },
     VisitorId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'lw_visitor',
+        key: 'Id'
+      }
     },
     Score: {
       type: DataTypes.STRING(200),

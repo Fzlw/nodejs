@@ -24,16 +24,16 @@ describe('test app/service/lw_book_dynamic.js', () => {
 
         const entity = await ctx.service.lwBookDynamic.create({
             Id: Id,
-			BookId: "zHTWS", 
-			Content: "f2iSwpOulbkTBvWcPzYoKzktLqlx77t1QahkWhQgLAIW2ZbO1xGQLG7GDNwi6YfcpwknPtdl2YRutfyO8CFDfiXfAdkZgheLiz7F2fiMXR34Ip3FC14x5wEJ62pjMdnG7TuSK86rn5iCLoMjiUM6faNAhkFlVuOBRUgfssxuOtXA141iPiP0FEEo8RmFKXEhwoilWh3JOycWsAZo6W877bJwDIcBdo7EXWIneDuINGNXVZPs4Q", 
-			Remark: "2Yp6YXvl1zD944KlwYhQW3dhmk4d43lt3oo8v0Hd9y9wy81ASqXek2ksiRGhbl2XasO30pxaKKhTJlnSSrh5CcioE1a8a", 
-			Position: "W2PHSCwbP8jpq3Pb44XSctKwuJ46ttVziwI2J1wYyTckk0", 
-			ImgGroup: "Q2UzHTlyfNHq", 
+			BookId: "vd", 
+			Content: "aPYqYlA9xdtnxrgw6pZ2yX8hSuKLgTQdXegPxXunTV7AbVGeuQTnm3m81KHZai0mWWuENbiPdEOyEavuk2ipfS9CrXFOrOHY9Vc57jaWwZZ6JWJmB2tks7p0dPO0RBYvwvSw1WNp1czGnhmQnOfQywnQ1cQHRgnGlWwydr54UWXzXIt4Nut6io3Ua0VVq15tQYnwyp9tSgxLzgg07m5GWngMKJGMm6DxT19LNnM1sxz93eSAxjPGZUWDReZWLSqPM7p71bDeUNs4c1Jbgj3ANpbxefA3ccpaVVVW8krO3KKW7xm6n0jUdF3tT0SP2Gi9F6NY7xFKRF36VIw6eyLjNFTJNtTenSzDVo8McnHNAAaQGHoXlcpuNfvittuhqyFrIbhJNHFM2ev76xNSUFvAmO9FhP9NHTG0sjCtJcxyrgN523LhWOV5vdb2XQNmzhYMVT0du7DZs2GgZ0gOucyouYLEyemojvTnOEu1Zv6ee2gBjTvcAacumaWn7hE47fKq8C6miI91V1YM1kMHUMjQt65HGmKpvwQb1VdikK5QlzAoTd5NWc8Al1e1UXytKabOMRpCSCRgC3bSQ8w0REuoqO4ttJ5LqKzXFi4K4LJn40fhpa3CQfq2oKSJ2R7BC9fsvt9QV2KohQmTsXKYx2LFaUK10dKgUgu29M3Jo8SV0MDkCJbi2WT5yuJjhyXTCWz", 
+			Remark: "tFCx2ztEsgtQuv8VBnJ5c6BM8nEbmtZnTfH50Fh2MC8Uv0Vy3BW5EGwK56NhQvvWZ7X5G78Mbs", 
+			Position: "z7BLBl", 
+			ImgGroup: "1", 
 			Valid: 1, 
-			CreateTime: "Fri Feb 23 2018 14:20:21 GMT+0800 (CST)", 
-			CreatePerson: "j8qstD2k9KjE6itDtVKMeozg2uwsVyHVRuZI4Q9vPtbEbgFH9TM", 
-			UpdateTime: "Tue Jan 30 2018 01:05:13 GMT+0800 (CST)", 
-			UpdatePerson: "S3DcV0K2WVqSJ5xkAuI27MJPgN549aphhvLGv9TmHmaxQaWepuCKq6fdi8mTLLgcMKN2vuLO630Ha7Hvw", 
+			CreateTime: "Fri Jun 01 2018 23:22:01 GMT+0800 (CST)", 
+			CreatePerson: "goWkRxWLCMOCyR1V3zj4EPlQG5roOXVy7Naa3BWRMFVPz", 
+			UpdateTime: "Tue Nov 06 2018 20:26:19 GMT+0800 (CST)", 
+			UpdatePerson: "xKORHbJVZwFFeSW63hJ8O6Bq7yI7UOi4hCEXLIsHQZXh2t9jZpPy0s8yyV6sdAFhhUyTeykg3G7qdY1ToMN0xiC3Ky83hMnxYZ", 
 
         });
         assert(entity.Id === Id);

@@ -11,7 +11,13 @@ module.exports = app => {
     },
     HobbyId: {
       type: DataTypes.STRING(36),
-      allowNull: false
+      allowNull: true,
+      defaultValue: ''
+    },
+    RelationId: {
+      type: DataTypes.STRING(36),
+      allowNull: true,
+      defaultValue: ''
     },
     UserId: {
       type: DataTypes.STRING(36),
@@ -21,11 +27,11 @@ module.exports = app => {
       type: DataTypes.STRING(200),
       allowNull: true
     },
-    ActivityId: {
-      type: DataTypes.STRING(36),
-      allowNull: false
+    Province: {
+      type: DataTypes.STRING(200),
+      allowNull: true
     },
-    Position: {
+    City: {
       type: DataTypes.STRING(200),
       allowNull: true
     },
