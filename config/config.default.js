@@ -23,7 +23,7 @@ module.exports = appInfo => {
 
     // 映射路径
     config.staticPrefix = 'fz';
-    config.staticVersion = '0.0.4';
+    config.staticVersion = '0.0.5';
 
     // egg 静态资源服务
     config.static = {
