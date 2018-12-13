@@ -24,16 +24,16 @@ describe('test app/service/lw_hobby.js', () => {
 
         const entity = await ctx.service.lwHobby.create({
             Id: Id,
-			Name: "MG", 
-			Describe: "Q5dbpWUBefTVJcBNqv2zXIpa2ii3CVBpBxJ1Epn3kD9xH6m8VMKcBovA76f16IfiQ9T7aOe90nK8O3P1oq5mlu8Bof0sIUKkGIydoDil2Rs03VmhBpHwab1o7L5OITvpAiwowU9rCah7MHG5WdNeUdD75hwRf73cvNPJrLenPpF3u6hV3U8q1Wp8KEMbrQ7cKWEbl51lT46F8cqcPQzdKtJXkjlaCZ8nJA9oeR086hJ8yeit5QGbXA6Lztw5G5ESUWaQ91IhrQwqG0vbergrXhuN6aBJdzLcQ2qaV4ZfsH7PEUJ7IifsAH0eCfUGcjfEmdtzAJMAPZsPLYYVf698juTjiE93N25pkGpFpaxN9dE2TklcriXxzs2VxDetwHeEKTcCvIwZSADjCdLZDzeVkS773sXbMsOYZb6OoT20wqOomHXmP8z57qXajow10ueLFFDKgnuGR98vAD5d9CwVvYPUSIyLmMewesSZ4MJi0S0Q53PxTi1rEvSKY3J2XwHdOZoERXi1Toy3FzZkV1qmGOQW6u", 
-			Img: "DcSl2KFKzgzPSimZM2KS3Ik2MYnagNBdMXG4CJSmPdO1pJcfTUktKf", 
+			Name: "EmODH9imQQVVcJBJgUGA1", 
+			Describe: "WE7wNp284HZgFj0ZIX4qPD3tG8It51wrbcvd5jiZeTVMyoE3Z1Q71cpVHgDQnNEIWLBa3MNG4NB74HwWAB3MVLelg2ftECg3nx5J884UcSh2YUqeCDngAy8J45lVjPdwZW8cf83uCATKJDp5rtN2OsrBbhqnEPG3Xow5fyCbvZwrKBKFPCS6AuWT3aIIzEtZ6rO5Loxu026BC6JNyDzJdRHfwAjts81Z1EyoGV5MimwG3kEiJQbrvo1CiiRIMTkGhZ8bjKdYiNT2XQpcWZRbbi1RSf5VmKn0foCS3xNwPLrahcjwTe3vykO3TWMDWkrDWq5BwSzfU8eldYhJuSUANOOrwnedcNWcuSqVZ1lw4iUkijqqhkIo0iq3BkA6qrfzdmfqWdDP6rOEN6yvQO", 
+			Img: "QLbWrvYaNWZ2Hk4E92bkFW4cR6hZY0", 
 			IsSelf: 1, 
-			Sort: 4, 
+			Sort: 1, 
 			Valid: 1, 
-			CreateTime: "Thu Feb 08 2018 19:30:13 GMT+0800 (CST)", 
-			CreatePerson: "sWlpXI5HScHD34jhy2lO8CGE8fzt4Xxw0q6qJunxy94adTPSj9O1e7rj5USR58R30mwQbI1FSxSvKXEV4QmoofYKVOg3D2Hp", 
-			UpdateTime: "Wed Jun 13 2018 20:15:28 GMT+0800 (CST)", 
-			UpdatePerson: "wSo8r0SN9YjPtryrbzQPvwVTiLAzj3C7PgdFjHbFcPBlLlKlw6rhkLiQvmLQ9swKZCLJ1EIbt82v39JN1B4t49MzF17", 
+			CreateTime: "Tue May 29 2018 08:51:30 GMT+0800 (CST)", 
+			CreatePerson: "m85wWe0DICvwEG8sn", 
+			UpdateTime: "Thu Sep 20 2018 12:28:11 GMT+0800 (CST)", 
+			UpdatePerson: "UYkCjcqE01XVg4iwvIobNfnG1ws9GHw9ALze4li56TnIzPVqY0Z5KgxDpMiL2nldz43OiazE3grRPiPk3lM", 
 
         });
         assert(entity.Id === Id);

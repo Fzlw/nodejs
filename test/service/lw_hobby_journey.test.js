@@ -24,19 +24,19 @@ describe('test app/service/lw_hobby_journey.js', () => {
 
         const entity = await ctx.service.lwHobbyJourney.create({
             Id: Id,
-			StartTime: "Tue Mar 27 2018 20:24:15 GMT+0800 (CST)", 
-			EndTime: "Tue Oct 30 2018 11:15:14 GMT+0800 (CST)", 
-			PointOfStart: "Tzvw9", 
-			PointOfEnd: "aFZ4daqtt0f70selkhI1jCbhoP10ZVoT5LNfStdrV36I3oO0cqcfCVTcj0xgacYSWepMmheu8u6DY0FYWephRvQ5X7wM", 
-			JourneyId: "24RV4ddBuM51Yw8pV", 
-			ImgGroupId: "5VtHuCFHH", 
-			Describe: "moeri8SxD3EASpt2ngReFFRh1bry2JweXOzxO2oxvrCusbGubSYsuaMzCisp76r3upLHvlli4o00yD7hQ4zbFxcEy4XiwwcFYU05JttsN5j4fqYEV7coS1R7ckdgfMfcSTqzZgeEgYpqTH5Nz94vozdtEutnEedi6jYwoh6v44rABuR4pcS6BDCAUEeVQzhzMRP8tcX02xMYtWxm9AT", 
-			Remark: "JzULos564LBJ30ajs1WKK6gCv", 
+			StartTime: "Fri Nov 30 2018 21:36:53 GMT+0800 (CST)", 
+			EndTime: "Wed May 23 2018 11:51:52 GMT+0800 (CST)", 
+			PointOfStart: "K", 
+			PointOfEnd: "4Mhutb3NVex0G9GEyPD8TDDaVqcBHGwjxXfzYk2LbThGQfKYu9Hai4M2whGaL2A8JqnXVYRYdqOqsZxOFFF7bbgF", 
+			JourneyId: "j396M8SpacTd", 
+			ImgGroupId: "HOeBLX7p", 
+			Describe: "Dn6Sbo2DLDTzLqsBGbPzpI6ukGqBqrMGrHr7fCWTVdJrjANzbPsSqbLHbTTBFPmLkCaL8gNNUmQfgOmQeBqqZNaZCPpf9BNUB7r3FEwLE7NyyeKd580sYsdCiLkfiagyZ7L1gKJZ88MMYv", 
+			Remark: "staLVLkxeG8XYn9hci6UDAoOTfYrOGniO", 
 			Valid: 1, 
-			CreateTime: "Sun Aug 19 2018 06:45:38 GMT+0800 (CST)", 
-			CreatePerson: "lCNbbM68btIwkUkDaCdG78xLm8gI", 
-			UpdateTime: "Fri Feb 16 2018 22:38:48 GMT+0800 (CST)", 
-			UpdatePerson: "VlBVTdRiAUDvxjbZlVVk6udd7U2Pqd1vdsJSBY9g6MfPf0Ux3Wt7D9Qh21I7", 
+			CreateTime: "Sun Mar 04 2018 18:37:27 GMT+0800 (CST)", 
+			CreatePerson: "ljMxLQT1lYKcT9skE3rPhx9YFmQsCBm4uaO5WH0nZkB605rJrutN3W2qOzn2y3lmuHFDgk8J9Hf2mfr3u8", 
+			UpdateTime: "Sun Sep 09 2018 00:20:39 GMT+0800 (CST)", 
+			UpdatePerson: "1XoaLMgLgnJYKch8xACVA6RZK3t4dwjrDzs0tO0hD2AR7bnCyzb06dgq93DDsLzzexgHJ4LFvD8cgPlXZwulJwiLl7", 
 
         });
         assert(entity.Id === Id);

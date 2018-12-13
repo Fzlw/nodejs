@@ -24,17 +24,17 @@ describe('test app/service/lw_game.js', () => {
 
         const entity = await ctx.service.lwGame.create({
             Id: Id,
-			DeveloperId: "xI0dPDZ7iYmZBwymqq", 
-			Name: "6bLW", 
-			Icon: "bHEQBE4Rz", 
-			Router: "CbeOiKrVP2MYWnDeifzIWV5N7rFcKQIc1R9IOK87RgaxLIZl7eGl8Njbso0zCD0qRExfk6csRPw8P9meNv", 
-			PassKey: "B", 
-			Sort: 5, 
+			DeveloperId: "cZL7", 
+			Name: "KKDPlIY", 
+			Icon: "G85A3pLb2SiCNsvmIDKdaSWJiG5rKtQaCxhlpNuLw", 
+			Router: "nPaurvIHzEGDtHPR", 
+			PassKey: "W3uZi", 
+			Sort: 4, 
 			Valid: 1, 
-			CreateTime: "Mon Jan 15 2018 22:45:10 GMT+0800 (CST)", 
-			CreatePerson: "Mr03Oh0T726oFx3rHWz0RuE6SU42fLrGEksuu9kriz9qqYW37I0r4dJ8fJ43zu6BTd6V", 
-			UpdateTime: "Mon May 21 2018 17:13:45 GMT+0800 (CST)", 
-			UpdatePerson: "KVNLS4NcvpU", 
+			CreateTime: "Sun Aug 19 2018 20:45:41 GMT+0800 (CST)", 
+			CreatePerson: "rC9rtTgIVhqcyNwVJok9HyimrZYlpLpzLaljrsm3sKH0SgAhU8L5hftINZHjyZyI0n0KoSmKM31cS", 
+			UpdateTime: "Sun Jun 03 2018 10:10:38 GMT+0800 (CST)", 
+			UpdatePerson: "0DinI2hNy8U2t", 
 
         });
         assert(entity.Id === Id);

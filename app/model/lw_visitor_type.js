@@ -21,6 +21,16 @@ module.exports = app => {
       type: DataTypes.STRING(10),
       allowNull: true
     },
+    MaxLen: {
+      type: DataTypes.DECIMAL,
+      allowNull: true,
+      defaultValue: '3'
+    },
+    FillByte: {
+      type: DataTypes.STRING(10),
+      allowNull: true,
+      defaultValue: '0'
+    },
     Remark: {
       type: DataTypes.STRING(200),
       allowNull: true

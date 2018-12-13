@@ -24,16 +24,16 @@ describe('test app/service/lw_book_dynamic.js', () => {
 
         const entity = await ctx.service.lwBookDynamic.create({
             Id: Id,
-			BookId: "QPbl4eFY7DGdsHs", 
-			Content: "JK6yfspgTIiMf6FYTVYMg7g9HTLXVb6heSYVJ3nFADNWMEAvTJEnUs1wWIwaYYOvBZ3VVsh9CIleAMPDsZJ6SvsqhVKjsKVawTPKCSRDUlcgJqNv90ba3sMpoDwaUyV8J165Wf2YAyW6HGTCN1uAql8dXieD71zmzPngF7wniISCPizOVXu8nxMgc30odjhBiqmK8iWjfnN87sLtddje09BFaD2ULFwjd9SxdVKbV2iITYha47mMiFTynHD2GEl8mD1xHP1xLfvWAkbjV7J6oMs1xkih1ge9xXRTPLNba8iqSIi8tQ0TdPVOtdoNKqbDWXPICgaBPl6OqLUfvCNqvYlj1yhffhLVxJTm7DzXMJJ1r3pUOvW4n4XBZHj77V74RpMm54KkCn0x68lN9YQH3BC061sajqCFIZSspjcKUPiuEoMf8NigV6R04ygtEpK4fPZ7KrcqhzhmjN3Yq70gKMASoUPX8bVKlXHKut6dGSkmLXKWa957d2O1QhDPtFLnNIIb2zymDRjzuYPcCmKC2ajkvKRhJRKlxNjKUHEbAcwpvS7Ew5LtLuvOvWiaZXWY40FBMQhG9WoQKL9llbJGTQ07NcaHTTn9VyLHDDe3cn2EqCYLJSUkWl7RbEvP5zkVEW1h7JaKZnMSiF81Y4br9K03QsHuIMvOZ2yBtukmRMs7Ca9eKxN9uGVEPhLVGSVUdWe3FTfWEUyUryX8DqPJxS191qOfSQwZWiPtUnsveKz8xuWR9exDAMvJT8UWKtZjCRhsMmvsqEw5I9tRoGs5cexLMJQGfqKoYfIgJUzFXbcRb6E0ZmjIJTLJSmsRRuQdy6bnYdqLxCJrr7LEZkVYVrAkRUMWLIafpGnUfBTaAuIgCG96d4t1X6MXXCex5qAZDdOcCEaWPBPsgEVSByRl6Un1GGkq33ic9VJaif2", 
-			Remark: "qFt8PXyLXVEu600AgQ2IygsPf6N0", 
-			Position: "9oRiaC4rlBiloguWMQt9I11kaBH2oAy0oj9", 
-			ImgGroup: "JjMj5Vs7T5emt", 
+			BookId: "hAiAUw0bwP", 
+			Content: "1rTueYKRYGCYnLfalQyV549mLDjDlina3TSh8lHAWNJ4rZoN7qM2k0zjy7JOdXGVAsgYWb6kTmu8Bo", 
+			Remark: "7a", 
+			Position: "DGgrmT2JQh4Hnh1cJc3KK51svRX5tPtAmmK5kDvVJzgNQg", 
+			ImgGroup: "RGRK3RKGLGvx3w", 
 			Valid: 1, 
-			CreateTime: "Sat Oct 13 2018 11:41:53 GMT+0800 (CST)", 
-			CreatePerson: "TVqcy5vCwYhkf4Idjv3EJNVT6wh6X2b04Ggdz47iAc87W4CpJ1Ril5kmRrduTztmzP3CEYWAffWWJJOBp85t9k8TNdQNCzy2lzpb", 
-			UpdateTime: "Thu Jan 25 2018 21:50:05 GMT+0800 (CST)", 
-			UpdatePerson: "foOQp6kUqBVY2yNWFk3VYmdOArKZYENuB3nMzQLR0pNI2G01f0Dgp9f2Nb6h8qUTCaM", 
+			CreateTime: "Thu Apr 19 2018 01:18:25 GMT+0800 (CST)", 
+			CreatePerson: "Eo3AjMiMPnwYOT16EJngjC3VtlM97EmyonezlJcg0jv3KT", 
+			UpdateTime: "Mon Apr 16 2018 10:50:38 GMT+0800 (CST)", 
+			UpdatePerson: "ykdr", 
 
         });
         assert(entity.Id === Id);

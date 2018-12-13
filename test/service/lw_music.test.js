@@ -24,16 +24,16 @@ describe('test app/service/lw_music.js', () => {
 
         const entity = await ctx.service.lwMusic.create({
             Id: Id,
-			LinkUrl: "ZohSj4Aa11", 
-			Singer: "lsUQlOTMyYNAu", 
-			SongName: "CeDIICowRCbtY3uZWv1oA4PH", 
+			LinkUrl: "9iwl", 
+			Singer: "9CfekBpafPkHfg", 
+			SongName: "q1dtgO0F1", 
 			IsBgMusic: 1, 
-			Remark: "AJaD75SlRaqxJ5X0uM3EioxzzUNFvAcvoheDSrC38bZP6BjyNbRXs0oHDBn3MPFPTudUswU5R7Vwg3i0HpWjS", 
+			Remark: "F3AoARz4l9VEVSUIfydJeThDFICcsxzKK0uw6mqFWHKOEHl2VDSltzMeYJetUntRNbTQBsJNVehLmL3XHVqT4KEIOzdkCrN", 
 			Valid: 1, 
-			CreateTime: "Sat Oct 20 2018 18:47:21 GMT+0800 (CST)", 
-			CreatePerson: "ECtrS5SYVGu4tf2CjxgcywpN0NPaKGajC1oAcVCtSQ85CEWXZEWRBp8j", 
-			UpdateTime: "Mon Nov 05 2018 03:12:40 GMT+0800 (CST)", 
-			UpdatePerson: "DCtdR6lYBcRZRN719sz13AqVh26o43EnDxiRWwQaXrPApdvGINrTwjSRPmLjb0jXYEWZdvdaJhqruJhYBR0zpfMb4p0wxn2Te", 
+			CreateTime: "Fri Nov 02 2018 09:52:59 GMT+0800 (CST)", 
+			CreatePerson: "pL5ouDD53FL96U3ADVxNJayUsRlnASUVDqsG9rJYAL8XNPC2aqRFhcS9FT6pK2XV", 
+			UpdateTime: "Thu Nov 08 2018 13:33:30 GMT+0800 (CST)", 
+			UpdatePerson: "4DpzX5KWDheKJzyAtNwfIXT2n7BENWVCaMrEZxOwdLmd4jVNQeFRK", 
 
         });
         assert(entity.Id === Id);

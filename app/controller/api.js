@@ -25,7 +25,7 @@ module.exports = class Api extends Controller {
         try {
             let ip = this.ctx.ip;
             // test
-            // ip = '113.97.35.74';
+            ip = '113.97.35.74';
             if (!ip || !regExp.IPv4.test(ip)) {
                 result.status = 30001;
                 result.msg = "IP地址有误";

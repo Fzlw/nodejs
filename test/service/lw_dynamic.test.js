@@ -24,17 +24,17 @@ describe('test app/service/lw_dynamic.js', () => {
 
         const entity = await ctx.service.lwDynamic.create({
             Id: Id,
-			HobbyId: "hRsmqrRsOxHzd2", 
-			RelationId: "ZdsZV4XXEnrekkGyE", 
-			UserId: "t7UlqTbeDJ", 
-			Caption: "iWuiAjSuiR76sydFZm", 
-			Province: "1G6INimmXEKxCpgz6qJFh9rbYeb9gOBwGCLLc67Bg4jvQOX4hUiWJKtBpUKzFKLbHuOK82jLJDpgKN9dhziy8lWU", 
-			City: "AatI3D30ZVv6drJqSddRodDQyvPtvKIHllskomVbkTSjMRGKAMU8fNOO39WskwyBhAdqOJuTEmUNYDEYCv7c", 
+			HobbyId: "Q2LK", 
+			RelationId: "raUsWM2YhK", 
+			UserId: "xeDKopUMPuf4TBr", 
+			Caption: "aAC7Kgv2nKdYO2vlnNMSLdz45U94OKY71JzvAAWquIjdZ2DQoWG2ELSOVxR7HhCtNSaafuCTxd", 
+			Province: "kb7AlNIo3y4skxcvl1gThM", 
+			City: "GE", 
 			Valid: 1, 
-			CreateTime: "Mon Nov 26 2018 15:54:32 GMT+0800 (CST)", 
-			CreatePerson: "IOJOlnKf7YsC9UmyrG8pDDqDq1CfXFXmAgEBlnKhLW9N", 
-			UpdateTime: "Fri Mar 23 2018 12:15:58 GMT+0800 (CST)", 
-			UpdatePerson: "Tg1zhhmCRpq85i3XDLev2VyZCcmFit9LYMZWak5rl1QdMomNdpDShqa1qNluN9fBWyywa1kAbrYQDKxhaN5wDAFSbd8", 
+			CreateTime: "Thu Jun 14 2018 19:38:07 GMT+0800 (CST)", 
+			CreatePerson: "cjH29LGt1y1SNyaBTftvDA3nr47uLnM0hqaWP277rZKhPuPx6uvXZcHa5AswYnfOgndSg8xjoLE5MfF2MI8XhfYJO8cHku", 
+			UpdateTime: "Thu Jan 25 2018 11:42:02 GMT+0800 (CST)", 
+			UpdatePerson: "NOgy1FttSkLZ", 
 
         });
         assert(entity.Id === Id);

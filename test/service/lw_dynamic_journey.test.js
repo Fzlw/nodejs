@@ -24,18 +24,18 @@ describe('test app/service/lw_dynamic_journey.js', () => {
 
         const entity = await ctx.service.lwDynamicJourney.create({
             Id: Id,
-			StartTime: "Wed Feb 14 2018 09:06:53 GMT+0800 (CST)", 
-			EndTime: "Thu Sep 27 2018 19:22:06 GMT+0800 (CST)", 
-			PointOfStart: "IARmfGoyGV9mQ5nUQbkIIHISMKwhx7NO4EJAUriMFLtidLK15iE6VN19lM6vXIHuJznbxtlurHPwQN0zWe4", 
-			PointOfEnd: "ngmqWU4jjRPU49sv4ndPmZvCNZG1xObB8NTLfz2rGlaX9APj8LaUa0lX5Gyee4uh2YXIhE95kews8q1pKHg7R16yNSMm2AptSaYn", 
-			ImgGroupId: "5DL0zxKuAIvRf6", 
-			Describe: "pgjEwmreJEAQ8MXbc88d86WQnFZ01X58j4TFN0QpRDhQUSwYt4GSTekfXiiq9b0vZdWnZ36nZYFwVuWsLF5R0Jw860FGuM8EwfpS4CAlVEGtZRqGbBODvlc5qAM0m22Cqj7Q4OjDQGeW60S86mZSm3GgwY6jWosqndtW7oRoddDAKPyVu29rvHx1uV9234ulUXzsriLH35lGHdkrCZtQPrrf6gIHT0TuMDKXrpUZuyksQBdGKJf4NLPf9BxUdvSAYEvpbPtBA5K9shZTDhNJqQtUPC1E4wgEFILI7kTLrOZyf31qGa6aHTRZWAMXCpA9ds4wMBmsz3KzYljrUtIt0Twq990vBBouZjkZoIVSgAsOLqdZrEHGtSXZP7UrKDU6ECzSl6Nbalt1PhL4aBIIhDBmgvXUYUzKLmM7hqnNce6wiB7v5QqYYLv1knBsCpBt425ZEg0K07MAmh0evkGcnw7kUwsL51yahtUygSYnGK5tnNV1FnFaS6mX4RjpzFPTVR0EcJ1tloi2yNgK0lPCAyfsm6x1HYgfmQ78UXkUNC9Rue2xX9ZaBuQSwWuY7iVh8OI8AudZd1eGZTypHL7WR2y17HGrSehefkfuODYpLYeaiyT4YWQ6A9clRDeP099OdQdZo52d", 
-			Remark: "JzP", 
+			StartTime: "Wed Jun 27 2018 06:58:21 GMT+0800 (CST)", 
+			EndTime: "Wed Dec 27 2017 08:32:38 GMT+0800 (CST)", 
+			PointOfStart: "wqC", 
+			PointOfEnd: "U8csTunuRDxbbmej7gkkcYkvp6sCF3hAaKhqC3iw", 
+			ImgGroupId: "URIBl4Ak697GLHyy", 
+			Describe: "vYKhqoo7RA3eAydaLFXvTEfzY590UhUQferIZmOhpEVILjbFtOmT7JHnSNyMyTwwxghhRGbNoGs3daKuSIX1wQoeqgBEs6Tr2db1RfkL9CfqQlfuTlqxgrYWxEihoKRiZqzcjiVHn3IoyJpe0l9gQPuACbbhugAniukmSja2DKX8KVa975Dzw2YMfC8dkwaPA75G32IQ4s6qa0b9fIzx32oEl97fZoa3Lq07aajE00mrT5T9PmpkA5AOM7YYA9Sn3KZl3DstJkwlkCuixesdOKKHWxiP6PYEEH8keKsvIuXvuN2MXYLvbXgrKRer0hxquzTUb7FFol0yo9ya5iPzUvGXUa9d66", 
+			Remark: "S", 
 			Valid: 1, 
-			CreateTime: "Thu Jan 04 2018 17:23:31 GMT+0800 (CST)", 
-			CreatePerson: "AfV4c", 
-			UpdateTime: "Sat Dec 08 2018 16:15:48 GMT+0800 (CST)", 
-			UpdatePerson: "LZvzP3OUlCFLQCUVsK5kHJ9jXKMfE32hCnrDBTBERWdg82hH6yEvU8ZyeBFtmkSjpu", 
+			CreateTime: "Sat Mar 31 2018 12:33:00 GMT+0800 (CST)", 
+			CreatePerson: "yDV6J4EfFlldkxPhS9EuSDordyVoev5R3H0Zp4woh9rV7U1wqtRUksPd", 
+			UpdateTime: "Sat Oct 27 2018 00:19:08 GMT+0800 (CST)", 
+			UpdatePerson: "mUtGX3ZJFJahEVwxVJ1BCXmDWCREuZn4Bgj0GVeSxyW3zgNnT0fJsYTIIoCl", 
 
         });
         assert(entity.Id === Id);

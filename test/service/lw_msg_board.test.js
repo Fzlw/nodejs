@@ -24,15 +24,15 @@ describe('test app/service/lw_msg_board.js', () => {
 
         const entity = await ctx.service.lwMsgBoard.create({
             Id: Id,
-			UserId: "kdPBNveVAEVdnhl", 
-			Content: "L7SQ5DeJRVgkJ0nmaveaix1Tk4Wo6Kkg7HjjkzpaUb71OeuLIGxiiQ9zszz6O2kzo5yNxPe4UNZkVVOF70auCTEMTWn0N3Hu6ikK1yFFMi4s6icDldQBjGfyNAyAe7T0WupnyWqVGhODIvtFPxac9UFj62lCZdqsU8U04e5UL6pMa6ztv2RtbtUYiRedWFvMfOE8Oqb845eLM4IJkPlzO0X60yPXiDkle6ztvKuUH8u7DG91UPyDYu7e1xJ4zUWMK8pjiTGeSfp8yf7mWcOa8xzlWav3vxUH0O1S7qtv2d2pJDhR55AtZJcE60roEzVLQa00OIqKG1f1pntUZUK572esip2vGl5kIdAou4qLGraqX4jiNQe44PkzuvaJ35SyJRDITxXptDbuCRH4eYwtlZGCJzY02AIqj9y3NGA0vLH9tu8nVsOAnisKOBcAMx3NnKdND8oyTNK11EFpBqzhazCDi", 
-			Remark: "NNfLMJ5Dx3zCyD8NrETyTeyiGOcn69lXBe9CceKtC0i7B4fyge6Iff1EahBoBp0u0yaRAQpEeSoGCu", 
+			UserId: "92iDDM", 
+			Content: "MiJ4E4in1JOMotH8IAWmNb1zgIGB3QF5zHj9D3NpjTDsOEngq9n546j64yUCRxukQ0IE5apewxpCnRVPpSder5SDZCAX98lzsmYomA6FR3f9jTAxUEcSr51XXmhAZRNrlt48T7mzYR9u6Ang3L4uu02c4JkuG1LcMZJz16ZSdGEK4gdXY2HO6puvmrrWOwM1QKurO92TtWtNxa7l5zO7VpFPKICtyIDAK2RJMckU2lUpoH8FkGd6KdS5WdJMhbJHZKL76uQiuKQvxQBhroTMHv70u02aB2K25llsiU7Kgw15ZO0Qy1lYRl5Jt0TGyYxG5pdnV8tcRat6EE4lSCXhmXFxWwH1e3GYP55gus3xMeOrIddpS12QyRQ0NIpe2OjKoAUy6gWXnCqazZb77Ew1YnYEi6t391nxdodxNR7ouym4cFQ1UAAbmAS5mhseNLgyeizNygH4z434mC43bhWLaa0xEP0UNW07t8hERkTk4R2q9165uySh0YaYkDoHN275Z7Wn0ppU5VCKK7RNbbjaKy35NeoaMofBRAO5l2m7UsMbGMuruR48Y7zh3COINbubtneHgdQllJ0Ea11kkbkjUPa2AtsunSDigdPPBBEy6", 
+			Remark: "uJiQj3cwxBv2EXoMNRlA9Thdqr1muPyT9WQXasMthqCfDDZKYYDoJIObZTKqob6AozTSb4TwLErFQZmPE4n", 
 			Approval: 1, 
 			Valid: 1, 
-			CreateTime: "Tue Oct 23 2018 06:06:31 GMT+0800 (CST)", 
-			CreatePerson: "uptGN2QbnH9eIHQ3CogsRZgFYFMh0Y7SIDbJyY0CgKasmVaRNUltdPEn4AdA70veEeJm0QrERj4MLXsNsAMiBFji1", 
-			UpdateTime: "Sun Aug 05 2018 16:57:18 GMT+0800 (CST)", 
-			UpdatePerson: "oaY9yv7CjpCRRGe3EGludFpejUccXypXfU3iDgir8G8iFNpSs2meDq6bQDRq7qlbv5mG9VyBCraMo3", 
+			CreateTime: "Tue Dec 19 2017 07:11:37 GMT+0800 (CST)", 
+			CreatePerson: "IwWlWfvAINSr", 
+			UpdateTime: "Fri Sep 21 2018 08:42:21 GMT+0800 (CST)", 
+			UpdatePerson: "QRQx", 
 
         });
         assert(entity.Id === Id);

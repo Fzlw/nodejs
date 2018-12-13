@@ -24,10 +24,10 @@ describe('test app/service/test_banner.js', () => {
 
         const entity = await ctx.service.testBanner.create({
             Id: Id,
-			remark: "XPBoSXNp", 
-			img: "Ymlx0DjBeMYgf9CPPSw5S", 
-			createTime: "Tue Jul 03 2018 02:59:38 GMT+0800 (CST)", 
-			updateTime: "Wed Oct 03 2018 10:27:47 GMT+0800 (CST)", 
+			remark: "zER", 
+			img: "OQmct1A7xSIyLUpuqPDpxJJgGIEXAtK", 
+			createTime: "Sun Apr 22 2018 21:33:35 GMT+0800 (CST)", 
+			updateTime: "Mon Oct 08 2018 19:12:13 GMT+0800 (CST)", 
 
         });
         assert(entity.Id === Id);

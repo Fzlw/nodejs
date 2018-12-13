@@ -1,23 +1,23 @@
 'use strict';
 
 /**
- * sysperson
+ * lwDynamicDaily
  * autoCreate Template by LiWei
  */
 
 const Service = require('egg').Service;
 
-module.exports = class SyspersonService extends Service {
+module.exports = class LwDynamicDailyService extends Service {
 
     /**
-     * create a new sysperson
-     * @param {Object} entity  model sysperson
+     * create a new lw_dynamic_daily
+     * @param {Object} entity  model lw_dynamic_daily
      * @return {Object} entity a model Entity
      */
     async create(entity) {
         if (typeof entity !== 'object') throw new Error('entity must be Object');
         try {
-            const result = await this.ctx.model.Sysperson.create(entity);
+            const result = await this.ctx.model.LwDynamicDaily.create(entity);
             return result;
         } catch (err) {
             throw err;
@@ -25,14 +25,14 @@ module.exports = class SyspersonService extends Service {
     }
 
     /**
-     * get a sysperson entity by Id
+     * get a lw_dynamic_daily entity by Id
      * @param {String} Id guid
      * @return {Object} entity a model Entity
      */
     async getById(Id) {
         if(!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
         try {
-            const result = await this.ctx.model.Sysperson.findOne({
+            const result = await this.ctx.model.LwDynamicDaily.findOne({
                 where: {
                     Id: Id
                 }
@@ -44,8 +44,8 @@ module.exports = class SyspersonService extends Service {
     }
 
     /**
-     * update a sysperson
-     * @param {Object} entity model sysperson
+     * update a lw_dynamic_daily
+     * @param {Object} entity model lw_dynamic_daily
      * @return {Object} newEntity entity a model Entity
      */
     async edit(entity) {
@@ -53,7 +53,7 @@ module.exports = class SyspersonService extends Service {
             throw new Error('entity must be Object');
         }
         try {
-            const newEntity = await this.ctx.model.Sysperson.update(entity, {
+            const newEntity = await this.ctx.model.LwDynamicDaily.update(entity, {
                 where: {
                     Id: entity.Id
                 }
@@ -65,7 +65,7 @@ module.exports = class SyspersonService extends Service {
     }
 
     /**
-     * remove a record from sysperson
+     * remove a record from lw_dynamic_daily
      * @param {Object} entity a model Entity
      * @return {Object} affact count
      */
@@ -75,20 +75,20 @@ module.exports = class SyspersonService extends Service {
         }
         try {
             entity.Valid = 0;
-            return await this.ctx.service.sysperson.edit(entity);
+            return await this.ctx.service.lwDynamicDaily.edit(entity);
         } catch (error) {
             throw error;
         }
     }
 
     /**
-     * delete a record from sysperson
+     * delete a record from lw_dynamic_daily
      * @param {Object} entity a model Entity
      * @return {Object} affact count
      */
     async delete(entity) {
         try {
-            const result = await this.ctx.model.Sysperson.destroy({
+            const result = await this.ctx.model.LwDynamicDaily.destroy({
                 where: {
                     Id: entity.Id
                 }
@@ -100,7 +100,7 @@ module.exports = class SyspersonService extends Service {
     }
 
     /**
-     * search in sysperson
+     * search in lw_dynamic_daily
      * @param {Object} pagination page 
      * @param {Object} where where
      * @param {Object} order order by  
@@ -139,59 +139,10 @@ module.exports = class SyspersonService extends Service {
                 })
             }
 
-            let entityList = await this.ctx.model.Sysperson.findAndCountAll(condition);
+            let entityList = await this.ctx.model.LwDynamicDaily.findAndCountAll(condition);
             return entityList;
         } catch (err) {
             throw err;
-        }
-    }
-
-    /**
-     * 获取最新的个人信息,包括爱好、联系方式
-     */
-    async getLast(userId) {
-        try {
-            const sql = `
-                select 
-                ppp.Id,
-                ppp.Name,
-                ppp.Province,
-                ppp.City,
-                ppp.Introduce,
-                ppp.HDpic,
-                way.QQ,
-                way.Email,
-                way.WeChat,
-                way.SinaBlog,
-                way.BiliBili,
-                way.GitHub,
-                userho.*
-                from (
-                    select * from sysperson where Id = '${userId}' and Valid = 1 order by CreateTime desc limit 1
-                ) ppp
-                inner join (
-                    select * from syscontactway where UserId = '${userId}' and Valid = 1 order by CreateTime desc limit 1
-                ) way ON ppp.Id = way.UserId
-                left join (
-                    select 
-                    uhobby.UserId, 
-                    uhobby.HobbyId,
-                    ho.Name HobbyName,
-                    ho.Describe HobbyDescribe,
-                    ho.Img HobbyImg,
-                    ho.IsSelf
-                    from lw_user_hobby uhobby 
-                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
-                    where uhobby.UserId = '${userId}' and uhobby.Valid = 1 and ho.Valid = 1
-                    order by ho.Sort desc
-                ) userho on userho.UserId = ppp.Id
-            `;
-            let entity = await this.ctx.model.query(sql, {
-                type: this.ctx.model.Sequelize.QueryTypes.SELECT
-            })
-            return entity;
-        } catch (error) {
-            console.log('service/sysperson/getLastOne' + error);
         }
     }
 

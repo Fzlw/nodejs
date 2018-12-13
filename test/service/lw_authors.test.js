@@ -24,16 +24,16 @@ describe('test app/service/lw_authors.js', () => {
 
         const entity = await ctx.service.lwAuthors.create({
             Id: Id,
-			Name: "tjuMlSXtLf4LoW6gCgA3iUtN", 
-			BirthTime: "Wed Jul 04 2018 07:16:21 GMT+0800 (CST)", 
-			Sex: "j", 
-			Introduce: "NLzOizKP5vbs6Gja4qzlRIUYPwYHE9TKVd3FDgTQu3j15bEUhY427pkF6sOdHMZI01HoW89BSq2cEXHnMp37cev0HUXpsJYIarVZ47eSbt1VlCOdiQT3m7TNcLqzUGka2O9jJFAPr5572N1ezDeslMdnTAKYQQqNdlHS86ZhF5PmTJTM0ag6Z5JQo6FCi79", 
-			Remark: "MbXns8mbruPkb4vDBxu6DiedE0ET96lDXxMkagIMSuSwHfGmF8aV1ljXwTQbC6CSAEczav", 
+			Name: "GDqEnke", 
+			BirthTime: "Wed Sep 12 2018 21:18:42 GMT+0800 (CST)", 
+			Sex: "v", 
+			Introduce: "8PDA1vhsWCgQcAb7fJlDGg7utUA0g9EMnnImpW1bpgY62fMQYkk8w25pHhBzZs3Z1yU1ojUZLknqOWW1yBtXRXtR6SlF23D3rjob4rMowNaabiu53Ul2Y2JMedc6XMirv7vhX4yp6Y6uIp2A93IhU97Tbz8xcvLYAKsRyr2QKb", 
+			Remark: "R5q5sKJlrqQA4", 
 			Valid: 1, 
-			CreateTime: "Tue Jun 26 2018 14:24:40 GMT+0800 (CST)", 
-			CreatePerson: "kTtYLwKTdRcrTFhWCWNr1JEkoViGVq4s5fpgn5Gk", 
-			UpdateTime: "Wed Jun 06 2018 04:28:39 GMT+0800 (CST)", 
-			UpdatePerson: "gzglz5sQZ0TzIRPrduOoSF9nzgLYDK", 
+			CreateTime: "Sat May 05 2018 09:43:09 GMT+0800 (CST)", 
+			CreatePerson: "1r1jvRwSfw", 
+			UpdateTime: "Sat Apr 14 2018 12:32:05 GMT+0800 (CST)", 
+			UpdatePerson: "3Qdr3zpadMohFgzynmCdfJRRBcbLll0Zvt3oOOCGsbzDxuaw7Lbtxts3LkH7aUpp1sq5851YYskbVuoDKFG", 
 
         });
         assert(entity.Id === Id);

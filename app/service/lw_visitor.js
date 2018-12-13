@@ -6,9 +6,9 @@
  */
 
 const Service = require('egg').Service;
-const { UserType } = require('../enums/visitor');
-const { fillString } = require('../utils/string');
+
 const uuid = require('uuid');
+const { fillString } = require('../utils/string');
 
 module.exports = class LwVisitorService extends Service {
 
@@ -33,7 +33,7 @@ module.exports = class LwVisitorService extends Service {
      * @return {Object} entity a model Entity
      */
     async getById(Id) {
-        if (!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
+        if(!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
         try {
             const result = await this.ctx.model.LwVisitor.findOne({
                 where: {
@@ -170,32 +170,34 @@ module.exports = class LwVisitorService extends Service {
 
     /**
      * 创建用户
-     * @param {number} userType 创建用户类型
+     * @param {number} userTypeId  创建用户类型Id
      * @returns {Object} entity 
      */
-    async createVisitor(userType) {
-        let {
-            prefixVisitor,
-            prefixRegister,
-            maxLength,
-            fillByte,
-            regexp
-        } = this.ctx.app.config.users;
-
+    async createVisitor(userTypeId) {
+        
         try {
+            let userTypeInfo = await this.ctx.service.lwVisitorType.getById(userTypeId);
+            if (!userTypeInfo) {
+                console.log('userTypeId is noexist');
+                return;
+            }
+
             let lastUser = await this.ctx.service.lwVisitor.getLastOne();
             let newUserName = '',
                 newUserId = uuid.v4(),
-                prefix = userType === UserType.visitor ? prefixVisitor : userType === UserType.register ? prefixRegister : userType.unknow;
+                prefix = userTypeInfo.Prefix,
+                suffix = userTypeInfo.Suffix;
             if (!lastUser || !lastUser.Id || lastUser.Id.length === 0) {
-                newUserName = prefix + fillString(1, maxLength, fillByte);
+                newUserName = fillString(1, userTypeInfo.MaxLen, userTypeInfo.FillByte);
             } else {
-                let count = Number(lastUser.Name.replace(regexp, '')) + 1;
-                newUserName = prefix + fillString(count, maxLength, fillByte);
+                let count = Number(lastUser.Name.replace(/.*_/g, '')) + 1;
+                newUserName = fillString(count, userTypeInfo.MaxLen, userTypeInfo.FillByte);
             }
+            newUserName = prefix + newUserName + suffix;
 
             let userEntity = {
                 Id: newUserId,
+                UserTypeId: userTypeInfo.Id,
                 Name: newUserName,
                 LandTime: new Date(),
                 Valid: 1,
@@ -203,7 +205,7 @@ module.exports = class LwVisitorService extends Service {
                 CreatePerson: 'sysauto'
             };
             let result = await this.ctx.service.lwVisitor.create(userEntity);
-            return result.dataValues || result;
+            return result;
         } catch (err) {
             console.log('app/service/lw_visitor/createVisitor' + err);
         }
