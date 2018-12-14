@@ -1,7 +1,7 @@
 <div class="module-nav" data-mod-id="component/nav/index">
     <div class="user">
         <span>欢迎 {{ data.Name }}</span>
-        <span class="info">深圳</span>
+        <span class="info">{{ data.Province + '_' + data.City }}</span>
     </div>
     <div class="tips">
         <span class="date">{{ data.Today }}</span>

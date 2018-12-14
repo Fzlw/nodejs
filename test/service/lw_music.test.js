@@ -24,16 +24,16 @@ describe('test app/service/lw_music.js', () => {
 
         const entity = await ctx.service.lwMusic.create({
             Id: Id,
-			LinkUrl: "9iwl", 
-			Singer: "9CfekBpafPkHfg", 
-			SongName: "q1dtgO0F1", 
+			LinkUrl: "jKfbIT4u0mSqpmYn", 
+			Singer: "HW", 
+			SongName: "n9hE7", 
 			IsBgMusic: 1, 
-			Remark: "F3AoARz4l9VEVSUIfydJeThDFICcsxzKK0uw6mqFWHKOEHl2VDSltzMeYJetUntRNbTQBsJNVehLmL3XHVqT4KEIOzdkCrN", 
+			Remark: "6Yg5DP67RF5JK4IpEgIAwDK7xATemz61MX5Ku3D9PGCeBMvMYd6H56204ADFN4yW9EUYANsPqp", 
 			Valid: 1, 
-			CreateTime: "Fri Nov 02 2018 09:52:59 GMT+0800 (CST)", 
-			CreatePerson: "pL5ouDD53FL96U3ADVxNJayUsRlnASUVDqsG9rJYAL8XNPC2aqRFhcS9FT6pK2XV", 
-			UpdateTime: "Thu Nov 08 2018 13:33:30 GMT+0800 (CST)", 
-			UpdatePerson: "4DpzX5KWDheKJzyAtNwfIXT2n7BENWVCaMrEZxOwdLmd4jVNQeFRK", 
+			CreateTime: "Sun Dec 24 2017 00:07:25 GMT+0800 (CST)", 
+			CreatePerson: "AxVxXqFhTsQ6cwe", 
+			UpdateTime: "Sat May 19 2018 04:18:51 GMT+0800 (CST)", 
+			UpdatePerson: "QR8U5BJhTxjIlUio4Lgg34akRTp", 
 
         });
         assert(entity.Id === Id);

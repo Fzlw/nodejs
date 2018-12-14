@@ -1,55 +1,36 @@
 'use strict';
 
 const Controller = require('egg').Controller;
-const { getSameInfoAsArr } = require('../utils/dataFormat');
+const {
+    regExp
+} = require('../enums/regexp');
 const moment = require('moment');
 
 class HomeController extends Controller {
+
     async index() {
         try {
+            // 开发阶段，默认登陆
+            this.ctx.session.user = {
+                Id: '307c06ea-bd53-451b-996e-69e1b6f87454',
+                Name: 'AAAem0BBB',
+                Province: '广东省',
+                City: '深圳市'
+            }
+            this.ctx.ip = '113.97.35.74';
+
+
             let user = this.ctx.session.user,
-                UserId = user && user.Id ? user.Id : '',
+                userId = user.Id,
                 navData = {
-                    Name: user && user.Name ? user.Name : '',
+                    Name: user.Name,
+                    Province: user.Province,
+                    City: user.City,
                     Today: moment().format('YYYY年MM月DD日')
                 };
-            // 建立游客入口
-            if (!UserId || UserId.length === 0) {
-                // Id TODO   由前台传入
-                let entity = await this.ctx.service.lwVisitor.createVisitor('3948b600-f346-4eea-bf15-70dead11db86');
-                if (!entity) {
-                    this.ctx.redirect('/error/404');
-                    return;
-                }
-                // 校正用户名数据格式
-                entity.Name = entity.Name.replace(/{|}/g, '');
-                // 保存用户状态
-                this.ctx.session.user = {
-                    Id: entity.Id,
-                    Name: entity.Name
-                };
-                // 写入navData
-                navData.Name = entity.Name;
-            }
 
-            // 同步获取我的相关信息  看系统用户Id怎么传入，尽量避免少访问数据库  TODO
-            let selfData = {};
-            let selfInfo = await this.ctx.service.sysperson.getLast('fd5448b2-bdd9-4e73-ad68-f854b4507e5a');
-
-            if (selfInfo) {
-                let ContactWays = getSameInfoAsArr(selfInfo, 'QQ', 'Email', 'GitHub'),
-                    Hobbys = getSameInfoAsArr(selfInfo, 'HobbyId', 'HobbyName', 'HobbyImg'),
-                    first = selfInfo[0] || {};
-                selfData = {
-                    MyName: first.Name || '',
-                    Province: first.Province || '',
-                    City: first.City || '',
-                    Introduce: first.Introduce || '',
-                    ContactWays: ContactWays,  // 联系方式 Array
-                    Hobbys: Hobbys  // 爱好/标签  Array  个人设置标签
-                }
-            }
-
+            // 同步获取我的相关信息 
+            let selfData = this.ctx.app.__selfData || {};
             // 数据处理
 
             await this.ctx.render('home.xtpl', {
@@ -57,9 +38,44 @@ class HomeController extends Controller {
                 selfData
             });
         } catch (err) {
-            console.log('app/controller/home/index' + err);
+            // 重定向  TODO
+            this.ctx.logger.error('controller/home/index?' + this.ctx.session.user.Id + err);
         }
     }
+
+    /**
+     * 渲染登陆页面
+     * 这里将地理位置保存在session中，就可以只请求一次接口了
+     */
+    async login() {
+        try {
+            // 通过IP获得用户地址
+            let ip = this.ctx.ip;
+            if (!ip || ip.length === 0 || !regExp.IPv4.test(ip)) {
+                this.ctx.body = "IP地址非法";
+                return;
+            }
+
+            let position = {
+                Province: '',
+                City: ''
+            };
+            let addressEntity = await this.ctx.service.lwWeather.getPositionByIP(ip);
+            if (addressEntity && Number(addressEntity.status) === 1 && addressEntity.province &&
+                addressEntity.city && addressEntity.adcode) {
+                position = {
+                    Province: addressEntity.province,
+                    City: addressEntity.city
+                }
+            }
+            this.ctx.session.user = position;
+
+            await this.ctx.render('login.xtpl', {});
+        } catch (error) {
+            this.ctx.logger.error('controller/home/login?' + error);
+        }
+    }
+
 
 }
 

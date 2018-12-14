@@ -26,6 +26,10 @@ module.exports = app => {
       type: DataTypes.STRING(18),
       allowNull: true
     },
+    Password: {
+      type: DataTypes.STRING(512),
+      allowNull: false
+    },
     Sex: {
       type: DataTypes.STRING(2),
       allowNull: true
@@ -41,6 +45,11 @@ module.exports = app => {
     LandTime: {
       type: DataTypes.DATE,
       allowNull: false
+    },
+    IsAuto: {
+      type: DataTypes.INTEGER(1),
+      allowNull: false,
+      defaultValue: '1'
     },
     Valid: {
       type: DataTypes.INTEGER(1),

@@ -24,19 +24,19 @@ describe('test app/service/lw_weather.js', () => {
 
         const entity = await ctx.service.lwWeather.create({
             Id: Id,
-			Province: "oStiCbmUutAUpu6tOmgaQIbksxJ5VOm8eKXnSaFxioTWw9W9fEsPsG1QSnGFHsQm6", 
-			City: "udYjNdWslz5Q0q4EsaUDZKOX7i9yYtKuYjCILa1noZrak8sdtUPnjsZ4F58edycvamnaopluqbzKIn3h8DTHf09gk9xNHdkLPK", 
-			AdCode: "c5", 
-			Weather: "7nSBeD5uR", 
-			Temperature: 1, 
-			MinTemperature: 2, 
-			MaxTemperature: 3, 
-			WindDirection: "g", 
-			WindPower: "HtG", 
-			ReportTime: "Thu May 31 2018 00:20:49 GMT+0800 (CST)", 
+			Province: "sVX5bAn7Bo42OFJyCB4f2iITovIfFVfEsjhaLEJ0ugNhwpModFnSrvQVxF9Bp6sfsjCfPmSsUNdL", 
+			City: "oIK73k1oAbgVGhRmO9FV3kzJ1lE8PkFr27Q2cfesCuDvdE4Ri1WOORVosCPBCZzpMJ3Wl1MVdvmQ0o", 
+			AdCode: "5", 
+			Weather: "liBKQr", 
+			Temperature: 2, 
+			MinTemperature: 3, 
+			MaxTemperature: 1, 
+			WindDirection: "z", 
+			WindPower: "O", 
+			ReportTime: "Sat Oct 20 2018 14:07:57 GMT+0800 (CST)", 
 			Valid: 1, 
-			CreateTime: "Wed Aug 08 2018 19:01:59 GMT+0800 (CST)", 
-			CreatePerson: "pQdjWVGsFU4uChKtq6jJ73QzgFWzzX5ImzkJuw7BNJZZenbZPrsQzDNYonfbrmmoV1MBkCNHw3KcVXZuxwpy", 
+			CreateTime: "Sat Jul 07 2018 15:04:46 GMT+0800 (CST)", 
+			CreatePerson: "w5GfWDVlYwYwUdqD4TOz0oBtjrcwoIcIdKWPLuZfWZWKqCaMJrCQAceACFsLbLJu2hgDOqIqnSblcCdLcBUEYwWWP6rkJF8j", 
 
         });
         assert(entity.Id === Id);

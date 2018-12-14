@@ -24,18 +24,20 @@ describe('test app/service/lw_visitor.js', () => {
 
         const entity = await ctx.service.lwVisitor.create({
             Id: Id,
-			UserTypeId: "iL", 
-			Name: "remLc7pttm1ACM91J7m5xrI8y0vNzmpWR", 
-			Mobile: "tpyr", 
-			Sex: "T", 
-			Province: "r11E7xIyI8M3QdICEeKVJJbFSQC8nlzOoyC62j2HEwZKPO3Gec3pxk", 
-			City: "hx", 
-			LandTime: "Mon Aug 27 2018 23:50:59 GMT+0800 (CST)", 
+			UserTypeId: "dKksESa2DRaB1oT", 
+			Name: "SYiPSW241UCdhUPDuRQsrweb9zeDVzFjkk", 
+			Mobile: "Xh", 
+			Password: "cnGzigVpCUqDwlYawfUMrR90mP0Mu5U31WfnFx4uom7GmPHWyKYBPIUHuwuVbd805N7JZK6grqDXGf8LBCUy1KNhYj7asKhFV8XwWIqAYqnB1zV7IOuFRYa0p2ka94d2D4GTwE1gkF46jWL3a4SBkV9VY5AM", 
+			Sex: "D", 
+			Province: "Vj2gz6CJBWyxeby9MzRilodutWHpTbrnebyTw1IhUyunuW3aGCY3rhgdH7xEYrJH0VV1EpqzC07FIRWfBD0eiVTeFEu5lB2", 
+			City: "EUhQXHObqJGTGnHZczwsFjSly5D8EUKwdA1SsBOdXjSH", 
+			LandTime: "Wed Sep 19 2018 23:47:27 GMT+0800 (CST)", 
+			IsAuto: 1, 
 			Valid: 1, 
-			CreateTime: "Wed Aug 22 2018 19:48:55 GMT+0800 (CST)", 
-			CreatePerson: "2dHh6QIiTLJ6L3m6lv3LdO", 
-			UpdateTime: "Mon Nov 12 2018 04:07:38 GMT+0800 (CST)", 
-			UpdatePerson: "LTA2bBn4edV", 
+			CreateTime: "Sun May 27 2018 00:41:44 GMT+0800 (CST)", 
+			CreatePerson: "Riy6koJ7vL5", 
+			UpdateTime: "Wed Oct 10 2018 06:47:51 GMT+0800 (CST)", 
+			UpdatePerson: "l9c2eugw7Ul4YrBoaMtpzE3ycXWfDw7dTV5JuP6hz2dLhJ", 
 
         });
         assert(entity.Id === Id);

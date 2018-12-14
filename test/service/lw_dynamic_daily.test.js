@@ -24,14 +24,14 @@ describe('test app/service/lw_dynamic_daily.js', () => {
 
         const entity = await ctx.service.lwDynamicDaily.create({
             Id: Id,
-			ImgGroupId: "g5ohD", 
-			Content: "mv6DOpTAIOwLV2BsMkxhbW4RBktQCxJf75Dhrqs6VihpKqlD3hpG5kBPKzuT01yRhsauENaKexHDOAxfpmk8jDQna3DNHluauMOL4cIgP4NQ0SdqbqEXTdjHuxAJ3Key4IUYWSTLgbU7UdnSQwDFMTqvWQQMl6oVdssWBUMPjseaxXyEn4Dv6HqQikM3QpT81eU5lPx8rx4Q2nfgmJhYLBrCBMhrLGDnkrCl83W5TtfBBCp1bsDsEjNEizgqgXUvDMOI12ORrBXRHYlGzEAU7vUSb7mcOrSFt2qbjpaB4vgTdaF5xwfNgqjokSFa5cdlNMGgEuRSzVStQ5iW63z4GrL4HBFD9YSlyamcS3X0Ob3h4EUEWJNqTvOcbcK04DFRkmKsUy8doLEzb94o5Y8fWPEyAYFzPQRfU7EVqqpTdNeUZZtPmP1owwghfOSesHQxtW9yVXDzZfEiAWw5nIony6FJ9STkJR7kxLahFzZ6c0mztDctplh7A7sfYyDHDR9e8tQkMnQXDfuL3VJSpLaHaiKo6MDmFEIGIhCilKL3KUeb10QtqMfkdPTmuIWBQ2oqpZ7Zx0W1Qza5RPGIttkYuqU0h24Cf9uiLOuZ13L94F4FR8LTm5EwHeD8UONcr167Ozym7FMoinYEeu0LHt4S7tfnsppAnjY6e3K57Sl1gknSbiz1YGfPT6CMDW3g1OkeZQebDr1i5TerfmlpRsyNt9suxZTfNUOJc3NuI57qNh6MeE99jYB21RokHXPCfjdPfjAXOHwEoLUaMde6z6DweXfsWEuQVzLWFFAO2fOw9gXdLkgrYmiZh3EklT3OnK1PYlTeQombklqbmyG30", 
-			Remark: "wN4bImUAWaclTTlvL5EluMMhHu3m6aLCQaV86BSrQQBbQZ1Cd", 
+			ImgGroupId: "7Vr99", 
+			Content: "EM42yQHiHF2446EignmWCOoc5C7ZvGHEvaUygJtH4cAXwdd801MMtqYDqjRqnx4tQqbUD59HjGKrxFTPmlCUoAUrAndGlfS5j7sp2RANhQgrX0WOGBpjhGgXs9nwSC7iz06YMuAy6N2FVintmB1cf8gZ7a9RPn4XHmNL7pU516Ybd4vccyBcss7D0s5FBaMfPntPGufB2hqjBi4zvzqmSqOoUABhWJNaPsJeGXDtbxVlgp7qyJPyQCIPQvHQfraDD2qVXk8xeK9z5YLpFppT0gwztB5RhnwDVJ7CCe9ZnpEpxbi3X0a2sXOmdEo5pGckz2pl8brQSe5rRkRwoE36BoGSDc4RxHfMx6M5RXqoHvD7b1IvDEhZmr5r97OaABXAHhiapLLHrRkZM5MOWjktqYaX1j9p1joRkII0qqqJcC0cNGcquY1SWJw86UJWyuwbLpkfK3ukMg3ENqMjuak7qi2HpwIt4oZyhose6r8M1nQvHwiifMxBzRUXdQ3t8AdsE5N8hvIzud", 
+			Remark: "75DnSd1vYAdCicVFIgxyou0RdpsbST1YDWsGnhEqItDZag3HBxl7S2gY1upDo9uSvIFLzGCKPd7gTEaVq9qqgZHunrgZyqQ", 
 			Valid: 1, 
-			CreateTime: "Sat Jan 13 2018 15:41:56 GMT+0800 (CST)", 
-			CreatePerson: "oGnyyw6r63IiiUA9yM9byQaBxzaJY869BHCDtK0JoCwEzai0lRYgNR6eKIKXwqCV9RKQSCKX", 
-			UpdateTime: "Mon Nov 19 2018 19:53:06 GMT+0800 (CST)", 
-			UpdatePerson: "Ybh", 
+			CreateTime: "Sat Nov 17 2018 20:40:20 GMT+0800 (CST)", 
+			CreatePerson: "h80w", 
+			UpdateTime: "Thu Sep 13 2018 05:05:50 GMT+0800 (CST)", 
+			UpdatePerson: "43J3oI2lNgwE8UFOUV20hQd5RtXwktrOwR5Qrh9p7dNMDHlz2vHG6Km8wJtNezGWAXCGPzT1DBG9QUXlMm8CRfm6QqafPHN", 
 
         });
         assert(entity.Id === Id);

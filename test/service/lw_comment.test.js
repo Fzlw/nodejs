@@ -24,17 +24,17 @@ describe('test app/service/lw_comment.js', () => {
 
         const entity = await ctx.service.lwComment.create({
             Id: Id,
-			DynamicId: "4T", 
-			Comment: "WqUfzNM2zIc3mvDydyuCbQz0mwqGSv0AfPXbKhn4vUvDmPRmmRxog2hYri4Z6H7b5ux7KHJk15SLaHfz5LS4ENayHCkEvOgXrpJwwG0oXKg5koxGYPbSZPw518QBEAxaayrh24uc9eFhYIrV71zQU5YjAx8bjQNo69zNmEGuvYywdEQGhWxaKPACtSu5LbmJovyBWaXIazixjDsI5Qyd7Y6OsY7mKktAjmH05TKWeKnVAGiiSOzNhMvFf8PdSoEh5XQRfYYRK72rfHnyMZ1aMbek3JnRSjysr2pfgAQTtHoCHjr9uEpFSO3i49VjrV0vUdJseFL5YxVoSQMBXOnnCED0YNcVdGvyhrDVVI2S2BanTOSPlXTZNJjH0b2rT8shifLEoZfbgmSjFRnBKJy0il0tP09npxtIz5rIQ7tLLPO08n2cntCuwGZ0Q5VyAdIxkgDzQxDfjGOEQgc2yeItHdiFX5llJpB4BR5jV35aQxVrB0npJ1sMcIihdv5jlYLRnIFRK795IJP4fC84nAdshyNwxZlgrMfHMKiWK2vkC5JO5peZLkG0NUtSB1NCfslOE1ePuxuEpraoWikH7KGcU6SO46uBG444EKjXxOeL9G4GzlZtdEunWsPVkn6CZLDStB8lnqUigkxwBOn57VVesWqBSQy7utOH4MVTgeKYELGd8PHsKc5oiJyxjtmy7x1f9u", 
-			VisitorId: "5kuW", 
-			Province: "uGeFRivco1A9OOSjJlcvAr", 
-			City: "DhwaLqPfjnqZcizawS8T0RAjRDx7EDCoD5Pdx7H56DwTBFLedM2QecH0M0l0ihvVNAP", 
+			DynamicId: "dJ6qf5mMIa6m1nCr", 
+			Comment: "3PiI0PG2FZy1QvCup9eVUMURpZ0dtr5vBTUKMnDZutdpcRNyFWR0e3wabRt3L5EWI28y2O3SqNJF0IMJCna0DHIQcNNmmq8rNE0rssgEJlEzQBDSv00pn4hqWfxxx8oJ6fxMdmkYpdTQYULlb7GLjx8PcXOIJOXuT6qAr51VPJNo71iVEsFec3z8qgtXjl0Olakp67CqeUV8wS7jrbtNENBuLrjXjL1Yw05shjkQIvJSefCkj5E0nrnYdDtvhBAE4JrmZnX0yTeKgw3U1BRoS35QiUA1zTYIQmSZHx3N1yByx7zh712fjROZIVd4LHaK0cdsgYXcYbARBmqjDEXswFah4CRLjB1s4EbxPbhKgfShhP6nDN83DImUH4h8MS6w1e9pfwZRsBd79UnMJptPa0ERWQ0pUtyc7y8rtbVPpJmecTxdklWAO86yP8eifGQoqHZElkVH9Ji9r1gznOTbjSoky6BHtTeQ0RGyiOYVufPO0AYyQhm1AdpogABttefkHDRxRGxYqdAhWDEpP636XdPkJ4syTTrDktHpoeEAW9VbybjBid3YXjdkT1JqwRfcqEo5F6E0B0wY7Jd69Buo7qHfb0zcFCu8tTGDbgRFRxhEMPnzfaF28TjGO2q5k7YXo8ILbmbkKkyObG4lDTmPLrS", 
+			VisitorId: "lHf8AjOp", 
+			Province: "g16T2S79tROJw0bokVuCRBxMDmIs6aoerq5Vwdup3iwIMyhJAaOthGQTWI10Bho9t6A", 
+			City: "VUcOTQhIjHgVyeoQCKX41dXw", 
 			Approval: 1, 
 			Valid: 1, 
-			CreateTime: "Fri May 18 2018 02:25:07 GMT+0800 (CST)", 
-			CreatePerson: "sUPDBUDSWNIUhcsvUzgaYikjrw4MY", 
-			UpdateTime: "Wed May 23 2018 20:21:13 GMT+0800 (CST)", 
-			UpdatePerson: "AkveXYIjxCPgg05Z399C8hiQDGg9PcLZyxoQivJ", 
+			CreateTime: "Thu Sep 06 2018 12:23:34 GMT+0800 (CST)", 
+			CreatePerson: "tmSxx1AKZn7Z4d3od9UMQtnOZFAEoF8S4Izc7RRqdvNbV0UuH4sQ", 
+			UpdateTime: "Mon Apr 30 2018 15:01:02 GMT+0800 (CST)", 
+			UpdatePerson: "RSaQIMGaFxIJsPA3FvgiLoDdGEBhRAEPwK8iUbCoVIiLsoQ5z5IvCnGt974IE54ICbIbHqXCmm04DhtIUpIxe22tdqlvy7un", 
 
         });
         assert(entity.Id === Id);

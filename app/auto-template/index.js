@@ -52,7 +52,7 @@ describe('autoCreate by liwei', () => {
         // 断言 TODO
     })
 
-    it('create test/service', () => {
+    it.only('create test/service', () => {
         const ctx = app.mockContext(),
             models = app.model.models; // 获取所有model
 

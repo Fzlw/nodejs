@@ -7,6 +7,8 @@
 
 const Service = require('egg').Service;
 
+const uuid = require('uuid');
+
 module.exports = class LwVisitorLogsService extends Service {
 
     /**
@@ -30,7 +32,7 @@ module.exports = class LwVisitorLogsService extends Service {
      * @return {Object} entity a model Entity
      */
     async getById(Id) {
-        if(!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
+        if (!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
         try {
             const result = await this.ctx.model.LwVisitorLogs.findOne({
                 where: {
@@ -143,6 +145,43 @@ module.exports = class LwVisitorLogsService extends Service {
             return entityList;
         } catch (err) {
             throw err;
+        }
+    }
+
+    /**
+     * 根据必须参数创建实体
+     * @param {object} options 
+     */
+    async createByOptions(options) {
+
+        try {
+            let now = new Date(),
+                defaultEntity = {
+                    Id: uuid.v4(),
+                    IP: this.ctx.ip,
+                    UserAgent: this.ctx.request.header["user-agent"],
+                    Province: '',
+                    City: '',
+                    LandTime: now,
+                    Valid: 1,
+                    CreateTime: now,
+                    CreatePerson: 'system'
+                };
+                
+            // 获取地理信息
+            let {
+                Province,
+                City
+            } = this.ctx.session.user;
+            let entity = Object.assign(defaultEntity, options, {
+                Province,
+                City
+            });
+            let result = await this.ctx.service.lwVisitorLogs.create(entity);
+            return result;
+        } catch (error) {
+            this.ctx.logger.error('service/lw_visitor_logs/createByOptions' + error);
+            throw error;
         }
     }
 

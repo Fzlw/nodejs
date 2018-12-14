@@ -24,19 +24,20 @@ describe('test app/service/lw_visitor_logs.js', () => {
 
         const entity = await ctx.service.lwVisitorLogs.create({
             Id: Id,
-			UserId: "qS", 
-			IP: "eQhs3Hs0lCWYAS9SWTnf", 
-			LandTime: "Fri Dec 07 2018 13:36:21 GMT+0800 (CST)", 
-			Province: "i64f6olUWXzYnpdFRg1t3ljX59KMpGaDAkiNId6RIcQuHpAYRV7O9AIm9sFF0Zw8TOvvZ5vGOrQE07xzOy3B1RWovBGLeBtk0", 
-			City: "TTFxPiilMFZT", 
-			UserAgent: "H3O0zBVZBNemVS4fRDOrkhLToYB0pP2Nrxwzxms7QcHMIQpgCtE0hMROXtzwk4F1zv9QDSdBW7VolHtZbyKs3kMWzYRM4NEuykkAROyg8uc6MOuI3ygRaTnqEj9ehdqsd3mzUSCbXQAidLVVwoMku8pG02TR93lsMYAnOziio2i8vMbuKkqYdZTPKbMHTfrOakbzq6fYZ3g8HdBLvFXou7wAvgisQkBon5vvC8diy5S3TzRgsbd5daWDYPWJ0HDRIsLWrX9RUPozVKxWiMS24cRyaNcpU7VmDDk6bwahRY19Wm2tKpWzJeKdR03ABfBQx5bA5zvzrC1kdUAKNaZuyLaaLWH06Rj6UUtwnxaCHid1jMCQDxhzEVTehPb34zl9JKJJ4xs69DObuvq6yPUWE1o6DtlGgwfLt0FGVvYM0mIKpHRfLF44HLxdrIIZeGRGJasmsL7FbKzOnk5P79GYRg66FjHNeiev23h58mOFo7jrrEERcKCNqKEzv8FI88aLuYxFvxzGCx7uixmSGagAqhiHN1T2rnC3TUSXEwVTN8MjXYKGXzSOHNkaqMCGs7OGkyVNlW2jLS3lZeUG31Y5lexgmPAYNb3SZ5tNgu6ijvmxx9D9T32r0aZIQ0khxBr0R2g9ma4wQH30IySqzcBLSoN8yCTgKQ8Mn46WB5IceHcf2sUYkMjdSrmf07mcD9qt23B2R1mHJQ8RzKyxB2HCOiZ1d8dG12MawEg6uQJqIz6495PL2TecJAaLYN9NDWKk3UCRbnEy7ag6nR912bOfR7m4RvdE0YAVfQ4J6qRz55AQnMqSIkmoUkT0ry99zEj8bpYE7veZycEpVKfLaDWRu4GHT2HF0NqbpEbeWnALudWmquBNxo4", 
-			WebBrowser: "hNqppnUWBv33xqhQXOaygBzUTWoYPkrKHSWhRRt6b5Leso", 
-			WebBrowserVersion: "uBEOVpuhG1LB6pW", 
+			UserId: "3gB", 
+			IP: "IJaLyzOY9HccQB", 
+			LandTime: "Fri Oct 05 2018 23:27:40 GMT+0800 (CST)", 
+			Province: "IJTgWJf5T1ARB1eNGx140c5qf4SNM27SpwBVEj1oWV442c8Vzwb7vbK2kyiyqKEOGWXQXmT9vytf15gy", 
+			City: "BjAjiUXT9NM6yoHp1QJ3RBqmD860QZ1kLdi0", 
+			UserAgent: "4ZjD91ar0wSoD5QTi09KSMURCeTd1mFjFlghT4n2gQg5aJDbh8is6Cph52cveRyA2ZL3bZcgIuhFYgIPeqTlv0nlimUsvoB16g0tSEohmEVDddrzsrWRYRG4lMSsl6Zq1cNI1PdNQyBXV6ySjLsoIM4KQ2VCKeuZNpE5W4UsShcbKsFlcRl5lmXUbRzHH4QJiclsjuY6CqQjS7rTevy22EMobb2BZkZNYUYgUItqp1aSVLR4djfjaqdDINb5VrR2VYaL0wvS2GzoCtgOqKqkCxpBairMsAzmfEslAkN4AdVMCLSuOamZaMsNlxng2IVMKAtIT83E9phYLfY02dsIMdVvj4QTut1Tx5xZBGpD8Qf7Z4vwQjd9UR4ex4i4QDXOL1tBgqbIZjswmKpMM68a8S7vx8UbPuP6sAvuiw9KxyAArY1EkmS909fvManTU9y07SGYPQHO0pBgkxi3GkVvYIHaNYdu3jlVLXBOWXq0RiRr0ozo0HyvVN1MY8EH2WdfNtCeGur3qo87r8PGEoqGrhCDD5lEavE24jPc0PTz8QhLsQHQMhyn1i4oQRKeTh7scAjXEB54UkkoCORRsoN2otD5EAI9VG7mbCtzjTRcLGwS6DEaQmNTV1GrxoVCK9zns28wm51soUh9TRStCSY2WT6jUzEHTjWg3RwePwpHqGGVsakqNiJ26VTFcQLu5y7B0z8nh8clC2SQwHoeG6Keq5azjkNuWtevR8tBHWQUGZss5", 
+			WebBrowser: "ci6z", 
+			WebBrowserVersion: "lYeWo4isn", 
+			Remark: "yHh1ykX4PamHCuV4hzsPp0j1DWCtzujUWYJVr0T1yR4oUA1fvebCswszMXqeVlIwuM4eVOzmJHIYxDAQGBGGS", 
 			Valid: 1, 
-			CreateTime: "Thu May 24 2018 05:03:09 GMT+0800 (CST)", 
-			CreatePerson: "MJzctsQApBScgfN6ZJYbjgasZ6IcesOUjafPnnXk29NbiyDypd90EgyDEVqo85W6vytySMVgs7YxT4gPw2ugdcafQM", 
-			UpdateTime: "Thu Sep 27 2018 16:51:14 GMT+0800 (CST)", 
-			UpdatePerson: "avAwqeu6OcaYZTKeOmuDsTspt1HckaYjZv4xasMflQZsoNr8iVhzG", 
+			CreateTime: "Fri Apr 06 2018 16:58:12 GMT+0800 (CST)", 
+			CreatePerson: "HfmD3WCOfTa5JGyCM0jY4nUZI5GiSZvhxdXQob6GhlizW2jCcRksRb0hfhaFLGSDLo9BsAXlXCeJMMsIMKsmb", 
+			UpdateTime: "Thu Feb 08 2018 19:59:18 GMT+0800 (CST)", 
+			UpdatePerson: "vB14zNWISgtP5TYz6Vv6adU5Ho4FVU9bdqKCfgIzQd2KcLu7AG7RAsXupL3dSLYPDY2nW", 
 
         });
         assert(entity.Id === Id);

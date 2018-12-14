@@ -24,18 +24,18 @@ describe('test app/service/lw_dynamic_journey.js', () => {
 
         const entity = await ctx.service.lwDynamicJourney.create({
             Id: Id,
-			StartTime: "Wed Jun 27 2018 06:58:21 GMT+0800 (CST)", 
-			EndTime: "Wed Dec 27 2017 08:32:38 GMT+0800 (CST)", 
-			PointOfStart: "wqC", 
-			PointOfEnd: "U8csTunuRDxbbmej7gkkcYkvp6sCF3hAaKhqC3iw", 
-			ImgGroupId: "URIBl4Ak697GLHyy", 
-			Describe: "vYKhqoo7RA3eAydaLFXvTEfzY590UhUQferIZmOhpEVILjbFtOmT7JHnSNyMyTwwxghhRGbNoGs3daKuSIX1wQoeqgBEs6Tr2db1RfkL9CfqQlfuTlqxgrYWxEihoKRiZqzcjiVHn3IoyJpe0l9gQPuACbbhugAniukmSja2DKX8KVa975Dzw2YMfC8dkwaPA75G32IQ4s6qa0b9fIzx32oEl97fZoa3Lq07aajE00mrT5T9PmpkA5AOM7YYA9Sn3KZl3DstJkwlkCuixesdOKKHWxiP6PYEEH8keKsvIuXvuN2MXYLvbXgrKRer0hxquzTUb7FFol0yo9ya5iPzUvGXUa9d66", 
-			Remark: "S", 
+			StartTime: "Sat Nov 03 2018 03:42:38 GMT+0800 (CST)", 
+			EndTime: "Wed Mar 21 2018 12:31:43 GMT+0800 (CST)", 
+			PointOfStart: "hoPGN7MT", 
+			PointOfEnd: "UYCLZMSljhC3aWdDmaQaXFU7QmInAt7noINc1VJL3PTFSDDQ0ePUmTCAaJHhqMWQEhBoAHzPIQY", 
+			ImgGroupId: "FakkGU", 
+			Describe: "829yGDvMGesQqKPTCJkdLyAO9pYqqTk0D9DNGgjjRVzelbQcGq5BnTzUbGPEH8noN2vGa5bBdipVI5SIh4dTMox6fUL7ac7DKDH2RRpR3j5Wyo6i2tOatvddvlZnRhYudQxJg", 
+			Remark: "lMsvWhClFRok6cuwEIiiY4WYuDd5KA0A", 
 			Valid: 1, 
-			CreateTime: "Sat Mar 31 2018 12:33:00 GMT+0800 (CST)", 
-			CreatePerson: "yDV6J4EfFlldkxPhS9EuSDordyVoev5R3H0Zp4woh9rV7U1wqtRUksPd", 
-			UpdateTime: "Sat Oct 27 2018 00:19:08 GMT+0800 (CST)", 
-			UpdatePerson: "mUtGX3ZJFJahEVwxVJ1BCXmDWCREuZn4Bgj0GVeSxyW3zgNnT0fJsYTIIoCl", 
+			CreateTime: "Sun Dec 09 2018 20:24:53 GMT+0800 (CST)", 
+			CreatePerson: "jo62RHCNHSbI4EVPDb8BPdIcraHDonwowj7jPjF9S3azoSGCr95Y2MH1YN6tX4nuSfDFGiK3boPBt732vMPyN", 
+			UpdateTime: "Sun Feb 18 2018 09:58:45 GMT+0800 (CST)", 
+			UpdatePerson: "ddXIXvdYGhVqaqOIGvnC7pUKzUlAMkgjTZcv1s", 
 
         });
         assert(entity.Id === Id);

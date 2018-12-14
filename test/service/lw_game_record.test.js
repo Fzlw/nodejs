@@ -24,14 +24,14 @@ describe('test app/service/lw_game_record.js', () => {
 
         const entity = await ctx.service.lwGameRecord.create({
             Id: Id,
-			GameId: "b2uVhLu9DoT6JlW", 
-			VisitorId: "YAJeNoQ", 
-			Score: "Od", 
+			GameId: "MJo1wrIulDmKu8qttq", 
+			VisitorId: "1fcwinRp4xD8W", 
+			Score: "yrIw7krvrDPj4vg1dooUhXydKZ1t3wCOnjcXr9xS8BwibeC1Ya8P9o5ZvHvmIedj1ipZrwk63LdEPOcnGwKtmO", 
 			Valid: 1, 
-			CreateTime: "Fri Feb 09 2018 02:37:01 GMT+0800 (CST)", 
-			CreatePerson: "nKa3jP86FSEE5TLV697XDuWtKwrfofQxm6lnP3c5BEBZwD4FKc6wbqAuFKVR8Cj2dnI1uNtxdTDwkanixZei6ANimXD43vy", 
-			UpdateTime: "Wed Jul 25 2018 04:42:31 GMT+0800 (CST)", 
-			UpdatePerson: "wWNKOkOtgOb3xnA5a39XyFTm69V5lmoi2dGYGc7UmAtAeW3fLS3um3bY1dXZQWOC1GhyBP", 
+			CreateTime: "Thu Mar 29 2018 11:39:23 GMT+0800 (CST)", 
+			CreatePerson: "PM8QzMlkbACWxA6RUbi9He", 
+			UpdateTime: "Tue Feb 27 2018 21:41:09 GMT+0800 (CST)", 
+			UpdatePerson: "UyzLhC9nsoHCqibKv6K0OvIY3rfZybycao8foZL2DmiFm9yMT2iw7b", 
 
         });
         assert(entity.Id === Id);

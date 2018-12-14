@@ -24,15 +24,15 @@ describe('test app/service/lw_msg_board.js', () => {
 
         const entity = await ctx.service.lwMsgBoard.create({
             Id: Id,
-			UserId: "92iDDM", 
-			Content: "MiJ4E4in1JOMotH8IAWmNb1zgIGB3QF5zHj9D3NpjTDsOEngq9n546j64yUCRxukQ0IE5apewxpCnRVPpSder5SDZCAX98lzsmYomA6FR3f9jTAxUEcSr51XXmhAZRNrlt48T7mzYR9u6Ang3L4uu02c4JkuG1LcMZJz16ZSdGEK4gdXY2HO6puvmrrWOwM1QKurO92TtWtNxa7l5zO7VpFPKICtyIDAK2RJMckU2lUpoH8FkGd6KdS5WdJMhbJHZKL76uQiuKQvxQBhroTMHv70u02aB2K25llsiU7Kgw15ZO0Qy1lYRl5Jt0TGyYxG5pdnV8tcRat6EE4lSCXhmXFxWwH1e3GYP55gus3xMeOrIddpS12QyRQ0NIpe2OjKoAUy6gWXnCqazZb77Ew1YnYEi6t391nxdodxNR7ouym4cFQ1UAAbmAS5mhseNLgyeizNygH4z434mC43bhWLaa0xEP0UNW07t8hERkTk4R2q9165uySh0YaYkDoHN275Z7Wn0ppU5VCKK7RNbbjaKy35NeoaMofBRAO5l2m7UsMbGMuruR48Y7zh3COINbubtneHgdQllJ0Ea11kkbkjUPa2AtsunSDigdPPBBEy6", 
-			Remark: "uJiQj3cwxBv2EXoMNRlA9Thdqr1muPyT9WQXasMthqCfDDZKYYDoJIObZTKqob6AozTSb4TwLErFQZmPE4n", 
+			UserId: "KyCtaxvcoxlyxxhELy", 
+			Content: "mDocweD32d9uyN3vcJFsWHImXcaXV2inbd554qWo9I1kozuqgAyOYcHm1ula3mZtTDB", 
+			Remark: "kwOBHzTnhYKS4V0iMdiAym1K7pCe7j8G4S4B45bN5q9p3ys2pMzcYZT4bejHu0oZpN8Wj1TstCVzedpXFGkJmaFHK", 
 			Approval: 1, 
 			Valid: 1, 
-			CreateTime: "Tue Dec 19 2017 07:11:37 GMT+0800 (CST)", 
-			CreatePerson: "IwWlWfvAINSr", 
-			UpdateTime: "Fri Sep 21 2018 08:42:21 GMT+0800 (CST)", 
-			UpdatePerson: "QRQx", 
+			CreateTime: "Mon May 14 2018 06:06:05 GMT+0800 (CST)", 
+			CreatePerson: "wEXBXEyXLhlIZWXJWa2n6xUhcnk6hzwwmkcRvoOP56JgwnGVgu7EriIvu3", 
+			UpdateTime: "Wed May 16 2018 06:00:41 GMT+0800 (CST)", 
+			UpdatePerson: "5B", 
 
         });
         assert(entity.Id === Id);

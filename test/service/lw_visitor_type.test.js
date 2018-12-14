@@ -24,17 +24,17 @@ describe('test app/service/lw_visitor_type.js', () => {
 
         const entity = await ctx.service.lwVisitorType.create({
             Id: Id,
-			Name: "3YOYuQtImYPX80uv7q22tL1o7N9ROa0C3tzLI2PRBtpn298KXwbCuHe6ZFQMTjoU4IXGNGblxY3Wk4cxkbQP", 
-			Prefix: "vfeZE", 
-			Suffix: "uMveF", 
-			MaxLen: 3, 
-			FillByte: "em", 
-			Remark: "O8wYMTfeIEWJOBpEP1lREJ36QjkKqf1wGnJ", 
+			Name: "U2qVaY5IHhSjnVL7Fc34UoDGmakt9mVZpNUoGokyy8BedJtxzQhdelER9eCOEuKbOhkp6py", 
+			Prefix: "8J", 
+			Suffix: "6iXh", 
+			MaxLen: 2, 
+			FillByte: "5NJYg", 
+			Remark: "g20R5edlPV6eOJnUxdzu7iomF0JsUoiFR80SLkp8WlErXRbBRg4PCnNm9xgvRMp7qBC5qlOqW", 
 			Valid: 1, 
-			CreateTime: "Sat Oct 27 2018 23:59:50 GMT+0800 (CST)", 
-			CreatePerson: "GAD85tpuCAJKuoISOMUOu53MGDwXo8a3cFL7rdQJ3fdpv26aPVoJi", 
-			UpdateTime: "Thu Jun 28 2018 15:22:25 GMT+0800 (CST)", 
-			UpdatePerson: "abLIavTHlTUQjNKroGXlOC6ON5DtTFEMtfGtdD82BlRAfGH8OP7yfLLkLYjATCFzWJZpVqTLXFE", 
+			CreateTime: "Fri Nov 30 2018 17:53:06 GMT+0800 (CST)", 
+			CreatePerson: "GD25O6OALJXgo1tIu6HzWwP0tEa6hFtgHhb4s3YBcAOa7cnHbtXw3WHLcbose8", 
+			UpdateTime: "Thu Dec 14 2017 19:03:25 GMT+0800 (CST)", 
+			UpdatePerson: "Nl31tzScS3my7WCR25C3pqAwm1h2DaeSdEJaaqrdtlGKtfuJHswmVglcz7NSGNXAGoSw9TEr28E", 
 
         });
         assert(entity.Id === Id);

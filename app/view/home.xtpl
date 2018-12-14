@@ -19,7 +19,7 @@
     <div class="content">
         <div class="aslide">
             {{include ('../../public/build/component/bg-music/index.xtpl', {  })}}
-            {{include ('../../public/build/component/self/index.xtpl', {  })}}
+            {{include ('../../public/build/component/self/index.xtpl', { data: selfData })}}
             {{include ('../../public/build/component/message-board/index.xtpl', {  })}}
             {{include ('../../public/build/component/interesting/index.xtpl', {  })}}
         </div>

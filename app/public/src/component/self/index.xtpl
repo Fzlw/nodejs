@@ -4,13 +4,13 @@
     {{! svg图标 }}
         <img src="http://placehold.it/30x30/deb887" alt="icon" />
         <span>昵称</span>
-        <p>红瞳雀</p>
+        <p>{{ data.MyName }}</p>
     </div>
     <div class="item">
     {{! svg图标 }}
         <img src="http://placehold.it/30x30/deb887" alt="icon" />
         <span>城市</span>
-        <p>红瞳雀</p>
+        <p>{{ data.City }}</p>
     </div>
     <div class="item">
     {{! svg图标 }}
@@ -22,6 +22,6 @@
     {{! svg图标 }}
         <img src="http://placehold.it/30x30/deb887" alt="icon" />
         <span>签名</span>
-        <p>红瞳雀</p>
+        <p>{{ data.Introduce }}</p>
     </div>
 </div>

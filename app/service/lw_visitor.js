@@ -47,6 +47,24 @@ module.exports = class LwVisitorService extends Service {
     }
 
     /**
+     *  get a lw_visitor by condtion
+     * @param {Object} where condition
+     * @return {Object} entity a model Entity
+     */
+    async getByCondition(where) {
+        if (!where || typeof where !== 'object') {
+            throw new Error('param error');
+        }
+        try {
+            return await this.ctx.model.LwVisitor.findOne({
+                where: where
+            });
+        } catch (err) {
+            throw err;
+        }
+    }
+
+    /**
      * update a lw_visitor
      * @param {Object} entity model lw_visitor
      * @return {Object} newEntity entity a model Entity
@@ -152,12 +170,14 @@ module.exports = class LwVisitorService extends Service {
     /**
      * get the last lw_visitor
      */
-    async getLastOne() {
+    async getLastOne(typeId, options) {
         try {
+            let whereCon = Object.assign(options || {}, {
+                UserTypeId: typeId,
+                Valid: 1
+            });
             let lastone = await this.ctx.model.LwVisitor.findOne({
-                where: {
-                    Valid: 1
-                },
+                where: whereCon,
                 order: [
                     ['CreateTime', 'DESC']
                 ]
@@ -173,7 +193,7 @@ module.exports = class LwVisitorService extends Service {
      * @param {number} userTypeId  创建用户类型Id
      * @returns {Object} entity 
      */
-    async createVisitor(userTypeId) {
+    async createVisitorAndLog(userTypeId) {
         
         try {
             let userTypeInfo = await this.ctx.service.lwVisitorType.getById(userTypeId);
@@ -182,7 +202,8 @@ module.exports = class LwVisitorService extends Service {
                 return;
             }
 
-            let lastUser = await this.ctx.service.lwVisitor.getLastOne();
+            // 获取最新用户
+            let lastUser = await this.ctx.service.lwVisitor.getLastOne(typeId);
             let newUserName = '',
                 newUserId = uuid.v4(),
                 prefix = userTypeInfo.Prefix,
@@ -205,8 +226,8 @@ module.exports = class LwVisitorService extends Service {
                 CreateTime: new Date(),
                 CreatePerson: 'sysauto'
             };
-            let result = await this.ctx.service.lwVisitor.create(userEntity);
-            return result;
+            let createUser = await this.ctx.service.lwVisitor.create(userEntity);
+            return createUser;
         } catch (err) {
             console.log('app/service/lw_visitor/createVisitor' + err);
         }

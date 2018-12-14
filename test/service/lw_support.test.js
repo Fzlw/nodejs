@@ -26,13 +26,13 @@ describe('test app/service/lw_support.js', () => {
             Id: Id,
 			Support: 1, 
 			Against: 1, 
-			DynamicId: "ISt3nE", 
-			VisitorId: "j7rUIK9DTyeA35g31", 
+			DynamicId: "PA", 
+			VisitorId: "3i7mQY8fQTUK6d2z", 
 			Valid: 1, 
-			CreateTime: "Mon Apr 02 2018 23:32:59 GMT+0800 (CST)", 
-			CreatePerson: "lIJToe8N", 
-			UpdateTime: "Sun May 27 2018 23:21:57 GMT+0800 (CST)", 
-			UpdatePerson: "oTzPbuMqhaJ3XbE1oTdtFpuKU7zbiIfQ0cX6r05LY3KH9QVimyxdsXz", 
+			CreateTime: "Tue Aug 28 2018 18:02:48 GMT+0800 (CST)", 
+			CreatePerson: "yrDbljbNr65EQiNwiJcqHDxJ0Id5397VrdnbyGKLrHw77FcBV2SqNTKQtiZLF", 
+			UpdateTime: "Sat Jun 30 2018 21:44:25 GMT+0800 (CST)", 
+			UpdatePerson: "lmXrWSnjHXVWxBT1TdCao2CGNR4xWHGRjdIx93WJmxApVyEn0uCdZB8iXXGsVqRSJ65a7gDxE7sF8aBvRq4oTM", 
 
         });
         assert(entity.Id === Id);

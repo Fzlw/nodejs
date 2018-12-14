@@ -42,6 +42,9 @@ module.exports = appInfo => {
         online: `//www.fzstudy.top/${config.staticPrefix}/${config.staticVersion}`
     }
 
+    // 个人Id
+    config.selfId = "fd5448b2-bdd9-4e73-ad68-f854b4507e5a";
+
     // 游客名称前缀，最大填充位数, 填充符号, 用于替换前缀的正则  改为数据库存储
     // config.users = {
     //     prefixVisitor: "游客_",

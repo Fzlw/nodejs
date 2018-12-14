@@ -45,6 +45,10 @@ module.exports = app => {
       type: DataTypes.STRING(40),
       allowNull: true
     },
+    Remark: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
     Valid: {
       type: DataTypes.INTEGER(1),
       allowNull: false,
