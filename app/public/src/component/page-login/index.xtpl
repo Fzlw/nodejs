@@ -1,0 +1,11 @@
+<div class="page-login" data-mod-id="component/page-login/index">
+    <div class="version"></div>
+
+    <div class="container">
+        {{include ('../visit/index.xtpl')}}
+        {{include ('../register/index.xtpl')}}
+        {{include ('../login/index.xtpl')}} 
+    </div>
+
+    <div class="login-bg"></div>
+</div>

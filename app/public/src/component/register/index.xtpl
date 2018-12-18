@@ -10,7 +10,7 @@
                 <input type="text" />
             </div>
 
-            <button type="submit">登陆</button>
+            <button type="submit">注册</button>
             <button type="reset">重置</button>
         </form>
     </div>
