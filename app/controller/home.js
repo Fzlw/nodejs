@@ -51,6 +51,7 @@ class HomeController extends Controller {
         try {
             // 通过IP获得用户地址
             let ip = this.ctx.ip;
+            ip = '120.77.222.224'
             if (!ip || ip.length === 0 || !regExp.IPv4.test(ip)) {
                 this.ctx.body = "IP地址非法";
                 return;

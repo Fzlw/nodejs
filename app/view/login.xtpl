@@ -1,0 +1,12 @@
+{{extend ('./layout/layout.xtpl')}}
+
+{{#block ('head')}}
+<link href="{{ helper.getHost() }}/page/login.css" rel="stylesheet" type="text/css" />
+{{/block}}
+
+
+{{#block ('body')}}
+
+{{include ('../../public/build/component/login/index.xtpl', {  })}}
+
+{{/block}}
