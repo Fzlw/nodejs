@@ -5,20 +5,20 @@ const {
     regExp
 } = require('../enums/regexp');
 const moment = require('moment');
+const { UserTypeId } = require('../enums/visitor');
 
 class HomeController extends Controller {
 
     async index() {
         try {
             // 开发阶段，默认登陆
-            this.ctx.session.user = {
-                Id: '307c06ea-bd53-451b-996e-69e1b6f87454',
-                Name: 'AAAem0BBB',
-                Province: '广东省',
-                City: '深圳市'
-            }
-            this.ctx.ip = '113.97.35.74';
-
+            // this.ctx.session.user = {
+            //     Id: '307c06ea-bd53-451b-996e-69e1b6f87454',
+            //     Name: 'AAAem0BBB',
+            //     Province: '广东省',
+            //     City: '深圳市'
+            // }
+            // this.ctx.ip = '113.97.35.74';
 
             let user = this.ctx.session.user,
                 userId = user.Id,
@@ -71,7 +71,9 @@ class HomeController extends Controller {
             }
             this.ctx.session.user = position;
 
-            await this.ctx.render('login.xtpl', {});
+            await this.ctx.render('login.xtpl', { 
+                UserTypeId
+            });
         } catch (error) {
             this.ctx.logger.error('controller/home/login?' + error);
         }

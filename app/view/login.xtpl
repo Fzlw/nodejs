@@ -7,6 +7,6 @@
 
 {{#block ('body')}}
 
-{{include ('../../public/build/component/page-login/index.xtpl', {  })}}
+{{include ('../../public/build/component/page-login/index.xtpl', { userTypeId: UserTypeId })}}
 
 {{/block}}

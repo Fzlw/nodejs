@@ -87,6 +87,7 @@ module.exports = class Api extends Controller {
             userName = loginType.Prefix + '{' + userName + '}' + loginType.Suffix;
 
             // 进一步检验用户输入的是否含有脚本注入的风险关键字   TODO
+            // 密码加密   TODO
 
             let now = new Date(),
                 userId = uuid.v4(),
@@ -95,6 +96,7 @@ module.exports = class Api extends Controller {
                     UserTypeId: loginType.Id,
                     Name: userName,
                     Mobile: params.mobile,
+                    Password: 'lw_123456',
                     LandTime: now,
                     IsAuto: 1,
                     Valid: 1,

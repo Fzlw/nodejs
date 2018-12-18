@@ -24,7 +24,7 @@ describe('test app/service/lw_visitor_type.js', () => {
 
         const entity = await ctx.service.lwVisitorType.create({
             Id: Id,
-			Name: "U2qVaY5IHhSjnVL7Fc34UoDGmakt9mVZpNUoGokyy8BedJtxzQhdelER9eCOEuKbOhkp6py", 
+			Name: "注册用户", 
 			Prefix: "8J", 
 			Suffix: "6iXh", 
 			MaxLen: 2, 
