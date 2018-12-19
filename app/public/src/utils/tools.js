@@ -68,6 +68,7 @@ define([
                     'border-radius': 2,
                     opacity: 0,
                 }).appendTo($('body'));
+                console.log(div)
             let top = ($(window).height() - div.height()) / 2;
             let left = ($(window).width() - div.width()) / 2;
             div.css({

@@ -33,6 +33,14 @@ module.exports = appInfo => {
         preload: false
     }
 
+    // 中间件
+    config.middleware = ['userService'];
+
+    // 正则配置忽略重定向页面路由
+    config.userService = {
+        ignore: /^\/(login|404)$/
+    }
+
     // 默认为本地
     config.isOnline = false;
 

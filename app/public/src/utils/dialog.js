@@ -50,7 +50,7 @@ define([
                 closeBtn
             } = this.params;
             // 转换body
-            body = body instanceof $ ? body.html() : typeof body === 'string' ? body : '';
+            body = body instanceof Object ? body.html() : typeof body === 'string' ? body : '';
 
             const dialog = `
                 <div id=${this.id} style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;">

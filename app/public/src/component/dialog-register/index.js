@@ -2,15 +2,13 @@
 
 define([
     'zepto',
-    'utils/tools',
-    './index.xtpl'
-], function($, Tools, xtpl) {
+    'utils/tools'
+], function($, Tools) {
 
     class DialogRegister extends Tools {
         constructor() {
             super();
             // this.box = xtpl();
-            console.log(xtpl);
         }
 
 

@@ -37,8 +37,7 @@ let xtplDefaultConfig = {
 let requireDefaultConfig = {
     "baseUrl": `/${appConfig.staticPrefix}/${appConfig.staticVersion}/`,
     "paths": {
-        "zepto": "https://cdn.bootcss.com/zepto/1.2.0/zepto.min",
-        "xtemplate": "lib/xtemplate"
+        "zepto": "https://cdn.bootcss.com/zepto/1.2.0/zepto"
     }
 }
 
