@@ -127,7 +127,7 @@ module.exports = class Api extends Controller {
                 UserId: userId,
                 Remark: 'register'
             }
-            return await ctx.service.lwVisitorLogs.createByOptions(options);
+            await ctx.service.lwVisitorLogs.createByOptions(options);
         } catch (error) {
             this.ctx.logger.error('controller/api/register' + error);
             result.status = 500;

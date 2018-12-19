@@ -30,6 +30,7 @@ describe('test app/service/test_banner.js', () => {
 			updateTime: "Thu Nov 01 2018 02:13:38 GMT+0800 (CST)", 
 
         });
+        console.log(entity.dataValues)
         assert(entity.Id === Id);
     })
 

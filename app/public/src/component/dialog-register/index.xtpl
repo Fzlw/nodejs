@@ -1,0 +1,15 @@
+<div class="dialog-register">
+    <div class="con">
+        <form class="form-register" action="" method="post">
+            <label>手机号：
+                <input type="text" />
+            </label>
+            <label>密码：
+                <input type="text" />
+            </label>
+            {{! <input type="hidden" name="userTypeId" value="{ { userTypeId.register } }" /> }}
+            <button type="button">注册</button>
+            <button type="reset">重置</button>
+        </form>
+    </div>
+</div>
