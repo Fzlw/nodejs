@@ -1,8 +1,9 @@
 'use strict';
 
 define([
-    'zepto'
-], function ($) {
+    'zepto',
+    'zepto-fx'
+], function ($, fx) {
 
     class Tools {
 
@@ -60,7 +61,7 @@ define([
                     'box-sizing': 'border-box',
                     // width: 240,
                     height: 50,
-                    padding: '0 10px',
+                    padding: '0 20px',
                     'z-index': 999,
                     color: '#fff',
                     'font-size': 14,
@@ -68,7 +69,6 @@ define([
                     'border-radius': 2,
                     opacity: 0,
                 }).appendTo($('body'));
-                console.log(div)
             let top = ($(window).height() - div.height()) / 2;
             let left = ($(window).width() - div.width()) / 2;
             div.css({

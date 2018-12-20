@@ -12,12 +12,12 @@
         </div>
 
         <div class="register">
-            <button class="btn-default" type="button">注册用户</button>
+            <button type="button" class="btn-default" name="register" value="{{ userTypeId.register }}">注册用户</button>
             {{! <img src="http://placehold.it/30x30/deb887" alt="注册用户" /> }}
         </div>
 
         <div class="login">
-            <button class="btn-default" type="button">登陆</button>
+            <button type="button" class="btn-default" name="login">登陆</button>
             {{! <img src="http://placehold.it/30x30/deb887" alt="登陆" /> }}
         </div>
     </div>

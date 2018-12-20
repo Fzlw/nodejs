@@ -38,7 +38,7 @@ module.exports = appInfo => {
 
     // 正则配置忽略重定向页面路由
     config.userService = {
-        ignore: /^\/(login|404)$/
+        ignore: /^\/(login|404|register)$/
     }
 
     // 默认为本地

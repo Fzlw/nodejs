@@ -13,9 +13,9 @@ define([
             width: 30,
             height: 30,
             top: 0,
-            right: 0,
-            img: '//img.cnhash.com/0ef19aa6-f840-4126-82d2-44401374da1e.svg'
-        }
+            right: 0
+        },
+        closeBtnImg: '//img.cnhash.com/0ef19aa6-f840-4126-82d2-44401374da1e.svg'
     }
 
     class Dialog {
@@ -24,7 +24,6 @@ define([
             this.params = Object.assign({}, defaultConfig, options || {});
             this.params.top = ($(window).height() - this.params.height) / 2;
             this.id = this.uuid();
-            return "#" + this.id;
         }
 
         // 生成唯一标示
@@ -47,7 +46,8 @@ define([
                 height,
                 bgColor,
                 bgOpacity,
-                closeBtn
+                closeBtn,
+                closeBtnImg
             } = this.params;
             // 转换body
             body = body instanceof Object ? body.html() : typeof body === 'string' ? body : '';
@@ -59,9 +59,9 @@ define([
                     left: 0; right: 0; bottom: 0; z-index: 102; /*background: red;*/
                     ">
                         <div class="dialog-body">${body}</div>
-                        <img class="close" src="${closeBtn.img}" alt="弹层关闭按钮" style="position: absolute; 
+                        <img class="close" src="${closeBtnImg}" alt="弹层关闭按钮" style="position: absolute; 
                         top:${closeBtn.top}px; right:${closeBtn.right}px; width:${closeBtn.width}px; height:${closeBtn.height}px;
-                        cursor: pointer; " />
+                        cursor: pointer; z-index: 200; " />
                     </div>
                     <div class="dialog-bg"
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:${bgColor}; 

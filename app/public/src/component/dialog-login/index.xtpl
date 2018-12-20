@@ -1,13 +1,13 @@
 <div>
 
-    <div class="dialog-register">
-        <form class="form-register" action="" method="post">
+    <div class="dialog-login">
+        <form class="form-login" action="" method="post">
             <input type="text" placeholder="Your Mobile" />
             <input type="text" placeholder="Your Password" />
             {{! <input type="hidden" name="userTypeId" value="{ { userTypeId.register } }" /> }}
             <div class="btns">
                 <button type="reset" class="btn-default btn reset">重置</button>
-                <button type="button" class="btn-default btn register">注册</button>
+                <button type="button" class="btn-default btn login">登陆</button>
             </div>
         </form>
     </div>

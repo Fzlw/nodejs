@@ -3,8 +3,9 @@
 define([
     'zepto',
     'utils/tools',
-    'component/dialog-register/index'
-], function($, Tools, DialogRegister) {
+    'component/dialog-register/index',
+    'component/dialog-login/index'
+], function($, Tools, DialogRegister, DialogLogin) {
 
     class PageLogin extends Tools {
 
@@ -15,8 +16,6 @@ define([
         }
 
         init() {
-            // test 
-            new DialogRegister()
             this.handleClick()
         }
 
@@ -29,6 +28,10 @@ define([
                     name = target.attr('name');
                 if (name === 'visit') {
                     return this.clickBtnVisit();
+                } else if (name === 'register') {
+                    return this.clickBtnRegister(target.attr('value'));
+                } else if (name === 'login') {
+                    return this.clickBtnLogin(target.attr('value'));
                 }
             })
         }
@@ -52,6 +55,14 @@ define([
                 // 登陆失败 
                 this.tips(res.msg);
             }).catch(err => this.tips());
+        }
+
+        clickBtnRegister(Id) {
+            new DialogRegister(Id);
+        }
+
+        clickBtnLogin() {
+            new DialogLogin()
         }
 
 

@@ -85,19 +85,27 @@ requirejs([
                 path
             ], moduleFn => {
                 if (moduleFn && typeof moduleFn === 'function') {
-                    try {
-                        if (moduleFn.prototype && moduleFn.prototype.constructor) {
-                            new moduleFn($box);
-                        } else {
-                            moduleFn($box);
-                        }
-                    } catch (err) {
-                        console.log(err)
-                    }
+                    this.autoNew(moduleFn, $box);
+                } else if (moduleFn && typeof moduleFn === 'object') {
+                    // 返回值为object
+                    
                 } else {
                     // TODO 其他类型
                 }
             })
+        }
+
+        /**
+         * 自动加载实例
+         */
+        autoNew(moduleFn, $box) {
+            try {
+                let entity = null;
+                entity = moduleFn.prototype && moduleFn.prototype.constructor ? new moduleFn($box): moduleFn($box);
+                return entity;
+            } catch (err) {
+                console.log(err)
+            }
         }
 
         /**
