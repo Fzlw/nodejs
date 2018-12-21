@@ -4,3 +4,5 @@ logs
 
 app/public/build
 app/public/build/*
+
+*.log
