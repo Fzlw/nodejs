@@ -6,7 +6,7 @@
 
 
 {{#block ('body')}}
-{{! on}}
+
 {{include ('../../public/build/component/page-login/index.xtpl', { userTypeId: UserTypeId })}}
 
 {{/block}}
