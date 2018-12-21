@@ -73,6 +73,7 @@ class HomeController extends Controller {
 
             await this.ctx.render('login.xtpl', { 
                 UserTypeId
+                // on: this.ctx.app.config.logger.clearTime
             });
         } catch (error) {
             this.ctx.logger.error('controller/home/login?' + error);

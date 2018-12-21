@@ -1,0 +1,272 @@
+2018-12-21 16:44:27,505 INFO 5907 [egg-sequelize](9ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:44:27,511 INFO 5907 [egg-sequelize](13ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
+2018-12-21 16:44:27,411 INFO 5906 [egg-sequelize](10ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:44:27,426 INFO 5906 [egg-sequelize](13ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
+2018-12-21 16:44:27,443 INFO 5908 [egg-sequelize](9ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:44:27,448 INFO 5908 [egg-sequelize](15ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
+2018-12-21 16:44:27,508 INFO 5905 [egg-sequelize](9ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:44:27,519 INFO 5905 [egg-sequelize](15ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
+2018-12-21 16:47:12,826 INFO 5985 [egg-sequelize](10ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:47:12,837 INFO 5985 [egg-sequelize](15ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
+2018-12-21 16:47:12,820 INFO 5987 [egg-sequelize](7ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:47:12,829 INFO 5987 [egg-sequelize](14ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
+2018-12-21 16:47:12,835 INFO 5988 [egg-sequelize](8ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:47:12,850 INFO 5988 [egg-sequelize](17ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
+2018-12-21 16:47:12,836 INFO 5986 [egg-sequelize](9ms) Executed (default): SELECT 1+1 AS result
+2018-12-21 16:47:12,852 INFO 5986 [egg-sequelize](14ms) Executed (default): select 
+                ppp.Id,
+                ppp.Name,
+                ppp.Province,
+                ppp.City,
+                ppp.Introduce,
+                ppp.HDpic,
+                way.QQ,
+                way.Email,
+                way.WeChat,
+                way.SinaBlog,
+                way.BiliBili,
+                way.GitHub,
+                userho.*
+                from (
+                    select * from sysperson where Id = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) ppp
+                inner join (
+                    select * from syscontactway where UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and Valid = 1 order by CreateTime desc limit 1
+                ) way ON ppp.Id = way.UserId
+                left join (
+                    select 
+                    uhobby.UserId, 
+                    uhobby.HobbyId,
+                    ho.Name HobbyName,
+                    ho.Describe HobbyDescribe,
+                    ho.Img HobbyImg,
+                    ho.IsSelf
+                    from lw_user_hobby uhobby 
+                    left join lw_hobby ho on uhobby.HobbyId = ho.Id
+                    where uhobby.UserId = 'fd5448b2-bdd9-4e73-ad68-f854b4507e5a' and uhobby.Valid = 1 and ho.Valid = 1
+                    order by ho.Sort desc
+                ) userho on userho.UserId = ppp.Id
