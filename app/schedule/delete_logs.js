@@ -13,7 +13,7 @@ module.exports = app => {
             let dir = app.config.logger.dir;
             fs.unlink(dir, (err) => {
                 if (err) {
-                    app.logger.error('日志清除错误' + error);
+                    app.logger.error('日志清除错误' + err);
                 }
             })
             console.log(app.config.logger.dir)
