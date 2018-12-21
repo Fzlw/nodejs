@@ -9,4 +9,6 @@ module.exports = app => {
     app.router.post('/login', controller.api.login);
     // 注册接口
     app.router.post('/register', controller.api.register);
+    // 获取图片验证码
+    app.router.get('/getcode', controller.api.getCode);
 }

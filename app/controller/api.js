@@ -13,6 +13,7 @@ const {
 const {
     fillString
 } = require('../utils/string');
+const svgCaptcha = require('svg-captcha');
 
 module.exports = class Api extends Controller {
 
@@ -32,7 +33,7 @@ module.exports = class Api extends Controller {
             let ctx = this.ctx,
                 params = ctx.request.body;
 
-            // 是否已经登陆  是否重定向  TODO
+            // 是否已经登陆  
             if (ctx.session && ctx.session.user && ctx.session.user.Id && ctx.session.user.length !== 0) {
                 result.status = 30004;
                 result.msg = '您已登陆';
@@ -63,11 +64,10 @@ module.exports = class Api extends Controller {
             if (Number(loginType.Name) === LoginType.register) {
                 // 注册用户需要检查手机号(正则验证 TODO) 、密码（任意）、登录名（可选，默认同手机号,前期先不做，不让其填写）、图片验证码
                 if (!params.mobile || params.mobile.length === 0 || isNaN(Number(params.mobile)) ||
-                    !params.password || typeof params.password !== 'string' || params.password.length === 0
-                    // 图片验证码 TODO
-                    // !params.code || typeof params.code !== 'string' || params.code.length === 0 ||
-                    // params.code.toLowerCase() !== ctx.session.ImgCode
-                    ) {
+                    !params.password || typeof params.password !== 'string' || params.password.length === 0 ||
+                    !params.code || typeof params.code !== 'string' || params.code.length === 0 ||
+                    params.code.toLowerCase() !== ctx.session.imgCode
+                ) {
                     result.status = 30005;
                     result.msg = '注册信息参数有误';
                     ctx.body = result;
@@ -80,10 +80,8 @@ module.exports = class Api extends Controller {
                     result.msg = `用户${params.mobile}已经注册，请登陆...`;
                     ctx.body = result;
                     return;
-                } 
+                }
             }
-            // 验证完毕清除ctx.session.ImgCode
-            // ctx.session.ImgCode = null;
 
             // 前期先由系统自动递增分配用户名
             let userName = '';
@@ -126,6 +124,9 @@ module.exports = class Api extends Controller {
             result.status = 200;
             result.success = true;
 
+            // 验证完毕清除ctx.session.imgCode
+            ctx.session.imgCode = null;
+
             // 写入缓存
             ctx.session.user = {
                 Id: userId,
@@ -137,7 +138,11 @@ module.exports = class Api extends Controller {
                 UserId: userId,
                 Remark: 'register'
             }
-            await ctx.service.lwVisitorLogs.createByOptions(options);
+            try {
+                await ctx.service.lwVisitorLogs.createByOptions(options);
+            } catch (error) {
+                ctx.logger.error('写入注册log错误：' + error);
+            }
         } catch (error) {
             this.ctx.logger.error('controller/api/register' + error);
             result.status = 500;
@@ -164,7 +169,7 @@ module.exports = class Api extends Controller {
             if (!params || typeof params !== 'object' ||
                 // !params.userTypeId || params.userTypeId.length === 0 ||
                 !params.mobile || params.mobile.length === 0 ||
-                // !params.code || params.code.length === 0 ||  TODO
+                // !params.code || params.code.length === 0 ||  
                 !params.password || params.password.length === 0) {
                 result.status = 30001;
                 result.msg = '参数错误';
@@ -224,7 +229,11 @@ module.exports = class Api extends Controller {
                 UserId: userEntity.Id,
                 Remark: 'login'
             }
-            await ctx.service.lwVisitorLogs.createByOptions(options);
+            try {
+                await ctx.service.lwVisitorLogs.createByOptions(options);
+            } catch (error) {
+                ctx.logger.error('写入登陆log错误：' + error);
+            }
         } catch (error) {
             this.ctx.logger.error('controller/api/login' + error);
             result.status = 500;
@@ -333,6 +342,46 @@ module.exports = class Api extends Controller {
             result.msg = '网络异常，请稍后重试';
         }
         this.ctx.body = result;
+    }
+
+    /**
+     * 获取图片验证码 get
+     */
+    async getCode() {
+        try {
+            let code = svgCaptcha.create({
+                // 翻转颜色
+                inverse: false,
+                // 验证码字符中排除 0o1i
+                ignoreChars: '0o1i',
+                // 字体大小
+                fontSize: 40,
+                // 噪声线条数
+                noise: 2,
+                // 宽度
+                width: 80,
+                // 高度
+                height: 35,
+                color: false
+            });
+            // 保存到session，忽略大小写
+            this.ctx.session.imgCode = code.text.toLocaleLowerCase();
+
+            this.ctx.body = {
+                status: 200,
+                msg: '',
+                success: true,
+                data: code.data
+            }
+        } catch (error) {
+            this.ctx.logger.error('controller/api/getCode' + error);
+            this.ctx.body = {
+                status: 500,
+                success: false,
+                msg: '获取图片验证码失败',
+                data: null
+            }
+        }
     }
 
 

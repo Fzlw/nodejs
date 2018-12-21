@@ -4,7 +4,11 @@
         <form class="form-register" action="" method="post">
             <input type="text" placeholder="Your Mobile" name="mobile" />
             <input type="password" placeholder="Your Password" name="password" />
-            {{! <input type="hidden" name="userTypeId" value="{ { userTypeId.register } }" /> }}
+            <div class="code">
+                <input type="text" placeholder="Code" name="code" />
+                <div class="imgcode"></div>
+                <i class="iconfont icon-shuaxin"></i>
+            </div>
             <div class="btns">
                 <button type="reset" class="btn-default btn reset">重置</button>
                 <button type="button" class="btn-default btn register">注册</button>

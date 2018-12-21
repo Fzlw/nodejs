@@ -38,7 +38,7 @@ module.exports = appInfo => {
 
     // 正则配置忽略重定向页面路由
     config.userService = {
-        ignore: /^\/(login|404|register)$/
+        ignore: /^\/(login|404|register|getcode)$/
     }
 
     // 默认为本地
@@ -49,6 +49,9 @@ module.exports = appInfo => {
         local: `//127.0.0.1:7001/${config.staticPrefix}/${config.staticVersion}`,
         online: `//www.fzstudy.top/${config.staticPrefix}/${config.staticVersion}`
     }
+
+    // 日志清除时间
+    config.logClearTime = '3s' // * 24 * 60 * 60;  // 定时清除日志  默认3天 单位s
 
     // 个人Id
     config.selfId = "fd5448b2-bdd9-4e73-ad68-f854b4507e5a";
