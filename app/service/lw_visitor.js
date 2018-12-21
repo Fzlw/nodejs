@@ -8,7 +8,9 @@
 const Service = require('egg').Service;
 
 const uuid = require('uuid');
-const { fillString } = require('../utils/string');
+const {
+    fillString
+} = require('../utils/string');
 
 module.exports = class LwVisitorService extends Service {
 
@@ -33,7 +35,7 @@ module.exports = class LwVisitorService extends Service {
      * @return {Object} entity a model Entity
      */
     async getById(Id) {
-        if(!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
+        if (!Id || typeof Id !== 'string' || Id.length === 0) throw new Error('Id must be string');
         try {
             const result = await this.ctx.model.LwVisitor.findOne({
                 where: {
@@ -168,6 +170,25 @@ module.exports = class LwVisitorService extends Service {
     }
 
     /**
+     *  get a cnh_user by mobile
+     * @param {String} mobile
+     * @return {Object} entity
+     */
+    async getByMobile(mobile) {
+        try {
+            const result = this.ctx.model.LwVisitor.findOne({
+                where: {
+                    Mobile: mobile,
+                    Valid: 1
+                },
+            });
+            return result.dataValues || result;
+        } catch (err) {
+            throw err;
+        }
+    }
+
+    /**
      * get the last lw_visitor
      */
     async getLastOne(typeId, options) {
@@ -194,7 +215,7 @@ module.exports = class LwVisitorService extends Service {
      * @returns {Object} entity 
      */
     async createVisitorAndLog(userTypeId) {
-        
+
         try {
             let userTypeInfo = await this.ctx.service.lwVisitorType.getById(userTypeId);
             if (!userTypeInfo) {

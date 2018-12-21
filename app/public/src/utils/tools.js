@@ -5,10 +5,33 @@ define([
     'zepto-fx'
 ], function ($, fx) {
 
+    const tipsDefalutCss = {
+        position: 'fixed',
+        display: 'flex',
+        'justify-content': 'center',
+        'align-items': 'center',
+        'box-sizing': 'border-box',
+        // width: 240,
+        height: 50,
+        padding: '0 20px',
+        'z-index': 999,
+        color: '#fff',
+        'font-size': 14,
+        'background-color': 'rgba(0, 0, 0, 0.7)',
+        'border-radius': 2,
+        opacity: 0,
+    };
+
     class Tools {
 
         getElementPosition($element) {
 
+        }
+
+        getCsrf() {
+            return {
+                _csrf: $('input._csrf').val()
+            }
         }
 
         ajax(url, params) {
@@ -20,7 +43,7 @@ define([
                     url: url,
                     type: params.method || "GET",
                     dataType: params.dataType || "json",
-                    data: params.data,
+                    data: Object.assign(this.getCsrf(), params.data || {}),
                     timeout: params.timeout || 10000,
                     success: (res) => {
                         resolve(res);
@@ -48,27 +71,38 @@ define([
 
         /**
          * @param {str}  text 错误信息内容
+         * @param {string}  type  提示类型  'tips' 'success' 'warning'  'error'
          * 错误信息提示
          */
-        tips(text) {
+        tips(text, type = 'tips') {
             $('#INFO').remove();
+            let css = tipsDefalutCss,
+                extendCss = {};
+            if (type === 'warning') {
+                extendCss = {
+                    color: '#FFC82C',
+                    padding: '0 10px',
+                    height: 40,
+                    'background-color': 'rgba(51,51,51,0.7)'
+                }
+            } else if (type === 'error') {
+                extendCss = {
+                    color: '#FF4949',
+                    padding: '0 10px',
+                    height: 40,
+                    'background-color': 'rgba(51,51,51,0.7)'
+                } 
+            } else if (type === 'success') {
+                extendCss = {
+
+                }
+            }
+            css = Object.assign(css, extendCss);
+
             let div = $(`<div id="INFO">${text || '网络繁忙，请稍后重试'}</div>`)
-                .css({
-                    position: 'fixed',
-                    display: 'flex',
-                    'justify-content': 'center',
-                    'align-items': 'center',
-                    'box-sizing': 'border-box',
-                    // width: 240,
-                    height: 50,
-                    padding: '0 20px',
-                    'z-index': 999,
-                    color: '#fff',
-                    'font-size': 14,
-                    'background-color': 'rgba(0, 0, 0, 0.7)',
-                    'border-radius': 2,
-                    opacity: 0,
-                }).appendTo($('body'));
+                .css(
+                    css
+                ).appendTo($('body'));
             let top = ($(window).height() - div.height()) / 2;
             let left = ($(window).width() - div.width()) / 2;
             div.css({

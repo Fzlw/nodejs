@@ -50,11 +50,11 @@ module.exports = class Api extends Controller {
             }
 
             let loginType = await ctx.service.lwVisitorType.getById(params.userTypeId);
-            // 用户输入不存在的登陆类型，是否需要记录其IP地址，TODO
+            // 用户输入不存在的注册类型，是否需要记录其IP地址，TODO
             if (!loginType || typeof loginType !== 'object' ||
                 !loginType.Id || loginType.Id.length === 0 || loginType.Id !== params.userTypeId) {
                 result.status = 30003;
-                result.msg = '不存在的登陆类型';
+                result.msg = '不存在的注册类型';
                 ctx.body = result;
                 return;
             }
@@ -63,17 +63,27 @@ module.exports = class Api extends Controller {
             if (Number(loginType.Name) === LoginType.register) {
                 // 注册用户需要检查手机号(正则验证 TODO) 、密码（任意）、登录名（可选，默认同手机号,前期先不做，不让其填写）、图片验证码
                 if (!params.mobile || params.mobile.length === 0 || isNaN(Number(params.mobile)) ||
-                    !params.password || typeof params.password !== 'string' || params.password.length === 0 ||
-                    !params.code || typeof params.code !== 'string' || params.code.length === 0 ||
-                    params.code.toLowerCase() !== ctx.session.ImgCode) {
+                    !params.password || typeof params.password !== 'string' || params.password.length === 0
+                    // 图片验证码 TODO
+                    // !params.code || typeof params.code !== 'string' || params.code.length === 0 ||
+                    // params.code.toLowerCase() !== ctx.session.ImgCode
+                    ) {
                     result.status = 30005;
                     result.msg = '注册信息参数有误';
                     ctx.body = result;
                     return;
                 }
+                // 判断用户是否已经注册
+                let userInfo = await this.ctx.service.lwVisitor.getByMobile(params.mobile);
+                if (userInfo && userInfo.Id && userInfo.Id.length !== 0 && userInfo.Mobile === params.mobile) {
+                    result.status = 30006;
+                    result.msg = `用户${params.mobile}已经注册，请登陆...`;
+                    ctx.body = result;
+                    return;
+                } 
             }
             // 验证完毕清除ctx.session.ImgCode
-            ctx.session.ImgCode = null;
+            // ctx.session.ImgCode = null;
 
             // 前期先由系统自动递增分配用户名
             let userName = '';
@@ -96,7 +106,7 @@ module.exports = class Api extends Controller {
                     UserTypeId: loginType.Id,
                     Name: userName,
                     Mobile: params.mobile,
-                    Password: 'lw_123456',
+                    Password: params.password || 'lw_123456',
                     LandTime: now,
                     IsAuto: 1,
                     Valid: 1,
@@ -152,9 +162,9 @@ module.exports = class Api extends Controller {
 
             // 参数检查   userTypeId、mobile（正则  TODO）、code、password
             if (!params || typeof params !== 'object' ||
-                !params.userTypeId || params.userTypeId.length === 0 ||
+                // !params.userTypeId || params.userTypeId.length === 0 ||
                 !params.mobile || params.mobile.length === 0 ||
-                !params.code || params.code.length === 0 ||
+                // !params.code || params.code.length === 0 ||  TODO
                 !params.password || params.password.length === 0) {
                 result.status = 30001;
                 result.msg = '参数错误';
@@ -162,28 +172,27 @@ module.exports = class Api extends Controller {
                 return;
             }
 
-            if (params.code.toLowerCase() !== ctx.session.ImgCode) {
-                result.status = 30003;
-                result.msg = '验证码错误';
-                ctx.body = result;
-                return;
-            }
+            // if (params.code.toLowerCase() !== ctx.session.ImgCode) {
+            //     result.status = 30003;
+            //     result.msg = '验证码错误';
+            //     ctx.body = result;
+            //     return;
+            // }
+
 
             // 检验登陆类型
-            let loginType = await ctx.service.lwVisitorType.getById(params.userTypeId);
-            // 判断是否为注册用户
-            if (!loginType || typeof loginType !== 'object' ||
-                !loginType.Id || loginType.Id.length === 0 ||
-                Number(loginType.Name) !== LoginType.register) {
-                result.status = 30005;
-                result.msg = '登陆类型错误';
-                ctx.body = result;
-                return;
-            }
+            // let loginType = await ctx.service.lwVisitorType.getById(params.userTypeId);
+            // // 判断是否为注册过的用户
+            // if (!loginType || typeof loginType !== 'object' ||
+            //     !loginType.Id || loginType.Id.length === 0 ||
+            //     Number(loginType.Name) !== LoginType.register) {
+            //     result.status = 30005;
+            //     result.msg = '登陆类型错误';
+            //     ctx.body = result;
+            //     return;
+            // }
 
-            let userEntity = await ctx.service.lwVisitor.getByCondition({
-                Mobile: params.mobile
-            });
+            let userEntity = await ctx.service.lwVisitor.getByMobile(params.mobile);
 
             if (!userEntity || !userEntity.Id || userEntity.Id.length === 0) {
                 result.status = 30007;
@@ -199,11 +208,16 @@ module.exports = class Api extends Controller {
                 return;
             }
 
+            // 登陆成功
+            result.status = 200;
+            result.success = true;
+
             // 写入缓存
             ctx.session.user = {
                 Id: userEntity.Id,
                 Name: userEntity.Name.replace(regExp.repalceUserSign, '')
             }
+            // ctx.session.ImgCode = null;
 
             // 写入用户日志
             let options = {
@@ -211,15 +225,13 @@ module.exports = class Api extends Controller {
                 Remark: 'login'
             }
             await ctx.service.lwVisitorLogs.createByOptions(options);
-
-            // 重定向  TODO
-            ctx.redirect('/');
         } catch (error) {
             this.ctx.logger.error('controller/api/login' + error);
             result.status = 500;
             result.msg = '服务端错误，联系管理员';
             this.ctx.body = result;
         }
+        this.ctx.body = result;
     }
 
     /**

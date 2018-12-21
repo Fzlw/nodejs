@@ -31,7 +31,7 @@ define([
                 } else if (name === 'register') {
                     return this.clickBtnRegister(target.attr('value'));
                 } else if (name === 'login') {
-                    return this.clickBtnLogin(target.attr('value'));
+                    return this.clickBtnLogin();
                 }
             })
         }

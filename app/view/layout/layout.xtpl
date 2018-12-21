@@ -10,6 +10,7 @@
 <body>
     
     {{{block ('body')}}}
+    <input type="hidden" class="_csrf" value="{{ ctx.csrf }}" />
 
 
     <script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>

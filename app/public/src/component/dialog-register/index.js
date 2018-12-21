@@ -36,6 +36,12 @@ define([
         }
 
         register() {
+            let reg_mobile = /^[1][3,4,5,7,8,9][0-9]{9}$/,
+                reg_pwd = /^[a-z0-9A-Z]{6,}$/,
+                preMobile = '';   // TODO
+            let mobile = this.box.find("input[name='mobile']"),
+                pwd = this.box.find("input[name='password']");
+
             this.box.find('.register').on('click', () => {
                 let nameArr = this.box.find('.form-register').serializeArray(),
                     data = {};
@@ -43,12 +49,33 @@ define([
                     data[ele.name] = ele.value;
                 });
                 // 检查参数 TODO 
-
+                mobile.removeClass('tips');
+                pwd.removeClass('tips');
+                if (!data.mobile || data.mobile.length === 0) {
+                    mobile.addClass('tips');
+                    return;
+                } else if (!reg_mobile.test(data.mobile)) {
+                    this.tips('请输入正确的手机号码！', 'warning');
+                    return;
+                } else if (!data.password || data.password.length === 0) {
+                    pwd.addClass('tips');
+                    return;
+                } else if (!reg_pwd.test(data.mobile)) {
+                    this.tips('密码以数字字母组合，不少于六位！', 'warning');
+                    return;
+                }
+                // 保存先前数据
+                // preMobile = data.mobile;
+                // 发送请求
                 this.post('/register', {
                     data: Object.assign(this.postData, data)
                 }).then(res => {
-                    console.log(res)
-                }).catch(err => console.log(err))
+                    if (res.success) {
+                        window.location.href = '/';
+                        return;
+                    }
+                    this.tips(res.msg, 'error');
+                }).catch(err => this.tips())
             })
         }
 

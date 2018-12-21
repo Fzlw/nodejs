@@ -2,8 +2,8 @@
 
     <div class="dialog-login">
         <form class="form-login" action="" method="post">
-            <input type="text" placeholder="Your Mobile" />
-            <input type="text" placeholder="Your Password" />
+            <input type="text" placeholder="Your Mobile" name="mobile" />
+            <input type="password" placeholder="Your Password" name="password" />
             {{! <input type="hidden" name="userTypeId" value="{ { userTypeId.register } }" /> }}
             <div class="btns">
                 <button type="reset" class="btn-default btn reset">重置</button>

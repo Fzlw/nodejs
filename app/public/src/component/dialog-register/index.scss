@@ -18,6 +18,14 @@
                 margin: 0;
             }
         }
+        // input 扩展样式
+        .tips {
+            border: 1px solid #F42B2B;
+        }
+        input.tips::-webkit-input-placeholder {
+            color: #F42B2B;
+        }
+
         .btns {
             display: flex;
             justify-content: space-between;
