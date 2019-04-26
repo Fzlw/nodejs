@@ -34,7 +34,7 @@ module.exports = appInfo => {
     }
 
     // 中间件
-    config.middleware = ['userService'];
+    // config.middleware = ['userService'];
 
     // 正则配置忽略重定向页面路由
     config.userService = {
